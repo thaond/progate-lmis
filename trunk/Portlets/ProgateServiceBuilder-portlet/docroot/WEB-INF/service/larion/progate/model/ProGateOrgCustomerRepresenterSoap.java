@@ -1,0 +1,198 @@
+/**
+ * Copyright (c) 2000-2009 Liferay, Inc. All rights reserved.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+package larion.progate.model;
+
+import java.io.Serializable;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+/**
+ * <a href="ProGateOrgCustomerRepresenterSoap.java.html"><b><i>View Source</i></b></a>
+ *
+ * @author Brian Wing Shun Chan
+ *
+ */
+public class ProGateOrgCustomerRepresenterSoap implements Serializable {
+	public static ProGateOrgCustomerRepresenterSoap toSoapModel(
+		ProGateOrgCustomerRepresenter model) {
+		ProGateOrgCustomerRepresenterSoap soapModel = new ProGateOrgCustomerRepresenterSoap();
+
+		soapModel.setProGateOrgCustomerRepresenterId(model.getProGateOrgCustomerRepresenterId());
+		soapModel.setFirstName(model.getFirstName());
+		soapModel.setLastName(model.getLastName());
+		soapModel.setDisplayName(model.getDisplayName());
+		soapModel.setRole(model.getRole());
+		soapModel.setCustomerId(model.getCustomerId());
+		soapModel.setOrgId(model.getOrgId());
+		soapModel.setDescription(model.getDescription());
+		soapModel.setCreatedDate(model.getCreatedDate());
+		soapModel.setModifiedDate(model.getModifiedDate());
+
+		return soapModel;
+	}
+
+	public static ProGateOrgCustomerRepresenterSoap[] toSoapModels(
+		ProGateOrgCustomerRepresenter[] models) {
+		ProGateOrgCustomerRepresenterSoap[] soapModels = new ProGateOrgCustomerRepresenterSoap[models.length];
+
+		for (int i = 0; i < models.length; i++) {
+			soapModels[i] = toSoapModel(models[i]);
+		}
+
+		return soapModels;
+	}
+
+	public static ProGateOrgCustomerRepresenterSoap[][] toSoapModels(
+		ProGateOrgCustomerRepresenter[][] models) {
+		ProGateOrgCustomerRepresenterSoap[][] soapModels = null;
+
+		if (models.length > 0) {
+			soapModels = new ProGateOrgCustomerRepresenterSoap[models.length][models[0].length];
+		}
+		else {
+			soapModels = new ProGateOrgCustomerRepresenterSoap[0][0];
+		}
+
+		for (int i = 0; i < models.length; i++) {
+			soapModels[i] = toSoapModels(models[i]);
+		}
+
+		return soapModels;
+	}
+
+	public static ProGateOrgCustomerRepresenterSoap[] toSoapModels(
+		List<ProGateOrgCustomerRepresenter> models) {
+		List<ProGateOrgCustomerRepresenterSoap> soapModels = new ArrayList<ProGateOrgCustomerRepresenterSoap>(models.size());
+
+		for (ProGateOrgCustomerRepresenter model : models) {
+			soapModels.add(toSoapModel(model));
+		}
+
+		return soapModels.toArray(new ProGateOrgCustomerRepresenterSoap[soapModels.size()]);
+	}
+
+	public ProGateOrgCustomerRepresenterSoap() {
+	}
+
+	public Integer getPrimaryKey() {
+		return _ProGateOrgCustomerRepresenterId;
+	}
+
+	public void setPrimaryKey(Integer pk) {
+		setProGateOrgCustomerRepresenterId(pk);
+	}
+
+	public Integer getProGateOrgCustomerRepresenterId() {
+		return _ProGateOrgCustomerRepresenterId;
+	}
+
+	public void setProGateOrgCustomerRepresenterId(
+		Integer ProGateOrgCustomerRepresenterId) {
+		_ProGateOrgCustomerRepresenterId = ProGateOrgCustomerRepresenterId;
+	}
+
+	public String getFirstName() {
+		return _firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		_firstName = firstName;
+	}
+
+	public String getLastName() {
+		return _lastName;
+	}
+
+	public void setLastName(String lastName) {
+		_lastName = lastName;
+	}
+
+	public String getDisplayName() {
+		return _displayName;
+	}
+
+	public void setDisplayName(String displayName) {
+		_displayName = displayName;
+	}
+
+	public String getRole() {
+		return _role;
+	}
+
+	public void setRole(String role) {
+		_role = role;
+	}
+
+	public int getCustomerId() {
+		return _customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		_customerId = customerId;
+	}
+
+	public int getOrgId() {
+		return _orgId;
+	}
+
+	public void setOrgId(int orgId) {
+		_orgId = orgId;
+	}
+
+	public String getDescription() {
+		return _description;
+	}
+
+	public void setDescription(String description) {
+		_description = description;
+	}
+
+	public Date getCreatedDate() {
+		return _createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		_createdDate = createdDate;
+	}
+
+	public Date getModifiedDate() {
+		return _modifiedDate;
+	}
+
+	public void setModifiedDate(Date modifiedDate) {
+		_modifiedDate = modifiedDate;
+	}
+
+	private Integer _ProGateOrgCustomerRepresenterId;
+	private String _firstName;
+	private String _lastName;
+	private String _displayName;
+	private String _role;
+	private int _customerId;
+	private int _orgId;
+	private String _description;
+	private Date _createdDate;
+	private Date _modifiedDate;
+}

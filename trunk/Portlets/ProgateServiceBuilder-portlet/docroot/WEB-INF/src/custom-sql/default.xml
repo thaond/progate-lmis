@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<custom-sql>
+	<sql file="custom-sql/LmisViewStaffRootOrgFN.xml" />
+    <sql file="custom-sql/sql.xml" />
+    <sql file="custom-sql/CDS.xml" /> 
+</custom-sql>
+
