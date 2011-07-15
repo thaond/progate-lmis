@@ -1,0 +1,28 @@
+
+  #wrapper{
+  	border-left: none !important;
+  	border-right: none !important;
+  }
+  /* #p_p_id_ProGate_DisplayStyle_WAR_ProGateportlet_INSTANCE_c62Z_ */
+  #mainheader{ display:none !important;}
+  .header{ display:none !important;}
+  .filter{ display:none !important;}
+  .footer{ display:none !important;}
+  .main{border: none !important;}
+  .content{border: none!important; 
+  		background-color: white !important;
+  	}
+  #beneathnav{
+  	display: none !important;
+  } 
+  .header-of-table th{
+  	background-color: blue !important;
+  }
+  .content{
+  	background-color: white !important;
+  }
+  
+  body{
+   background-color: white !important;
+  }
+  

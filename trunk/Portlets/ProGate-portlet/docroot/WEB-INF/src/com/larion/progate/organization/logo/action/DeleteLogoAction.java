@@ -1,0 +1,73 @@
+/**
+ * 
+ */
+package com.larion.progate.organization.logo.action;
+
+import java.io.PrintWriter;
+
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.PortletConfig;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import larion.progate.model.Organization;
+import larion.progate.service.OrganizationLocalServiceUtil;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionMapping;
+
+import com.larion.progate.common.constants.URLParameter_RS;
+import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.struts.PortletAction;
+import com.liferay.portal.util.PortalUtil;
+import com.liferay.portlet.ActionRequestImpl;
+import com.liferay.portlet.imagegallery.service.IGImageLocalServiceUtil;
+
+/**
+ * @author hungpk
+ * 
+ */
+public class DeleteLogoAction extends PortletAction {
+
+	public void processAction(ActionMapping mapping, ActionForm form,
+			PortletConfig portletConfig, ActionRequest actionRequest,
+			ActionResponse actionResponse) throws Exception {
+        
+		try {
+			Integer orgId = ParamUtil.getInteger(actionRequest,
+					URLParameter_RS.ORG_ID);
+			//Long imageId = ParamUtil.getLong(actionRequest, URLParameter_RS.ID);
+
+			String field = ParamUtil
+					.getString(actionRequest, URLParameter_RS.FIELD);
+			// default return value
+			String ret = "OK";
+
+			Organization org = OrganizationLocalServiceUtil.getOrganization(orgId);
+			if (field.equals(URLParameter_RS.LOGO)) {
+				org.setLogoId("");
+			}
+			if (field.equals(URLParameter_RS.BANNER)) {
+				org.setBannerId("");
+			}
+				
+			OrganizationLocalServiceUtil.updateOrganization(org);
+
+			//IGImageLocalServiceUtil.deleteIGImage(imageId);
+			HttpServletResponse servletResponse = PortalUtil
+					.getHttpServletResponse(actionResponse);
+			
+			
+			
+			PrintWriter writer = servletResponse.getWriter();
+
+			writer.print(ret);
+			writer.flush();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+}

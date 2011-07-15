@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model-hints>
+	<model name="larion.progate.lmis.model.LmisEmailSettings">
+		<field name="lmisEmailSettingId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="emailName" type="String" />
+		<field name="emailDescription" type="String" />
+		<field name="emailTemplate" type="String" />
+		<field name="emailType" type="String" />
+		<field name="category" type="int" />
+		<field name="toSender" type="boolean" />
+		<field name="toPm" type="boolean" />
+		<field name="toBod" type="boolean" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisEmailSettingDetails">
+		<field name="lmisEmailSettingDetailId" type="Integer" />
+		<field name="emailSettingId" type="int" />
+		<field name="orgRelatedId" type="int" />
+		<field name="userRelatedId" type="int" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisTimeChangeApprovals">
+		<field name="lmisTimeChangeApprovalId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="requestId" type="int" />
+		<field name="approvedBy" type="int" />
+		<field name="approvedAt" type="Date" />
+		<field name="isApproved" type="boolean" />
+		<field name="approvedStatus" type="boolean" />
+		<field name="Reason" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisTimeChangeRequests">
+		<field name="lmisTimeChangeRequestId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="requestedBy" type="int" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="monSelected" type="boolean" />
+		<field name="monStartTime" type="Date" />
+		<field name="monEndTime" type="Date" />
+		<field name="tueSelected" type="boolean" />
+		<field name="tueStartTime" type="Date" />
+		<field name="tueEndTime" type="Date" />
+		<field name="wedSelected" type="boolean" />
+		<field name="wedStartTime" type="Date" />
+		<field name="wedEndTime" type="Date" />
+		<field name="thuSelected" type="boolean" />
+		<field name="thuStartTime" type="Date" />
+		<field name="thuEndTime" type="Date" />
+		<field name="friSelected" type="boolean" />
+		<field name="friStartTime" type="Date" />
+		<field name="friEndTime" type="Date" />
+		<field name="satSelected" type="boolean" />
+		<field name="satStartTime" type="Date" />
+		<field name="satEndTime" type="Date" />
+		<field name="requestedReason" type="String" />
+		<field name="requestedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedAt" type="Date" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisWorkingTimes">
+		<field name="lmisWorkingTimeId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="sessionName" type="String" />
+		<field name="startTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="limitLate" type="int" />
+		<field name="maxLate" type="int" />
+		<field name="coefficientLate" type="double" />
+		<field name="limitEarly" type="int" />
+		<field name="maxEarly" type="int" />
+		<field name="coefficientEarly" type="double" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisDayTypes">
+		<field name="LmisDayTypeId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="Name" type="String" />
+		<field name="Description" type="String" />
+		<field name="dayType" type="int" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisWorkingCalendars">
+		<field name="lmisWorkingCalendarId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="dayValue" type="Date" />
+		<field name="dayType" type="int" />
+		<field name="description" type="String" />
+		<field name="isModified" type="boolean" />
+		<field name="totalWorkingTime" type="double" />
+		<field name="isRelatedSession" type="boolean" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisWorkingCalendarSessions">
+		<field name="lmisWorkingCalendarSessionID" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="calendarId" type="int" />
+		<field name="sessionId" type="int" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisGeneralSettings">
+		<field name="lmisGeneralSettingId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="confType" type="int" />
+		<field name="confValue" type="double" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewStaffMapping">
+		<field name="lmisViewStaffMappingId" type="Integer" />
+		<field name="orgId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="bodId" type="int" />
+		<field name="staffUID" type="int" />
+		<field name="pmUID" type="int" />
+		<field name="bodUID" type="int" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewStaffRootOrg">
+		<field name="User_id" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="orgId" type="int" />
+		<field name="bodId" type="int" />
+		<field name="screenName" type="String" />
+		<field name="emailAddress" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewStaffRootOrgFN">
+		<field name="lmisViewStaffRootOrgFNId" type="Integer" />
+		<field name="userId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="orgId" type="int" />
+		<field name="bodId" type="int" />
+		<field name="staffCode" type="String" />
+		<field name="scannerCode" type="String" />
+		<field name="screenName" type="String" />
+		<field name="fullName" type="String" />
+		<field name="emailAddress" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewStaffRootOrgOrdered">
+		<field name="lmisViewStaffRootOrgOrderedId" type="Integer" />
+		<field name="userId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="orgId" type="int" />
+		<field name="bodId" type="int" />
+		<field name="staffCode" type="String" />
+		<field name="scannerCode" type="String" />
+		<field name="screenName" type="String" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="fullName" type="String" />
+		<field name="emailAddress" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewTimeChangeReqs">
+		<field name="lmisViewTimeChangeReqId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="requestedBy" type="int" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="fullName" type="String" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="monStartTime" type="Date" />
+		<field name="monEndTime" type="Date" />
+		<field name="tueStartTime" type="Date" />
+		<field name="tueEndTime" type="Date" />
+		<field name="wedStartTime" type="Date" />
+		<field name="wedEndTime" type="Date" />
+		<field name="thuStartTime" type="Date" />
+		<field name="thuEndTime" type="Date" />
+		<field name="friStartTime" type="Date" />
+		<field name="friEndTime" type="Date" />
+		<field name="satStartTime" type="Date" />
+		<field name="satEndTime" type="Date" />
+		<field name="requestedReason" type="String" />
+		<field name="requestedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewEmailSettingDetailOrg">
+		<field name="orgRelatedId" type="Integer" />
+		<field name="id_" type="int" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="category" type="int" />
+		<field name="toSender" type="boolean" />
+		<field name="toPm" type="boolean" />
+		<field name="toBod" type="boolean" />
+		<field name="emailType" type="String" />
+		<field name="emailOrg" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewEmailSettingDetailUser">
+		<field name="userRelatedId" type="Integer" />
+		<field name="id_" type="int" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="category" type="int" />
+		<field name="toSender" type="boolean" />
+		<field name="toPm" type="boolean" />
+		<field name="toBod" type="boolean" />
+		<field name="emailType" type="String" />
+		<field name="emailUser" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewWorkingCalendar">
+		<field name="lmisViewWorkingCalendarId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="dayValue" type="Date" />
+		<field name="dayType" type="int" />
+		<field name="isModified" type="boolean" />
+		<field name="totalWorkingTime" type="double" />
+		<field name="isRelatedSession" type="boolean" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisOverTimeSettings">
+		<field name="lmisOverTimeSettingsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="otId" type="int" />
+		<field name="dayType" type="int" />
+		<field name="coEfficient" type="double" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisOverTimeTypes">
+		<field name="lmisOverTimeTypesId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisDataInputs">
+		<field name="lmisDataInputsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="dayValue" type="Date" />
+		<field name="startTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="inputBy" type="int" />
+		<field name="inputAt" type="Date" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisAttendanceDaily">
+		<field name="lmisAttendanceDailyId" type="Integer" />
+		<field name="dayValue" type="Date" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="absenceValue" type="double" />
+		<field name="isPermissive" type="boolean" />
+		<field name="absenceReason" type="String" />
+		<field name="absenceReasonId" type="int" />
+		<field name="planStartTime" type="Date" />
+		<field name="realStartTime" type="Date" />
+		<field name="timeLate" type="int" />
+		<field name="timeLatePenalty" type="int" />
+		<field name="timeLateFinal" type="double" />
+		<field name="planEndTime" type="Date" />
+		<field name="realEndTime" type="Date" />
+		<field name="timeEarly" type="int" />
+		<field name="timeEarlyPenalty" type="int" />
+		<field name="timeEarlyFinal" type="double" />
+		<field name="overtimeValue" type="String" />
+		<field name="totalWorkingTime" type="double" />
+		<field name="totalOvertime" type="double" />
+		<field name="totalOvertimeFinal" type="double" />
+		<field name="totalTimeFinal" type="double" />
+		<field name="comMent" type="String" />
+		<field name="createdAt" type="Date" />
+		<field name="createdBy" type="int" />
+		<field name="updatedAt" type="Date" />
+		<field name="updated_by" type="int" />
+		<field name="totalOvertimeRequested" type="double" />
+		<field name="absence_" type="int" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisOvertimeRequests">
+		<field name="lmisOvertimeRequestsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="requestedBy" type="int" />
+		<field name="requestedAt" type="Date" />
+		<field name="requestedReason" type="String" />
+		<field name="requestedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedAt" type="Date" />
+		<field name="orgId" type="int" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisOvertimeRequestDetails">
+		<field name="lmisOvertimeRequestDetailsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="requestId" type="int" />
+		<field name="userId" type="int" />
+		<field name="startTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="requestedReason" type="String" />
+		<field name="requestedHour" type="double" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisOvertimeApprovals">
+		<field name="lmisOvertimeApprovalsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="requestId" type="int" />
+		<field name="reportId" type="int" />
+		<field name="approvedBy" type="int" />
+		<field name="approvedAt" type="Date" />
+		<field name="isApproved" type="boolean" />
+		<field name="approvedStatus" type="boolean" />
+		<field name="reaSon" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisOvertimeMonthly">
+		<field name="lmisOvertimeMonthlyId" type="Integer" />
+		<field name="monthValue" type="int" />
+		<field name="yearValue" type="int" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="otType" type="String" />
+		<field name="otId" type="int" />
+		<field name="totalHour" type="double" />
+		<field name="totalHourFinal" type="double" />
+		<field name="orgId" type="int" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisDataImports">
+		<field name="lmisDataImportsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="dateValue" type="Date" />
+		<field name="importType" type="int" />
+		<field name="importBy" type="int" />
+		<field name="importAt" type="Date" />
+		<field name="sessionId" type="int" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisDataImportDetails">
+		<field name="lmisDataImportDetailsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="importId" type="int" />
+		<field name="startTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="scannerId" type="String" />
+		<field name="abSence" type="int" />
+		<field name="staffName" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisOverTimeReportHours">
+		<field name="lmisOverTimeReportHoursId" type="Integer" />
+		<field name="detailId" type="int" />
+		<field name="otType" type="String" />
+		<field name="otHour" type="double" />
+		<field name="otCoefficient" type="double" />
+		<field name="otId" type="int" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisOverTimeReportDetails">
+		<field name="lmisOverTimeReportDetailsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="reportId" type="int" />
+		<field name="userId" type="int" />
+		<field name="startTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="totalHour" type="double" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisOverTimeReports">
+		<field name="lmisOverTimeReportsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="reportedBy" type="int" />
+		<field name="reportedAt" type="Date" />
+		<field name="reportedReason" type="String" />
+		<field name="reportedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedAt" type="Date" />
+		<field name="requestId" type="int" />
+		<field name="orgId" type="int" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisOvertimeYearly">
+		<field name="lmisOvertimeYearlyId" type="Integer" />
+		<field name="yearValue" type="int" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="otType" type="String" />
+		<field name="otId" type="int" />
+		<field name="totalHour" type="double" />
+		<field name="totalHourFinal" type="double" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisAbsenceYearly">
+		<field name="lmisAbsenceYearlyId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="yearValue" type="int" />
+		<field name="userId" type="int" />
+		<field name="absenceType" type="String" />
+		<field name="absenceTypeId" type="int" />
+		<field name="totalDay" type="double" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisAbsenceMonthly">
+		<field name="lmisAbsenceMonthlyId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="monthValue" type="int" />
+		<field name="yearValue" type="int" />
+		<field name="userId" type="int" />
+		<field name="absenceType" type="String" />
+		<field name="absenceTypeId" type="int" />
+		<field name="totalDay" type="double" />
+		<field name="totalDayRequested" type="double" />
+		<field name="totalDayApproved" type="double" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisAbsenceSettings">
+		<field name="lmisAbsenceSettingsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="name_" type="String" />
+		<field name="desCription" type="String" />
+		<field name="isSubtract" type="boolean" />
+		<field name="isModified" type="boolean" />
+		<field name="absencePermissive" type="boolean" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisAbsenceApprovals">
+		<field name="lmisAbsenceApprovalsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="requestId" type="int" />
+		<field name="approvedBy" type="int" />
+		<field name="approvedAt" type="Date" />
+		<field name="isApproved" type="boolean" />
+		<field name="approvedStatus" type="boolean" />
+		<field name="reasonApproval" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisAbsenceRequests">
+		<field name="lmisAbsenceRequestsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="requestedBy" type="int" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="startSession" type="int" />
+		<field name="endSession" type="int" />
+		<field name="requestedReason" type="String" />
+		<field name="absenceType" type="String" />
+		<field name="absenceTypeId" type="int" />
+		<field name="requestedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedAt" type="Date" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewDayTypeOverTimeSettingType">
+		<field name="lmisViewDayTypeOverTimeSettingTypeId" type="Integer" />
+		<field name="otTypeId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="dayType" type="int" />
+		<field name="otId" type="int" />
+		<field name="coefficient" type="double" />
+		<field name="nameOvertimeType" type="String" />
+		<field name="description" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewRegistrationOvertime">
+		<field name="lmisViewRegistrationOvertimeId" type="Integer" />
+		<field name="otReqsId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="requestedBy" type="int" />
+		<field name="requestedAt" type="Date" />
+		<field name="requestedReason" type="String" />
+		<field name="requestedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedAt" type="Date" />
+		<field name="orgId" type="int" />
+		<field name="requestId" type="int" />
+		<field name="userId" type="int" />
+		<field name="startTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="reasonDetail" type="String" />
+		<field name="requestedHour" type="double" />
+		<field name="approvedBy" type="int" />
+		<field name="approvedAt" type="Date" />
+		<field name="isApproved" type="boolean" />
+		<field name="approvedStatus" type="boolean" />
+		<field name="reaSon" type="String" />
+		<field name="orgName" type="String" />
+		<field name="fullName" type="String" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="LastName" type="String" />
+		<field name="reqFirstName" type="String" />
+		<field name="reqMiddleName" type="String" />
+		<field name="reqLastName" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewRegistrationOvertimeaApproval">
+		<field name="lmisViewRegistrationOvertimeaApprovalId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="requestedBy" type="int" />
+		<field name="requestedAt" type="Date" />
+		<field name="requestedReason" type="String" />
+		<field name="requestedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedAt" type="Date" />
+		<field name="orgId" type="int" />
+		<field name="name" type="String" />
+		<field name="fullName" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewOTApp">
+		<field name="lmisViewOTAppId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="orgId" type="int" />
+		<field name="requestedBy" type="int" />
+		<field name="requestedAt" type="Date" />
+		<field name="requestedReason" type="String" />
+		<field name="requestedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedAt" type="Date" />
+		<field name="approvedBy" type="int" />
+		<field name="approvedAt" type="Date" />
+		<field name="isApproved" type="boolean" />
+		<field name="approvedStatus" type="boolean" />
+		<field name="approvedReason" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewReportOvertime">
+		<field name="lmisViewReportOvertimeId" type="Integer" />
+		<field name="otRepId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="orgId" type="int" />
+		<field name="requestId" type="int" />
+		<field name="reportedBy" type="int" />
+		<field name="reportedAt" type="Date" />
+		<field name="reportedReason" type="String" />
+		<field name="reportedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedAt" type="Date" />
+		<field name="reportId" type="int" />
+		<field name="userId" type="int" />
+		<field name="totalHour" type="double" />
+		<field name="startTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="detailId" type="int" />
+		<field name="otType" type="String" />
+		<field name="otHour" type="double" />
+		<field name="otCoefficient" type="double" />
+		<field name="otId" type="int" />
+		<field name="orgName" type="String" />
+		<field name="fullName" type="String" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="LastName" type="String" />
+		<field name="repFirstName" type="String" />
+		<field name="repLastName" type="String" />
+		<field name="repMiddleName" type="String" />
+		<field name="regRequestedHour" type="double" />
+		<field name="regStartTime" type="Date" />
+		<field name="regEndTime" type="Date" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewAttDaily">
+		<field name="lmisViewAttDailyId" type="Integer" />
+		<field name="dayValue" type="Date" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="absenceValue" type="double" />
+		<field name="isPermissive" type="boolean" />
+		<field name="orgId" type="int" />
+		<field name="absenceType" type="String" />
+		<field name="absenceTypeId" type="int" />
+		<field name="planStartTime" type="Date" />
+		<field name="realStartTime" type="Date" />
+		<field name="timeLate" type="int" />
+		<field name="timeLatePenalty" type="int" />
+		<field name="timeLateFinal" type="double" />
+		<field name="planEndTime" type="Date" />
+		<field name="realEndTime" type="Date" />
+		<field name="timeEarly" type="int" />
+		<field name="timeEarlyPenalty" type="int" />
+		<field name="timeEarlyFinal" type="double" />
+		<field name="overTimeValue" type="String" />
+		<field name="totalWorkingTime" type="double" />
+		<field name="totalOverTime" type="double" />
+		<field name="totalOverTimeFinal" type="double" />
+		<field name="totalTimeFinal" type="double" />
+		<field name="createdAt" type="Date" />
+		<field name="createdBy" type="int" />
+		<field name="updatedAt" type="Date" />
+		<field name="updatedBy" type="int" />
+		<field name="totalOverTimeRequested" type="double" />
+		<field name="abSence" type="int" />
+		<field name="fullName" type="String" />
+		<field name="staffCode" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewReportOvertimeApproval">
+		<field name="lmisViewReportOvertimeApprovalId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="orgId" type="int" />
+		<field name="requestId" type="int" />
+		<field name="reportedBy" type="int" />
+		<field name="reportedAt" type="Date" />
+		<field name="reportedReason" type="String" />
+		<field name="reportedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedAt" type="Date" />
+		<field name="orgName" type="String" />
+		<field name="fullName" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewDayValueMax">
+		<field name="lmisViewDayValueMaxId" type="Integer" />
+		<field name="dayValue" type="Date" />
+		<field name="rootId" type="int" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewOrgUserRoles">
+		<field name="lmisViewOrgUserRolesId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="orgId" type="int" />
+		<field name="userId" type="int" />
+		<field name="roleId" type="int" />
+		<field name="orgName" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewAttInfo">
+		<field name="lmisViewAttInfoId" type="Integer" />
+		<field name="staffUID" type="int" />
+		<field name="pmUID" type="int" />
+		<field name="dayValue" type="Date" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="absenceValue" type="double" />
+		<field name="isPermissive" type="boolean" />
+		<field name="absenceType" type="String" />
+		<field name="absenceTypeId" type="int" />
+		<field name="planStartTime" type="Date" />
+		<field name="realStartTime" type="Date" />
+		<field name="timeLate" type="int" />
+		<field name="timeLatePenalty" type="int" />
+		<field name="timeLateFinal" type="double" />
+		<field name="planEndTime" type="Date" />
+		<field name="realEndTime" type="Date" />
+		<field name="timeEarly" type="int" />
+		<field name="timeEarlyPenalty" type="int" />
+		<field name="timeEarlyFinal" type="double" />
+		<field name="overTimeValue" type="String" />
+		<field name="totalWorkingTime" type="double" />
+		<field name="totalOverTime" type="double" />
+		<field name="totalOverTimeFinal" type="double" />
+		<field name="totalTimeFinal" type="double" />
+		<field name="createdAt" type="Date" />
+		<field name="createdBy" type="int" />
+		<field name="updatedAt" type="Date" />
+		<field name="updatedBy" type="int" />
+		<field name="totalOverTimeRequested" type="double" />
+		<field name="abSence" type="int" />
+		<field name="fullName" type="String" />
+		<field name="staffCode" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewStaffMappingPm">
+		<field name="lmisViewStaffMappingPmId" type="Integer" />
+		<field name="orgId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="bodId" type="int" />
+		<field name="staffUID" type="int" />
+		<field name="pmUID" type="int" />
+		<field name="staffCode" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewAttdance">
+		<field name="lmisViewAttDailyId" type="Integer" />
+		<field name="dayValue" type="Date" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="absenceValue" type="double" />
+		<field name="isPermissive" type="boolean" />
+		<field name="absenceType" type="String" />
+		<field name="absenceTypeId" type="int" />
+		<field name="planStartTime" type="Date" />
+		<field name="realStartTime" type="Date" />
+		<field name="timeLate" type="int" />
+		<field name="timeLatePenalty" type="int" />
+		<field name="timeLateFinal" type="double" />
+		<field name="planEndTime" type="Date" />
+		<field name="realEndTime" type="Date" />
+		<field name="timeEarly" type="int" />
+		<field name="timeEarlyPenalty" type="int" />
+		<field name="timeEarlyFinal" type="double" />
+		<field name="overTimeValue" type="String" />
+		<field name="totalWorkingTime" type="double" />
+		<field name="totalOverTime" type="double" />
+		<field name="totalOverTimeFinal" type="double" />
+		<field name="totalTimeFinal" type="double" />
+		<field name="createdAt" type="Date" />
+		<field name="createdBy" type="int" />
+		<field name="updatedAt" type="Date" />
+		<field name="updatedBy" type="int" />
+		<field name="totalOverTimeRequested" type="double" />
+		<field name="abSence" type="int" />
+		<field name="fullName" type="String" />
+		<field name="staffCode" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewOvertimeReport">
+		<field name="lmisViewOvertimeReportId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="orgId" type="int" />
+		<field name="requestId" type="int" />
+		<field name="reportedBy" type="int" />
+		<field name="reportedAt" type="Date" />
+		<field name="reportedReason" type="String" />
+		<field name="reportedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedAt" type="Date" />
+		<field name="orgName" type="String" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisViewOvertimeReportDetail">
+		<field name="lmisViewReportOvertimeId" type="Integer" />
+		<field name="otRepId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="orgId" type="int" />
+		<field name="requestId" type="int" />
+		<field name="reportedBy" type="int" />
+		<field name="reportedAt" type="Date" />
+		<field name="reportedReason" type="String" />
+		<field name="reportedStatus" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedAt" type="Date" />
+		<field name="userId" type="int" />
+		<field name="totalHour" type="double" />
+		<field name="startTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="fullName" type="String" />
+		<field name="reqRequestedHour" type="double" />
+		<field name="reqStartTime" type="Date" />
+		<field name="reqEndTime" type="Date" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisAttMonthly">
+		<field name="lmisAttMonthlysId" type="Integer" />
+		<field name="yearValue" type="int" />
+		<field name="monthValue" type="int" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="totalWorkingDay" type="int" />
+		<field name="numDayAward" type="double" />
+		<field name="totalDayOff" type="double" />
+		<field name="totalDayCompensation" type="double" />
+		<field name="totalDayOffCompensation" type="double" />
+		<field name="startTimeAverage" type="Date" />
+		<field name="endTimeAverage" type="Date" />
+		<field name="totalTimeLate" type="int" />
+		<field name="totalTimeLatePenalty" type="int" />
+		<field name="totalTimeEarly" type="int" />
+		<field name="totalTimeEarlyPenalty" type="int" />
+		<field name="totalDayOvertime" type="int" />
+		<field name="totalTimeLateFinal" type="double" />
+		<field name="totalTimeEarlyFinal" type="double" />
+		<field name="totalWorkingTime" type="double" />
+		<field name="totalOvertime" type="double" />
+		<field name="totalOvertimeFinal" type="double" />
+		<field name="totalDayCompensationNextMonth" type="double" />
+		<field name="totalTimeFinal" type="double" />
+		<field name="totalOvertimeRequested" type="double" />
+		<field name="totalDayoffPermissive" type="double" />
+	</model>
+	<model name="larion.progate.lmis.model.LmisAttYearly">
+		<field name="lmisAttYearlyId" type="Integer" />
+		<field name="yearValue" type="int" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="totalWorkingDay" type="int" />
+		<field name="totalDayAwardPrevYear" type="double" />
+		<field name="totalDayOff" type="double" />
+		<field name="totalDayAward" type="double" />
+		<field name="totalDayRemaining" type="double" />
+		<field name="startTimeAverage" type="Date" />
+		<field name="endTimeAverage" type="Date" />
+		<field name="totalTimeLate" type="int" />
+		<field name="totalTimeLatePenalty" type="int" />
+		<field name="totalTimeEarly" type="int" />
+		<field name="totalTimeEarlyPenalty" type="int" />
+		<field name="totalDayOvertime" type="int" />
+		<field name="totalTimeLateFinal" type="double" />
+		<field name="totalTimeEarlyFinal" type="double" />
+		<field name="totalWorkingTime" type="double" />
+		<field name="totalOvertime" type="double" />
+		<field name="totalOvertimeFinal" type="double" />
+		<field name="totalTimeFinal" type="double" />
+		<field name="totalOvertimeRequested" type="double" />
+		<field name="totalDayoffPermissive" type="double" />
+	</model>
+</model-hints>

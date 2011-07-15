@@ -1,0 +1,946 @@
+@charset "utf-8";
+/* Misc */
+#clear-both {
+	clear: both;
+}
+
+#clear-right {
+	clear: right;
+}
+
+#clear-left {
+	clear: left;
+}
+
+#lblRequireField {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FF0000;
+	padding-top: 12px;
+	padding-right: 0px;
+	padding-bottom: 12px;
+	padding-left: 0px;
+}
+
+.wrapper .mainContent  .control-bottom {
+	height: 60px;
+	width: 96%;
+	margin: 0 auto 0 auto;
+	text-align: center;
+}
+
+a,a:hover,a:visited {
+	text-decoration: none;
+	color: #001CFF;
+}
+.wrapper {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 2px auto;
+	height: auto;
+	width: 98%;
+	padding-bottom: 30px;
+}
+
+.wrapper .header-center {
+	white-space: nowrap;
+	float: left;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	padding-top: 7px;
+	padding-left: 10px;
+	color: #ffffff;
+}
+
+.wrapper .header {
+	background-image: url(<%= request.getContextPath () %>/images/lmis/configAttendanceInfo/bg_line.png
+		);
+	background-repeat: repeat-x;
+	height: 30px;
+	margin-top: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px 5px 0 0;
+}
+
+.wrapper .mainContent {
+	width: auto;
+	height: auto;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 5px;
+	margin-top: -3px;
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #55C9F4;
+	border-bottom-color: #55C9F4;
+	border-left-color: #55C9F4;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+
+.wrapper .header .clear-both {
+	clear: both;
+}
+/* End Misc */
+.wrapper .mainContent .mode-edit {
+	float: right;
+	text-align: right;
+	margin-top: -39px;
+	margin-right: 5px;
+	padding-bottom: 5px;
+}
+
+.wrapper .mainContent .mode-edit .mode-edit-active {
+	padding-bottom: 10px;
+	font-size: 14px;
+	vertical-align: super;
+	text-decoration: none;
+	font-weight: bold;
+	color: blue;
+}
+
+.wrapper .mainContent .mode-edit #msg-fade {
+	padding-bottom: 10px;
+	font-size: 14px;
+	vertical-align: super;
+	text-decoration: none;
+	padding-right: 10px;
+}
+
+textarea#txtaddOrg,textarea#txtaddUser {
+	color: #00F;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	width: 99.5%;
+	height: 60px;
+}
+
+/*Config Calendar ------------------------------------------------ */
+.wrapper .mainContent #frmConfigCalendar .contentConfigCalendar {
+	border: 1px solid #55c9f4;
+	margin-left: 5px;
+	width: 96.7%;
+	height: auto;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 0px;
+	padding-left: 8px;
+	padding-top: 10px;
+	padding-right: 11px;
+	background-color: #DBEDF4;
+}
+
+.wrapper .mainContent #frmConfigCalendar .contentConfigCalendar #filter
+{
+	height: 24px;
+	padding-right: 5px;
+	width: 98%;
+}
+.filter #view {
+	background:url(<%=request.getContextPath()%>/images/lmis/small-button.png) no-repeat left;
+	color:#FFF;
+	font-size:10pt;
+	height:26px;
+	width: 55px;
+	border:none;
+}
+
+#filter #search-label {
+	color: #F90;
+}
+
+/*-------------------filter-------------------------*/
+.filter .selected-org{
+	position: relative; float: left; width: 450px;	
+}
+.filter .selected-status{
+	width: 230px; position: relative; float: left;
+}
+.filter .search-button{
+	width: 160px;
+	position: relative;
+	float: left;	
+}	
+/*-------------------------------------------------*/
+.wrapper .mainContent .tbl-header {
+	background: url(<%= request.getContextPath () %>/images/lmis/bg_line.png
+		) repeat-x;
+	height: 30px;
+	color: #FFF;
+	border: 1px solid #ececec;
+	text-align: center;
+}
+
+.wrapper .mainContent .tbl-header th {
+	/*border: 1px solid #C0C0C0;*/
+	text-align: center;
+	border-collapse: collapse;
+	height:30px;
+}
+
+.mainContent .table-content tbody tr {
+	height: 24px;
+}
+
+.mainContent .table-content {
+	width: 100%;
+}
+
+.table-content table {
+	border: 1px solid #C0C0C0;
+}
+
+/*.table-content td {
+	border: 1px solid #C0C0C0;
+}*/
+
+td.text-indent {
+	text-indent: 10px;
+}
+
+.addMoreHoliday texterea {
+	padding-right: 3px;
+	text-indent: 3px;
+	text-align: justify;
+	border: 2px solid #C0C0C0;
+}
+
+.div-of-table-content {
+	padding-bottom: 10px;
+	margin-right: -18px;
+	padding-top: 0px;
+}
+
+.oddrow {
+	background-color: #ffffff;
+	height: 24px;
+}
+
+.evenrow {
+	background-color: #D5E3E6;
+	height: 24px;
+}
+
+.button-disable {
+	width: 65px;
+	background: url(<%= request.getContextPath () %>/images/lmis/configAttendanceInfo/disable-button.png
+		) no-repeat;
+	font: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 14px;
+	height: 28px;
+	vertical-align: middle;
+	font-weight: normal;
+	border: 0px;
+	cursor: pointer;
+}
+
+.button-enable {
+	width: 65px;
+	background-image: url(<%= request.getContextPath () %>/images/lmis/configAttendanceInfo/button-blue.png
+		);
+	font: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 14px;
+	height: 28px;
+	vertical-align: middle;
+	font-weight: normal;
+	border: 0px;
+	cursor: pointer;
+}
+
+.wrapper .warning {
+	font: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: red;
+}
+/* PhatNT ConfigConde */
+.table-content table tbody .txt input {
+	width: 95%;
+}
+
+.table-content table tbody #fullname {
+	padding-left: 5px;
+	text-align: left;
+	text-indent: 10px;
+}
+
+.table-content table tbody #tdEdit #editCode {
+	cursor: pointer;
+}
+
+.table-content table tbody #tdEdit {
+	text-align: center;
+}
+
+#btnControl {
+	margin: 10px auto;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	word-spacing: 10px;
+}
+
+input#btnControl {
+	width: 50px;
+}
+
+td.txt input {
+	text-align: center;
+}
+
+/* End PhatNT ConfigConde */
+
+/* config coefficient overtime */
+.wrapper .mainContent .frmConfigCoefficientOvertime .contentConfigCoefficientOvertime
+	{
+	border: 1px solid #55c9f4;
+	margin: 0 auto 0 auto;
+	width: 98%;
+	height: auto;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 0px;
+	padding-left: 14px;
+	background-color: #DBEDF4;
+	padding-bottom: 5px;
+	padding-top: 10px;
+}
+
+/* overtime report */
+.createChange {
+	margin-top: -40px;
+	float: right;
+	margin-right: 10px;
+}
+.div-print
+{
+	margin-top: 30px;
+	float: right;
+	margin-right: 10px;
+}
+.cls-ot {
+	height: auto;
+	min-width: 750px;
+	width: 96.7%;
+	border-style: solid;
+	border-color: #1BC9E1;
+	border-width: 1px;
+	background-color: #DBEDF4;;
+	font-size: 12px;
+	position: relative;
+	margin-left: 5px;
+	padding-left: 10px;
+	padding-right: 9px;
+	margin-top: -2px;
+	margin-bottom: 7px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+}
+
+.cls-ot .title-center {
+	margin-top: 10px;
+	font-size: 16px;
+	color: #0080ff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.cls-ot .req-field {
+	color: #ff0000;
+	height: 40px;
+	width: 98%;
+}
+
+.cls-ot .content-left {
+	float: left;
+	width: 48%;
+	height: 200px;
+}
+
+.cls-ot .content-left .lbl {
+	float: left;
+}
+
+.cls-ot .content-right {
+	float: right;
+	width: 48%;
+	height: 200px;
+	padding-top: 4px;
+}
+
+.cls-ot .tbl-title {
+	width: 100%;
+}
+
+.cls-ot .tbl-title .mbr-join {
+	color: #0080ff;
+	font-weight: bold;
+	text-align: left;
+	float: left;
+	width: 200px;
+	height: 20px;
+	font-size: 14px;
+}
+
+.cls-ot .tbl-title .err-special {
+	float: right;
+	color: #ff0000;
+	padding-right: 20px;
+}
+
+.cls-ot .tbl-content { /*position:absolute;*/
+	top: 50px;
+	width: 98%;
+	height: 260px;
+	margin-bottom: 20px;
+	border: solid 1px #c0c0c0;
+}
+
+select.slt {
+	width: 262px;
+}
+
+input.subOrg{
+	width: 350px;
+	height: 20px;	
+}	
+
+td.cls-org {
+	height: 30px;
+	vertical-align: bottom;
+}
+
+tr.cls-reason {
+	vertical-align: middle;
+}
+
+label.cls-error {
+	color: #ff0000;
+	display: none;
+}
+
+label.cls-error-right {
+	color: #ff0000;
+	float: right;
+	padding-right: 10px;
+	display: none;
+}
+
+.total-ot {
+	font-weight: bold;
+	color: #00a400;
+	width: 98%;
+	font-size: 14px;
+	height: 20px; # ff0000;
+	display: none;
+}
+
+div.date-ot {
+	width: 100%;
+	height: 32px;
+/* 	margin-top: 35px; */
+/* 	padding-left:16px; */
+}
+
+div.date-ot input {
+	width: 347px;
+	vertical-align: middle;
+	height: 20px;
+}
+
+div.feedback {
+	width: 100%;
+	/* padding-left:16px; */
+}
+
+.fbk-field {
+	-moz-border-radius: 5px 5px 5px 5px;
+	border: 1px solid #00B0F0;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+input.date-req {
+	width: 350px;
+	height:20px;
+}
+
+#tbl-field tbody tr {
+	height: 30px;
+}
+
+fieldset.fbk-field {
+	font-weight: bold;
+	color: #0080FF;
+	padding-right: 10px;
+}
+
+div.tbl-mbr {
+	margin-bottom: 10px;
+}
+
+div.tbl-mbr table {
+	width: 100%;
+}
+
+div.tbl-mbr th {
+	background: url("/ProGate-portlet/images/lmis/bg_line.png") repeat-x
+		scroll left top transparent;
+	border: 1px solid #C0C0C0;
+	height: 25px;
+	text-align: center;
+	color: #ffffff;
+}
+
+div.tbl-mbr tr {
+	text-align: left;
+}
+
+div.tbl-mbr tr td input {
+	width: 30px;
+}
+
+div.tbl-mbr tr td {
+	height: 25px;
+}
+
+div.tbl-mbr tr td.hour input {
+	width: 80%;
+	display: table-cell;
+	text-align: center;
+}
+
+div.tbl-mbr tr td.tdreason input {
+	width: 99%;
+	height: 21px;
+}
+
+div.flt-right {
+	width: 98%;
+	padding-right: 10px;
+	float: right;
+}
+
+.tbl-mbr td {
+	border: 1px solid #C0C0C0;
+}
+.align-right{
+	text-align: right;
+}
+
+.time-align{
+	height: 21px; 
+	text-align: center;	
+}
+.hour-align{
+	height: 21px; 
+	text-align: right !important;	
+}
+/********************* End Overtime Report ************************/
+/*********************phan quyen******************************/
+.cds-container {
+	font-size: 10pt;
+	font-family: Arial;
+	width: 910px;
+}
+
+.cds-container .border-radius {
+	-moz-border-radius: 5px 5px 5px 5px;
+	border: 1px solid #55C9F4;
+	padding-bottom: 20px;
+	margin-left: 5px;
+	padding-right: 12px;
+	margin-top:  -1px;
+}
+
+img.absmiddle {
+	vertical-align: middle;
+	margin: .25em 0;
+}
+
+.table-content tr.highlight {
+	background: url(/ProGate-portlet/images/lmis/hover.png) repeat-x scroll left top transparent;
+	font-weight: normal;
+}
+
+.table-content tr.focus {
+	background: url(/ProGate-portlet/images/lmis/focus.png) repeat-x scroll left top transparent;
+}
+
+.cds-btn-yes,.cds-btn-no {
+	font: 10pt Arial, 'Trebuchet MS', Verdana;
+	background-color: #326AAC;
+	padding: 2px 15px 2px 15px;
+	border: 2px solid #EAEAEA;
+	color: white;
+	cursor: pointer;
+}
+
+div.around-table {
+	border: 1px solid #B8CBEF;/*#55C9F4;*/
+	padding-bottom: 25px;
+	-moz-border-radius: 5px;
+}
+div.around-table1
+{
+	border: 1px solid #B8CBEF;/*#C0C0C0;*/
+	-moz-border-radius: 5px;
+}
+.span-23 {
+	width: 909px;
+}
+
+.column,.span-1,.span-2,.span-3,.span-4,.span-5,.span-6,.span-7,.span-8,.span-9,.span-10,.span-11,.span-12,.span-13,.span-14,.span-15,.span-16,.span-17,.span-18,.span-19,.span-20,.span-21,.span-22,.span-23,.span-24
+	{
+	float: left;
+	margin-right: 10px;
+}
+.span-6 {
+	width: 230px;
+}
+.span-8 {
+	width: 420px;
+}
+.span-9 {
+	width: 410px;
+}
+.span-16 {
+	width: 880px;
+}
+.span-22 {
+	width: 895px;
+}
+.span-23 {
+	width: 910px;
+}
+input.span-23,textarea.span-23 {
+	width: 898px;
+}
+.prepend-1 {
+	padding-left: 20px;
+}
+.prepend-4 {
+	padding-left: 15px;
+}
+.prepend-9 {
+	padding-left: 360px;
+}
+div.prepend-top  {
+	margin-top: 1.5em;
+	padding: 2px;
+}
+.last {
+	margin-right: 0;
+	padding-right: 0;
+	margin-right: 0;
+}
+
+input.span-1,textarea.span-1,input.span-2,textarea.span-2,input.span-3,textarea.span-3,input.span-4,textarea.span-4,input.span-5,textarea.span-5,input.span-6,textarea.span-6,input.span-7,textarea.span-7,input.span-8,textarea.span-8,input.span-9,textarea.span-9,input.span-10,textarea.span-10,input.span-11,textarea.span-11,input.span-12,textarea.span-12,input.span-13,textarea.span-13,input.span-14,textarea.span-14,input.span-15,textarea.span-15,input.span-16,textarea.span-16,input.span-17,textarea.span-17,input.span-18,textarea.span-18,input.span-19,textarea.span-19,input.span-20,textarea.span-20,input.span-21,textarea.span-21,input.span-22,textarea.span-22,input.span-23,textarea.span-23,input.span-24,textarea.span-24
+	{
+	border-left-width: 1px;
+	border-right-width: 1px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+input.span-9,textarea.span-9 {
+	width: 338px;
+}
+
+input.span-16,textarea.span-16 {
+	width: 618px;
+}
+
+.column,.span-1,.span-2,.span-3,.span-4,.span-5,.span-6,.span-7,.span-8,.span-9,.span-10,.span-11,.span-12,.span-13,.span-14,.span-15,.span-16,.span-17,.span-18,.span-19,.span-20,.span-21,.span-22,.span-23,.span-24
+	{
+	float: left;
+	margin-right: 0px;
+}
+input.radio-style{
+	height: 20px;
+	vertical-align: -5px;	
+}
+
+.span-7 {width:293px;}
+.span-14{
+	width: 570px;
+}
+.span-supp-content{
+	width: 630px;	
+}
+.support-title{
+	background: url("/ProGate-portlet/images/lmis/bg_line.png") repeat-x;
+	height: 32px;
+	color: white;
+}
+.support-title th{
+	text-align:center;
+}
+.margin-text{
+	margin-right: 5px;
+}
+.padding-bottom{
+	padding-bottom: 5px;
+}
+/***Bao cao thong ke***/
+.header-of-table th {
+	background: url("/ProGate-portlet/images/lmis/bg_line.png") repeat-x;
+	height: 32px;
+	/*border: 0px solid #ececec;*/
+	color: #FFF;
+	vertical-align: middle;
+	text-align: left;
+}
+
+.wrapper .main {
+	position: relative;
+	border: solid 1px #0080ff;
+	min-width: 800px;
+	height: auto;
+	padding-top: 10px;
+	padding-right: 13px;
+	padding-bottom:10px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+/* 	border-top-left-radius: 0; */
+/* 	border-top-right-radius: 0; */
+/* 	border-bottom-left-radius: 5px; */
+/* 	border-bottom-right-radius: 5px; */
+	
+}
+
+.wrapper .main .content {
+	height: auto;
+	min-width: 750px;
+	width: 99%;
+	margin-left: 5px;
+	margin-right: 15px;
+	left: 5px;
+	border-style: solid;
+	border-color: #c0c0c0;
+	border-width: 1px;
+	background-color: #d7e9fb;
+	font-size: 12px;
+	clear: both;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 5px 5px 5px 5px;
+}
+
+.wrapper .main .table-content-of-report {
+	width: 99%;
+	margin-right: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 3px;
+	padding-bottom: 10px;
+	border: 1px solid #FFF;
+	background-color: #FFF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.main .filter{
+	height:60px;
+	width:100%;
+	padding-top:10px;
+}
+.main .filter .label{
+	position:relative; 
+	float:left; 
+	padding-top:17px; 
+	height:30px;
+	vertical-align:middle;
+	padding-left:10px;
+}
+.main .filter .datetime{
+	position:relative; 
+	float:left; 
+	padding-top:15px; 
+	height:30px;
+	vertical-align:middle;
+	padding-left:10px;
+}
+
+.main .filter .searchwrapper {
+	float:left;
+	width:256px; /*follow your image's size*/
+	position:relative; /*important*/
+	padding-top:15px;
+	padding-left:20px;
+	height:30px;
+}
+.main .filter #search_button{
+	position:relative; 
+	float:left;
+	height:30px;
+	padding-top:15px;
+	vertical-align:left;
+	padding-left:10px;
+}
+
+.filter #search-label{
+	color:#F90;
+}
+.filter input{
+	height:20px; 
+	vertical-align:middle;
+}
+.wrapper .main .table-content-of-report table {
+	border: 1px solid #C0C0C0;
+}
+
+.wrapper .main .table-content-of-report td, th {
+	border: 1px solid #C0C0C0;
+}
+div.report-left{
+	float:left; width : 49%; padding-left:3px
+}
+div.report-right{
+	float:left; width : 49%; padding-left:10px;
+}
+.reportDayOff , .reportDayOffType{
+	color:blue; vertical-align:bottom; padding-top:20px; padding-bottom:5px; font-weight:bold;
+	padding-left: 5px;
+}
+.margin-bottom-table{
+	margin-bottom: 20px;
+}
+.align-center{
+	text-align: center;	
+}
+.span-left{
+	width: 70%;
+	text-indent: 10px;
+}
+.span-right{
+	width: 28%;
+	text-align: right;
+	padding-right: 10px;
+}
+.header-of-table th{
+	padding-left: 10px;
+}
+
+tbody.height-td td{
+	height: 24px;	
+}	
+.lmis-paging{
+	padding-top: 10px;
+	/*padding-bottom: 10px;*/
+}
+.display_block{
+	height: 263px; cursor: pointer; display: block !important; overflow: auto !important;	
+	/*padding-left: 1px;*/
+}
+.border-style{
+	border: 1px solid #ffffff;/*#C0C0C0;*/
+}
+#listUserOfOrg td{
+	/*border: 1px solid #FFFFFF; /*#C0C0C0;*/
+}
+
+/* tooltip styling. by default the element to be styled is .tooltip  */
+.tooltip {
+	display:none;
+	background:transparent url(/tools/img/tooltip/black_arrow.png);
+	font-size:12px;
+	height:70px;
+	width:160px;
+	padding:25px;
+	color:#fff;	
+}
+.default-button-enable{
+	width:80px;
+	background-image: url(<%=request.getContextPath()%>/images/lmis/Dong_Y.png);
+	font:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	font-size:14px;
+	height:28px;
+	vertical-align:middle;
+	font-weight:normal;
+	border:0px;
+	cursor:pointer;
+}
+.default-button-disable{
+	width:80px;
+	background-image: url(<%=request.getContextPath()%>/images/lmis/Dong_Y_Disable.png) ;
+	font:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	font-size:14px;
+	height:28px;
+	vertical-align:middle;
+	font-weight:normal;
+	border:0px;
+	cursor: pointer;
+}
+.not-agree-enable{
+	width:110px;
+	background-image: url(<%=request.getContextPath()%>/images/lmis/Khong_Dong_Y.png) ;
+	font:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	font-size:14px;
+	height:28px;
+	vertical-align:middle;
+	font-weight:normal;
+	border:0px;
+	cursor: pointer;
+}
+.not-agree-disable{
+	width:110px;
+	background-image: url(<%=request.getContextPath()%>/images/lmis/Khong_Dong_Y_Disable.png) ;
+	font:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	font-size:14px;
+	height:28px;
+	vertical-align:middle;
+	font-weight:normal;
+	border:0px;
+	cursor: pointer;
+}
+#backgroundLoading{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	background:#000000;
+	border:1px solid #cecece;
+	z-index:1;
+}
+#backgroundLoading #imgLoad{
+	top:50%;
+	left:50%;
+	margin-left:-100px;
+	margin-top:-50px;
+	position: absolute;
+	width:100px;
+	height:100px;
+}
+
+.ui-dialog-buttonpane{
+	border-top: none !important;
+}
+.ui-dialog-titlebar{
+	background: url(<%=request.getContextPath()%>/images/lmis/configAttendanceInfo/bg_line.png) !important;
+}
+
+
+
+

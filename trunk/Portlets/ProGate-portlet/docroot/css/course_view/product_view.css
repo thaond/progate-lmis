@@ -1,0 +1,16 @@
+.productView-layout {
+  float: left;
+  padding-left: 10px;
+  width: 669px;
+}
+
+.productView-layout a{
+	text-decoration: none;
+}
+
+.productView-paging{
+    width: 100%;
+    float: left;
+    padding-top: 6px;
+	padding-bottom: 8px;
+}

@@ -1,0 +1,218 @@
+#popupOrgRelated {
+	height: 320px;
+	width: 680px;
+	display:none;
+	background:#FFF;
+	z-index:51;
+}
+
+#popupOrgRelated .popupHeader {
+	background:url(<%=request.getContextPath()%>/images/lmis/configAttendanceInfo/popup-bg-line.png) repeat-x top;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	width:100%;
+	height: 36px;
+	color:#FFF;
+	cursor:pointer;
+
+}
+#popupOrgRelated .popupHeader .popHeaderTitle {
+	padding: 6px 0 0 12px;
+}
+
+#popupOrgRelated .popupHeader #popup-close {
+	font-size:18px;
+	line-height:16px;
+	right:6px;
+	top:9px;
+	position:absolute;
+	color:#fff;
+	font-weight:bold;
+	display:block;
+}
+#backgroundPopup{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	background:#000000;
+	border:1px solid #cecece;
+	z-index:30;
+}
+#popupOrgRelated #popupContent {
+	padding-top:-2px;
+	padding-left: 15px;
+	padding-right:20px;
+	width:100%;
+	height:230px;
+	width:650px;
+}
+#popupOrgRelated td{
+border: 1px solid #ececec;
+}
+#popupOrgRelated .header-of-table th{
+       background: url(<%=request.getContextPath()%>/images/lmis/configAttendanceInfo/bg_line.png) repeat-x;  
+       height: 30px; 
+	   color:#FFF;
+	   vertical-align:middle;
+	   text-align: center;
+	   border: 1px solid #ececec;
+}
+
+/* scrollbar of table*/
+.tbodyPopupScroll{
+	display:block;
+	height:195px; overflow:auto; width:648px;
+}
+
+td.text-indent{
+	text-indent: 10px;
+}
+
+
+
+.button input{
+	width:65px;
+	background: url(<%=request.getContextPath()%>/images/lmis/configAttendanceInfo/button-blue.png) no-repeat;
+	font:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	font-size:14px;
+	height:28px;
+	vertical-align:middle;
+	font-weight:bold;
+	border:0px;
+}
+/********end popupOrgRelated****************************************/
+#popupPeopleGetInvolved {
+	height: 320px;
+	width: 680px;
+	display:none;
+	background:#FFF;
+	z-index:50;
+}
+#popupPeopleGetInvolved td{
+border: 1px solid #ececec;
+}
+#popupPeopleGetInvolved .popupHeader {
+	background:url(<%=request.getContextPath()%>/images/lmis/configAttendanceInfo/popup-bg-line.png) repeat-x top;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	width:100%;
+	height: 36px;
+	color:#FFF;
+	cursor:pointer;
+
+}
+#popupPeopleGetInvolved .popupHeader .popHeaderTitle {
+	padding: 6px 0 0 12px;
+}
+
+#popupPeopleGetInvolved .popupHeader #close-popup-staff {
+	font-size:18px;
+	line-height:16px;
+	right:6px;
+	top:9px;
+	position:absolute;
+	color:#fff;
+	font-weight:bold;
+	display:block;
+}
+#popupPeopleGetInvolved #popupContent {
+	padding-top:-2px;
+	padding-left: 15px;
+	padding-right:20px;
+	width:100%;
+	height:230px;
+	width:650px;
+}
+#popupPeopleGetInvolved  .header-of-table th{
+       background: url(<%=request.getContextPath()%>/images/lmis/configAttendanceInfo/bg_line.png) repeat-x;  
+       height: 30px; 
+	   color:#FFF;
+	   vertical-align:middle;
+	   text-align:  center;
+	   border: 1px solid #ececec;
+}
+/***********popupHelp***************/
+#popupHelp {
+	height: 400px;
+	width: 530px;
+	display:none;
+	background:#FFF;
+	z-index:51;
+}
+
+#popupHelp .popupHeader {
+	background:url(<%=request.getContextPath()%>/images/lmis/configAttendanceInfo/popup-bg-line.png) repeat-x top;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	width:100%;
+	height: 36px;
+	color:#FFF;
+	cursor:pointer;
+
+}
+#popupHelp .popupHeader .popHeaderTitle {
+	padding: 6px 0 0 12px;
+}
+
+#popupHelp .popupHeader #popup-close {
+	font-size:18px;
+	line-height:16px;
+	right:6px;
+	top:9px;
+	position:absolute;
+	color:#fff;
+	font-weight:bold;
+	display:block;
+}
+#backgroundPopup{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	background:#000000;
+	border:1px solid #cecece;
+	z-index:30;
+}
+#popupHelp #popupContent {
+	padding-top:-2px;
+	padding-left: 15px;
+	padding-right:20px;
+	width:100%;
+	height:320px;
+	width:650px;
+}
+
+/* scrollbar of table*/
+.tbodyPopupScroll{
+	display:block;
+	height:195px; overflow:auto; width:648px;
+}
+
+td.text-indent{
+	text-indent: 10px;
+}
+
+
+
+.button input{
+	width:65px;
+	background: url(<%=request.getContextPath()%>/images/lmis/configAttendanceInfo/button-blue.png) no-repeat;
+	font:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	font-size:14px;
+	height:28px;
+	vertical-align:middle;
+	font-weight:bold;
+	border:0px;
+}

@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<class name="larion.progate.lmis.model.impl.LmisEmailSettingsImpl" table="lmis_email_settings">
+		<id name="lmisEmailSettingId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_email_settings_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="emailName" column="email_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailDescription" column="email_desciption" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailTemplate" column="email_template" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailType" column="email_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="category" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="toSender" column="to_sender" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="toPm" column="to_pm" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="toBod" column="to_bod" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisEmailSettingDetailsImpl" table="lmis_email_setting_details">
+		<id name="lmisEmailSettingDetailId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_email_setting_details_id_seq</param>
+			</generator>
+		</id>
+		<property name="emailSettingId" column="email_setting_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgRelatedId" column="org_related_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userRelatedId" column="user_related_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisTimeChangeApprovalsImpl" table="lmis_timechange_approvals">
+		<id name="lmisTimeChangeApprovalId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_timechange_approvals_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestId" column="request_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="approvedBy" column="approved_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="approvedAt" column="approved_at" type="org.hibernate.type.TimestampType" />
+		<property name="isApproved" column="is_approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="approvedStatus" column="approved_status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="Reason" column="reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisTimeChangeRequestsImpl" table="lmis_timechange_requests">
+		<id name="lmisTimeChangeRequestId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_timechange_requests_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedBy" column="requested_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="startDate" column="start_date" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" column="end_date" type="org.hibernate.type.TimestampType" />
+		<property name="monSelected" column="mon_selected" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="monStartTime" column="mon_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="monEndTime" column="mon_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="tueSelected" column="tue_selected" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="tueStartTime" column="tue_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="tueEndTime" column="tue_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="wedSelected" column="wed_selected" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="wedStartTime" column="wed_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="wedEndTime" column="wed_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="thuSelected" column="thu_selected" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="thuStartTime" column="thu_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="thuEndTime" column="thu_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="friSelected" column="fri_selected" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="friStartTime" column="fri_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="friEndTime" column="fri_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="satSelected" column="sat_selected" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="satStartTime" column="sat_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="satEndTime" column="sat_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="requestedReason" column="requested_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="requestedStatus" column="requested_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisWorkingTimesImpl" table="lmis_workingtime_settings">
+		<id name="lmisWorkingTimeId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_workingtime_settings_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="sessionName" column="session_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startTime" column="start_time" type="org.hibernate.type.TimestampType" />
+		<property name="endTime" column="end_time" type="org.hibernate.type.TimestampType" />
+		<property name="limitLate" column="limit_late" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="maxLate" column="max_late" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="coefficientLate" column="coefficient_late" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="limitEarly" column="limit_early" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="maxEarly" column="max_early" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="coefficientEarly" column="coefficient_early" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisDayTypesImpl" table="lmis_day_types">
+		<id name="LmisDayTypeId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_day_types_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="Name" column="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="Description" column="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dayType" column="day_type" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisWorkingCalendarsImpl" table="lmis_working_calendars">
+		<id name="lmisWorkingCalendarId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_working_calendars_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="dayValue" column="day_value" type="org.hibernate.type.TimestampType" />
+		<property name="dayType" column="day_type" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isModified" column="is_modified" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="totalWorkingTime" column="total_working_time" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="isRelatedSession" column="is_related_session" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisWorkingCalendarSessionsImpl" table="lmis_working_calendar_sessions">
+		<id name="lmisWorkingCalendarSessionID" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_working_calendar_sessions_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="calendarId" column="calendar_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="sessionId" column="session_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisGeneralSettingsImpl" table="lmis_general_settings">
+		<id name="lmisGeneralSettingId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_general_settings_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="confType" column="conf_type" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="confValue" column="conf_value" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewStaffMappingImpl" table="vw_staff_mapping">
+		<id name="lmisViewStaffMappingId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">organizations_sequence</param>
+			</generator>
+		</id>
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="bodId" column="bod_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="staffUID" column="staff_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pmUID" column="pm_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="bodUID" column="bod_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewStaffRootOrgImpl" table="vw_staff_root_org">
+		<id name="User_id" column="user_id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="bodId" column="bod_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="screenName" column="screenname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailAddress" column="emailaddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewStaffRootOrgFNImpl" table="vw_staff_root_org_fullname">
+		<id name="lmisViewStaffRootOrgFNId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">progate_organizations_staffs_id_seq</param>
+			</generator>
+		</id>
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="bodId" column="bod_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="staffCode" column="staff_code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="scannerCode" column="scanner_code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="screenName" column="screenname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fullName" column="fullname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailAddress" column="emailaddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewStaffRootOrgOrderedImpl" table="vw_staff_root_org_fn_ordered">
+		<id name="lmisViewStaffRootOrgOrderedId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">progate_organizations_staffs_id_seq</param>
+			</generator>
+		</id>
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="bodId" column="bod_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="staffCode" column="staff_code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="scannerCode" column="scanner_code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="screenName" column="screenname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="firstName" column="firstname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" column="lastname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fullName" column="fullname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailAddress" column="emailaddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewTimeChangeReqsImpl" table="vw_timechange_request_user_">
+		<id name="lmisViewTimeChangeReqId" column="id" type="java.lang.Integer">
+			<generator class="com.liferay.counter.service.persistence.IDGenerator" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedBy" column="requested_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="firstName" column="firstname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" column="lastname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fullName" column="fullname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startDate" column="start_date" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" column="end_date" type="org.hibernate.type.TimestampType" />
+		<property name="monStartTime" column="mon_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="monEndTime" column="mon_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="tueStartTime" column="tue_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="tueEndTime" column="tue_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="wedStartTime" column="wed_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="wedEndTime" column="wed_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="thuStartTime" column="thu_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="thuEndTime" column="thu_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="friStartTime" column="fri_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="friEndTime" column="fri_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="satStartTime" column="sat_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="satEndTime" column="sat_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="requestedReason" column="requested_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="requestedStatus" column="requested_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewEmailSettingDetailOrgImpl" table="vw_email_setting_detail_org">
+		<id name="orgRelatedId" column="org_related_id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="id_" column="id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" column="email_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="category" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="toSender" column="to_sender" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="toPm" column="to_pm" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="toBod" column="to_bod" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="emailType" column="email_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailOrg" column="email_org" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewEmailSettingDetailUserImpl" table="vw_email_setting_detail_user">
+		<id name="userRelatedId" column="user_related_id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="id_" column="id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" column="email_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="category" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="toSender" column="to_sender" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="toPm" column="to_pm" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="toBod" column="to_bod" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="emailType" column="email_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailUser" column="email_user" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewWorkingCalendarImpl" table="vw_working_calendar">
+		<id name="lmisViewWorkingCalendarId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="dayValue" column="day_value" type="org.hibernate.type.TimestampType" />
+		<property name="dayType" column="day_type" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isModified" column="is_modified" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="totalWorkingTime" column="total_working_time" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="isRelatedSession" column="is_related_session" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisOverTimeSettingsImpl" table="lmis_overtime_settings">
+		<id name="lmisOverTimeSettingsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_overtime_settings_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="otId" column="ot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="dayType" column="day_type" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="coEfficient" column="coefficient" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisOverTimeTypesImpl" table="lmis_overtime_types">
+		<id name="lmisOverTimeTypesId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_overtime_types_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisDataInputsImpl" table="lmis_data_inputs">
+		<id name="lmisDataInputsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_data_inputs_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="dayValue" column="day_value" type="org.hibernate.type.TimestampType" />
+		<property name="startTime" column="start_time" type="org.hibernate.type.TimestampType" />
+		<property name="endTime" column="end_time" type="org.hibernate.type.TimestampType" />
+		<property name="inputBy" column="input_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="inputAt" column="input_at" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisAttendanceDailyImpl" table="lmis_attendance_daily">
+		<id name="lmisAttendanceDailyId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_attendance_daily_id_seq</param>
+			</generator>
+		</id>
+		<property name="dayValue" column="day_value" type="org.hibernate.type.TimestampType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="absenceValue" column="absence_value" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="isPermissive" column="is_permissive" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="absenceReason" column="absence_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="absenceReasonId" column="absence_reason_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="planStartTime" column="plan_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="realStartTime" column="real_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="timeLate" column="time_late" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeLatePenalty" column="time_late_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeLateFinal" column="time_late_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="planEndTime" column="plan_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="realEndTime" column="real_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="timeEarly" column="time_early" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeEarlyPenalty" column="time_early_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeEarlyFinal" column="time_early_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="overtimeValue" column="overtime_value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="totalWorkingTime" column="total_working_time" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOvertime" column="total_overtime" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOvertimeFinal" column="total_overtime_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalTimeFinal" column="total_time_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="comMent" column="comment" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalOvertimeRequested" column="total_overtime_requested" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="absence_" column="absence" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisOvertimeRequestsImpl" table="lmis_overtime_requests">
+		<id name="lmisOvertimeRequestsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_overtime_requests_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedBy" column="requested_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedAt" column="requested_at" type="org.hibernate.type.TimestampType" />
+		<property name="requestedReason" column="requested_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="requestedStatus" column="requested_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisOvertimeRequestDetailsImpl" table="lmis_overtime_request_details">
+		<id name="lmisOvertimeRequestDetailsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_overtime_request_details_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestId" column="request_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="startTime" column="start_time" type="org.hibernate.type.TimestampType" />
+		<property name="endTime" column="end_time" type="org.hibernate.type.TimestampType" />
+		<property name="requestedReason" column="requested_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="requestedHour" column="requested_hour" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisOvertimeApprovalsImpl" table="lmis_overtime_approvals">
+		<id name="lmisOvertimeApprovalsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_overtime_approvals_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestId" column="request_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportId" column="report_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="approvedBy" column="approved_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="approvedAt" column="approved_at" type="org.hibernate.type.TimestampType" />
+		<property name="isApproved" column="is_approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="approvedStatus" column="approved_status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="reaSon" column="reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisOvertimeMonthlyImpl" table="lmis_overtime_monthly">
+		<id name="lmisOvertimeMonthlyId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_overtime_monthly_id_seq</param>
+			</generator>
+		</id>
+		<property name="monthValue" column="month_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="yearValue" column="year_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="otType" column="ot_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="otId" column="ot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalHour" column="total_hour" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalHourFinal" column="total_hour_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisDataImportsImpl" table="lmis_data_imports">
+		<id name="lmisDataImportsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_imports_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="dateValue" column="date_value" type="org.hibernate.type.TimestampType" />
+		<property name="importType" column="import_type" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="importBy" column="import_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="importAt" column="import_at" type="org.hibernate.type.TimestampType" />
+		<property name="sessionId" column="session_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisDataImportDetailsImpl" table="lmis_data_import_details">
+		<id name="lmisDataImportDetailsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_data_import_details_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="importId" column="import_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="startTime" column="start_time" type="org.hibernate.type.TimestampType" />
+		<property name="endTime" column="end_time" type="org.hibernate.type.TimestampType" />
+		<property name="scannerId" column="scanner_id" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="abSence" column="absence" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="staffName" column="staff_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisOverTimeReportHoursImpl" table="lmis_overtime_report_hours">
+		<id name="lmisOverTimeReportHoursId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_overtime_report_hours_id_seq</param>
+			</generator>
+		</id>
+		<property name="detailId" column="detail_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="otType" column="ot_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="otHour" column="ot_hour" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="otCoefficient" column="ot_coefficient" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="otId" column="ot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisOverTimeReportDetailsImpl" table="lmis_overtime_report_details">
+		<id name="lmisOverTimeReportDetailsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_overtime_report_details_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportId" column="report_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="startTime" column="start_time" type="org.hibernate.type.TimestampType" />
+		<property name="endTime" column="end_time" type="org.hibernate.type.TimestampType" />
+		<property name="totalHour" column="total_hour" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisOverTimeReportsImpl" table="lmis_overtime_reports">
+		<id name="lmisOverTimeReportsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_overtime_reports_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportedBy" column="reported_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportedAt" column="reported_at" type="org.hibernate.type.TimestampType" />
+		<property name="reportedReason" column="reported_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="reportedStatus" column="reported_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="requestId" column="request_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisOvertimeYearlyImpl" table="lmis_overtime_yearly">
+		<id name="lmisOvertimeYearlyId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_overtime_yearly_id_seq</param>
+			</generator>
+		</id>
+		<property name="yearValue" column="year_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="otType" column="ot_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="otId" column="ot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalHour" column="total_hour" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalHourFinal" column="total_hour_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisAbsenceYearlyImpl" table="lmis_absence_yearly">
+		<id name="lmisAbsenceYearlyId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_absence_yearly_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="yearValue" column="year_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="absenceType" column="absence_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="absenceTypeId" column="absence_type_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalDay" column="total_day" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisAbsenceMonthlyImpl" table="lmis_absence_monthly">
+		<id name="lmisAbsenceMonthlyId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_attendance_monthly_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="monthValue" column="month_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="yearValue" column="year_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="absenceType" column="absence_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="absenceTypeId" column="absence_type_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalDay" column="total_day" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDayRequested" column="total_day_requested" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDayApproved" column="total_day_approved" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisAbsenceSettingsImpl" table="lmis_absence_settings">
+		<id name="lmisAbsenceSettingsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_absence_settings_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name_" column="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="desCription" column="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isSubtract" column="is_subtract" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="isModified" column="is_modified" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="absencePermissive" column="absence_permissive" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisAbsenceApprovalsImpl" table="lmis_absence_approvals">
+		<id name="lmisAbsenceApprovalsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_absence_approvals_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestId" column="request_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="approvedBy" column="approved_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="approvedAt" column="approved_at" type="org.hibernate.type.TimestampType" />
+		<property name="isApproved" column="is_approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="approvedStatus" column="approved_status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="reasonApproval" column="reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisAbsenceRequestsImpl" table="lmis_absence_requests">
+		<id name="lmisAbsenceRequestsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_absence_requests_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedBy" column="requested_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="startDate" column="start_date" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" column="end_date" type="org.hibernate.type.TimestampType" />
+		<property name="startSession" column="start_session" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="endSession" column="end_session" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedReason" column="requested_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="absenceType" column="absence_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="absenceTypeId" column="absence_type_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedStatus" column="requested_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewDayTypeOverTimeSettingTypeImpl" table="vw_day_types_overtime_settings_type">
+		<id name="lmisViewDayTypeOverTimeSettingTypeId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="otTypeId" column="ot_type_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="dayType" column="day_type" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="otId" column="ot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="coefficient" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="nameOvertimeType" column="name_overtime_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewRegistrationOvertimeImpl" table="vw_registration_overtime">
+		<id name="lmisViewRegistrationOvertimeId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="otReqsId" column="ot_reqs_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedBy" column="requested_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedAt" column="requested_at" type="org.hibernate.type.TimestampType" />
+		<property name="requestedReason" column="requested_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="requestedStatus" column="requested_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestId" column="request_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="startTime" column="start_time" type="org.hibernate.type.TimestampType" />
+		<property name="endTime" column="end_time" type="org.hibernate.type.TimestampType" />
+		<property name="reasonDetail" column="reason_detail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="requestedHour" column="requested_hour" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="approvedBy" column="approved_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="approvedAt" column="approved_at" type="org.hibernate.type.TimestampType" />
+		<property name="isApproved" column="is_approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="approvedStatus" column="approved_status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="reaSon" column="reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="orgName" column="org_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fullName" column="full_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="firstName" column="first_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="middleName" column="middle_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="LastName" column="last_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="reqFirstName" column="req_first_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="reqMiddleName" column="req_middle_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="reqLastName" column="req_last_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewRegistrationOvertimeaApprovalImpl" table="vw_registration_overtime_approval">
+		<id name="lmisViewRegistrationOvertimeaApprovalId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedBy" column="requested_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedAt" column="requested_at" type="org.hibernate.type.TimestampType" />
+		<property name="requestedReason" column="requested_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="requestedStatus" column="requested_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fullName" column="full_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewOTAppImpl" table="vw_ot_app">
+		<id name="lmisViewOTAppId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedBy" column="requested_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestedAt" column="requested_at" type="org.hibernate.type.TimestampType" />
+		<property name="requestedReason" column="requested_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="requestedStatus" column="requested_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="approvedBy" column="approved_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="approvedAt" column="approved_at" type="org.hibernate.type.TimestampType" />
+		<property name="isApproved" column="is_approved" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="approvedStatus" column="approved_status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="approvedReason" column="reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewReportOvertimeImpl" table="vw_report_overtime">
+		<id name="lmisViewReportOvertimeId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="otRepId" column="ot_rep_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestId" column="request_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportedBy" column="reported_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportedAt" column="reported_at" type="org.hibernate.type.TimestampType" />
+		<property name="reportedReason" column="reported_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="reportedStatus" column="reported_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="reportId" column="report_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalHour" column="total_hour" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="startTime" column="start_time" type="org.hibernate.type.TimestampType" />
+		<property name="endTime" column="end_time" type="org.hibernate.type.TimestampType" />
+		<property name="detailId" column="detail_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="otType" column="ot_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="otHour" column="ot_hour" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="otCoefficient" column="ot_coefficient" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="otId" column="ot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgName" column="org_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fullName" column="full_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="firstName" column="first_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="middleName" column="middle_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="LastName" column="last_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="repFirstName" column="rep_first_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="repLastName" column="rep_last_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="repMiddleName" column="rep_middle_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="regRequestedHour" column="reg_requested_hour" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="regStartTime" column="reg_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="regEndTime" column="reg_end_time" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewAttDailyImpl" table="vw_attendance_daily">
+		<id name="lmisViewAttDailyId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="dayValue" column="day_value" type="org.hibernate.type.TimestampType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="absenceValue" column="absence_value" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="isPermissive" column="is_permissive" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="absenceType" column="absence_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="absenceTypeId" column="absence_type_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="planStartTime" column="plan_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="realStartTime" column="real_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="timeLate" column="time_late" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeLatePenalty" column="time_late_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeLateFinal" column="time_late_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="planEndTime" column="plan_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="realEndTime" column="real_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="timeEarly" column="time_early" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeEarlyPenalty" column="time_early_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeEarlyFinal" column="time_early_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="overTimeValue" column="overtime_value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="totalWorkingTime" column="total_working_time" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOverTime" column="total_overtime" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOverTimeFinal" column="total_overtime_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalTimeFinal" column="total_time_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" column="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalOverTimeRequested" column="total_overtime_requested" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="abSence" column="absence" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="fullName" column="full_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="staffCode" column="staff_code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewReportOvertimeApprovalImpl" table="vw_report_overtime_approval">
+		<id name="lmisViewReportOvertimeApprovalId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestId" column="request_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportedBy" column="reported_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportedAt" column="reported_at" type="org.hibernate.type.TimestampType" />
+		<property name="reportedReason" column="reported_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="reportedStatus" column="reported_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="orgName" column="org_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fullName" column="full_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewDayValueMaxImpl" table="vw_day_value_max">
+		<id name="lmisViewDayValueMaxId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="dayValue" column="day_value" type="org.hibernate.type.TimestampType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewOrgUserRolesImpl" table="vw_org_user_roles">
+		<id name="lmisViewOrgUserRolesId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="roleId" column="role_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgName" column="org_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewAttInfoImpl" table="vw_att_info">
+		<id name="lmisViewAttInfoId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="staffUID" column="staff_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pmUID" column="pm_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="dayValue" column="day_value" type="org.hibernate.type.TimestampType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="absenceValue" column="absence_value" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="isPermissive" column="is_permissive" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="absenceType" column="absence_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="absenceTypeId" column="absence_type_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="planStartTime" column="plan_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="realStartTime" column="real_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="timeLate" column="time_late" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeLatePenalty" column="time_late_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeLateFinal" column="time_late_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="planEndTime" column="plan_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="realEndTime" column="real_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="timeEarly" column="time_early" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeEarlyPenalty" column="time_early_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeEarlyFinal" column="time_early_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="overTimeValue" column="overtime_value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="totalWorkingTime" column="total_working_time" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOverTime" column="total_overtime" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOverTimeFinal" column="total_overtime_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalTimeFinal" column="total_time_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" column="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalOverTimeRequested" column="total_overtime_requested" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="abSence" column="absence" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="fullName" column="full_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="staffCode" column="staff_code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewStaffMappingPmImpl" table="vw_lmis_staff_mapping_pm">
+		<id name="lmisViewStaffMappingPmId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">organizations_sequence</param>
+			</generator>
+		</id>
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="bodId" column="bod_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="staffUID" column="staff_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pmUID" column="pm_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="staffCode" column="staff_code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewAttdanceImpl" table="vw_attendance">
+		<id name="lmisViewAttDailyId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="dayValue" column="day_value" type="org.hibernate.type.TimestampType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="absenceValue" column="absence_value" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="isPermissive" column="is_permissive" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="absenceType" column="absence_type" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="absenceTypeId" column="absence_type_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="planStartTime" column="plan_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="realStartTime" column="real_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="timeLate" column="time_late" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeLatePenalty" column="time_late_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeLateFinal" column="time_late_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="planEndTime" column="plan_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="realEndTime" column="real_end_time" type="org.hibernate.type.TimestampType" />
+		<property name="timeEarly" column="time_early" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeEarlyPenalty" column="time_early_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="timeEarlyFinal" column="time_early_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="overTimeValue" column="overtime_value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="totalWorkingTime" column="total_working_time" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOverTime" column="total_overtime" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOverTimeFinal" column="total_overtime_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalTimeFinal" column="total_time_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" column="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalOverTimeRequested" column="total_overtime_requested" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="abSence" column="absence" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="fullName" column="full_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="staffCode" column="staff_code" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewOvertimeReportImpl" table="vw_overtime_report">
+		<id name="lmisViewOvertimeReportId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestId" column="request_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportedBy" column="reported_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportedAt" column="reported_at" type="org.hibernate.type.TimestampType" />
+		<property name="reportedReason" column="reported_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="reportedStatus" column="reported_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="orgName" column="org_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisViewOvertimeReportDetailImpl" table="vw_overtime_report_detail">
+		<id name="lmisViewReportOvertimeId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="otRepId" column="ot_rep_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="requestId" column="request_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportedBy" column="reported_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reportedAt" column="reported_at" type="org.hibernate.type.TimestampType" />
+		<property name="reportedReason" column="reported_reason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="reportedStatus" column="reported_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalHour" column="total_hour" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="startTime" column="start_time" type="org.hibernate.type.TimestampType" />
+		<property name="endTime" column="end_time" type="org.hibernate.type.TimestampType" />
+		<property name="fullName" column="full_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="reqRequestedHour" column="requested_hour" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="reqStartTime" column="req_start_time" type="org.hibernate.type.TimestampType" />
+		<property name="reqEndTime" column="req_end_time" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisAttMonthlyImpl" table="lmis_attendance_monthly">
+		<id name="lmisAttMonthlysId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_attendance_monthly_id_seq</param>
+			</generator>
+		</id>
+		<property name="yearValue" column="year_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="monthValue" column="month_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalWorkingDay" column="total_working_day" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="numDayAward" column="num_day_award" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDayOff" column="total_dayoff" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDayCompensation" column="total_day_compensation" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDayOffCompensation" column="total_dayoff_compensation" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="startTimeAverage" column="start_time_average" type="org.hibernate.type.TimestampType" />
+		<property name="endTimeAverage" column="end_time_average" type="org.hibernate.type.TimestampType" />
+		<property name="totalTimeLate" column="total_time_late" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalTimeLatePenalty" column="total_time_late_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalTimeEarly" column="total_time_early" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalTimeEarlyPenalty" column="total_time_early_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalDayOvertime" column="total_day_overtime" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalTimeLateFinal" column="total_time_late_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalTimeEarlyFinal" column="total_time_early_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalWorkingTime" column="total_working_time" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOvertime" column="total_overtime" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOvertimeFinal" column="total_overtime_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDayCompensationNextMonth" column="total_day_compensation_next_month" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalTimeFinal" column="total_time_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOvertimeRequested" column="total_overtime_requested" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDayoffPermissive" column="total_dayoff_permissive" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="larion.progate.lmis.model.impl.LmisAttYearlyImpl" table="lmis_attendance_yearly">
+		<id name="lmisAttYearlyId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">lmis_attendance_yearly_id_seq</param>
+			</generator>
+		</id>
+		<property name="yearValue" column="year_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalWorkingDay" column="total_working_day" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalDayAwardPrevYear" column="total_day_award_prev_year" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDayOff" column="total_dayoff" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDayAward" column="total_day_award" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDayRemaining" column="total_day_remaining" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="startTimeAverage" column="start_time_average" type="org.hibernate.type.TimestampType" />
+		<property name="endTimeAverage" column="end_time_average" type="org.hibernate.type.TimestampType" />
+		<property name="totalTimeLate" column="total_time_late" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalTimeLatePenalty" column="total_time_late_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalTimeEarly" column="total_time_early" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalTimeEarlyPenalty" column="total_time_early_penalty" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalDayOvertime" column="total_day_overtime" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalTimeLateFinal" column="total_time_late_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalTimeEarlyFinal" column="total_time_early_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalWorkingTime" column="total_working_time" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOvertime" column="total_overtime" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOvertimeFinal" column="total_overtime_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalTimeFinal" column="total_time_final" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalOvertimeRequested" column="total_overtime_requested" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="totalDayoffPermissive" column="total_dayoff_permissive" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+</hibernate-mapping>
