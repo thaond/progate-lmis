@@ -1,1 +1,0 @@
-<b>Ban khong co quyen</b>
