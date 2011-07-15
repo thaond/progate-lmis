@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<project name="build-common-portlet">
+	<native2ascii encoding="UTF-8" src="docroot/WEB-INF/src" dest="docroot/WEB-INF/classes" includes="**/*.properties"/>
+	
+	<property name="project.dir" value="../.." />
+
+	<import file="../build-common-plugin.xml" />
+</project>
