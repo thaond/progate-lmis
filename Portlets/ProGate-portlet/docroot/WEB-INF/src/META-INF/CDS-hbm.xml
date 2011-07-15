@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<class name="larion.progate.cds.model.impl.CompetencyImpl" table="cds_competencies">
+		<id name="competencyId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_competencies_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="numberOrder" column="number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" column="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.LevelImpl" table="cds_levels">
+		<id name="levelId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_levels_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="competencyId" column="competency_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="numberOrder" column="number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="aliasName" column="alias_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" column="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.SlotImpl" table="cds_slots">
+		<id name="slotId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_slots_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelId" column="level_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="numberOrder" column="number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="aliasName" column="alias_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" column="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsPointsImpl" table="cds_points">
+		<id name="pointId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_points_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pointName" column="point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pointValue" column="point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" column="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsEvaluationPeriodsImpl" table="cds_evaluation_periods">
+		<id name="CdsEvaluationPeriodsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_evaluation_periods_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fromDate" column="from_date" type="org.hibernate.type.TimestampType" />
+		<property name="toDate" column="to_date" type="org.hibernate.type.TimestampType" />
+		<property name="startDate" column="start_date" type="org.hibernate.type.TimestampType" />
+		<property name="endDate" column="end_date" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" column="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+		<property name="isModified" column="is_modified" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsTitlesImpl" table="cds_titles">
+		<id name="cdsTitleId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_titles_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="abbreviation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="numberOrder" column="number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" column="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsTitleCompetenciesImpl" table="cds_title_competencies">
+		<id name="CdsTitleCompetenciesId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_title_competencies_id_seq</param>
+			</generator>
+		</id>
+		<property name="cdsTitleId" column="title_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="competencyId" column="competency_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pointHash" column="point_hash" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pointValue" column="point_value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsMinimumRequirementsImpl" table="cds_minimum_requirements">
+		<id name="minimumRequirementId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_minimum_requirements_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="numberOrder" column="number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" column="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsTitleMinimumRequirementsImpl" table="cds_title_minimum_requirements">
+		<id name="CdsTitleMinimumRequirementsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_title_minimum_requirements_id_seq</param>
+			</generator>
+		</id>
+		<property name="titleId" column="title_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="minimumRequirementId" column="minimum_requirement_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="minimumRequirementLevelId" column="level_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsMinimumRequirementLevelsImpl" table="cds_minimum_requirement_levels">
+		<id name="minimumRequirementLevelId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_minimum_requirement_levels_id_seq</param>
+			</generator>
+		</id>
+		<property name="minimumRequirementId" column="minimum_requirement_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="numberOrder" column="number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdBy" column="created_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="createdAt" column="created_at" type="org.hibernate.type.TimestampType" />
+		<property name="updatedBy" column="updated_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="updatedAt" column="updated_at" type="org.hibernate.type.TimestampType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.ViewListTitleCompetenciesImpl" table="v_title_competencies">
+		<id name="id" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="titleId" column="title_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="titleName" column="title_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="abbreviation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="competencyId" column="competency_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="competencyName" column="competency_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="competencyNumberOrder" column="competency_number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pointHash" column="point_hash" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pointValue" column="point_value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.ViewListTitleMinimumRequirementsImpl" table="v_title_minimum_requirements">
+		<id name="id" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="titleId" column="title_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="titleName" column="title_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="abbreviation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="minimumRequirementId" column="minimum_requirement_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="minimumRequirementName" column="minimum_requirement_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="minimumRequirementNumberOrder" column="minimum_requirement_number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelId" column="level_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="level" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsPAFinalCompeteniesImpl" table="cds_performance_appraisal_final_competencies">
+		<id name="cdsPAFinalCompeteniesId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_performance_appraisal_final_competencies_id_seq</param>
+			</generator>
+		</id>
+		<property name="paId" column="pa_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="competencyId" column="competency_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelRankingHash" column="level_ranking_hash" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelRankingValue" column="level_ranking_value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsPAFinalLevelsImpl" table="cds_performance_appraisal_final_levels">
+		<id name="CdsPAFinalLevelsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_performance_appraisal_final_levels_id_seq</param>
+			</generator>
+		</id>
+		<property name="paId" column="pa_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelId" column="level_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalLevelPoint" column="total_level_point" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isPassed" column="is_passed" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsPAFinalSlotsImpl" table="cds_performance_appraisal_final_slots">
+		<id name="CdsPAFinalSlotsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_performance_appraisal_final_slots_id_seq</param>
+			</generator>
+		</id>
+		<property name="paId" column="pa_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="slotId" column="slot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatus" column="rating_status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="pointName" column="point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="maxPointName" column="max_point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pointValue" column="point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="maxPointValue" column="max_point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isPassed" column="is_passed" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.ViewFinalCompetenciesImpl" table="v_final_competencies">
+		<id name="competencyId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelRankingHash" column="level_ranking_hash" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelRankingValue" column="level_ranking_value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.ViewFinalLevelsImpl" table="v_final_levels">
+		<id name="levelId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="competencyId" column="competency_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalLevelPoint" column="total_level_point" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isPassed" column="is_passed" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.ViewFinalSlotsImpl" table="v_final_slots">
+		<id name="slotId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="levelId" column="level_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatus" column="rating_status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="pointName" column="point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="maxPointName" column="max_point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pointValue" column="point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="maxPointValue" column="max_point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isPassed" column="is_passed" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.ViewFinalTitlesImpl" table="v_cds_performance_appraisal_final_cds_titles">
+		<id name="ViewFinalTitlesId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="titleId" column="title_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="titleName" column="titlename" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.ViewSlotInformationImpl" table="v_slot_information">
+		<id name="viewSlotInformationId" column="id" type="java.lang.Integer">
+			<generator class="assigned" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="slotId" column="slot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pointName" column="point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="maxPointName" column="max_point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isPassed" column="is_passed" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="periodName" column="period_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fromDate" column="from_date" type="org.hibernate.type.TimestampType" />
+		<property name="toDate" column="to_date" type="org.hibernate.type.TimestampType" />
+		<property name="pmName" column="pm_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="orgName" column="org_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsPASlotsImpl" table="cds_performance_appraisal_slots">
+		<id name="CdsPASlotsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_performance_appraisal_slots_id_seq</param>
+			</generator>
+		</id>
+		<property name="paId" column="pa_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id " type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="slotId" column="slot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pmUid" column="pm_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="bodUid" column="bod_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingOrgId" column="rating_org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatus" column="rating_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatusPm" column="rating_status_pm" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatusBod" column="rating_status_bod" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pointName" column="point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="maxPointName" column="max_point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pointValue" column="point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="maxPointValue" column="max_point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isPassed" column="is_passed" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsPALevelsImpl" table="cds_performance_appraisal_levels">
+		<id name="CdsPALevelsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_performance_appraisal_levels_id_seq</param>
+			</generator>
+		</id>
+		<property name="paId" column="pa_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id " type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelId" column="level_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalLevelPoint" column="total_level_point" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isPassed" column="is_passed" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsPACompetenciesImpl" table="cds_performance_appraisal_competencies">
+		<id name="CdsPACompetenciesId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_performance_appraisal_competencies_id_seq</param>
+			</generator>
+		</id>
+		<property name="paId" column="pa_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id " type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="competencyId" column="competency_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelRankingHash" column="level_ranking_hash" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelRankingValue" column="level_ranking_value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.ViewPerformanceAppraisalLevelsImpl" table="v_performance_appraisal_levels">
+		<id name="id" column="view_id" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="levelId" column="level_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="numberOrder" column="number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="competencyId" column="competency_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelName" column="level_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="paId" column="pa_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalLevelPoint" column="total_level_point" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isPassed" column="is_passed" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.ViewPerformanceAppraisalSlotsImpl" table="v_performance_appraisal_slots">
+		<id name="id" column="view_id" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="slotId" column="slot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelId" column="level_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="competencyId" column="competency_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="slotName" column="slot_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="aliasName" column="alias_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="paId" column="pa_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="slotNumberOrder" column="slot_number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelNumberOrder" column="level_number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="competencyNumberOrder" column="competency_number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodName" column="period_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fromDate" column="from_date" type="org.hibernate.type.TimestampType" />
+		<property name="toDate" column="to_date" type="org.hibernate.type.TimestampType" />
+		<property name="bodUid" column="bod_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pmUid" column="pm_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingOrgId" column="rating_org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatus" column="rating_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatusBod" column="rating_status_bod" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatusPm" column="rating_status_pm" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pointName" column="point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="maxPointName" column="max_point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pointValue" column="point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="maxPointValue" column="max_point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isPassed" column="is_passed" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsPerformanceAppraisalSlotRatingImpl" table="cds_performance_appraisal_slot_rating">
+		<id name="CdsPerformanceAppraisalSlotRatingId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_performance_appraisal_slot_rating_id_seq</param>
+			</generator>
+		</id>
+		<property name="paId" column="pa_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="slotId" column="slot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingBy" column="rating_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingAt" column="rating_at" type="org.hibernate.type.TimestampType" />
+		<property name="ratingStatus" column="rating_status" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="userType" column="user_type" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pointName" column="point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pointValue" column="point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingOrgId" column="rating_org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsPerformanceAppraisalSlotCommentsImpl" table="cds_performance_appraisal_slot_comments">
+		<id name="CdsPerformanceAppraisalSlotCommentsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_performance_appraisal_slot_comments_id_seq</param>
+			</generator>
+		</id>
+		<property name="paId" column="pa_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="slotId" column="slot_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="commentBy" column="comment_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="commentAt" column="comment_at" type="org.hibernate.type.TimestampType" />
+		<property name="commentContent" column="comment_content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsPerformanceAppraisalsImpl" table="cds_performance_appraisals">
+		<id name="cdsPerformanceAppraisalsId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_performance_appraisals_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="titleId" column="title_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatus" column="rating_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatusPm" column="rating_status_pm" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatusBod" column="rating_status_bod" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isLocked" column="is_locked" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="pmList" column="pm_list" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="orgList" column="org_list" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bodList" column="bod_list" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="isTitleUp" column="is_title_up" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.ViewEmployeesInProjectsImpl" table="v_employees_in_projects">
+		<id name="id" column="view_id" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="firstName" column="firstname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="middleName" column="middlename" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" column="lastname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="position" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="titleAbbreviation" column="title_abbreviation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="titleName" column="title_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="orgId" column="org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="orgList" column="org_list" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pmList" column="pm_list" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodName" column="period_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fromDate" column="from_date" type="org.hibernate.type.TimestampType" />
+		<property name="toDate" column="to_date" type="org.hibernate.type.TimestampType" />
+		<property name="periodStatus" column="period_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatus" column="rating_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatusPm" column="rating_status_pm" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatusBod" column="rating_status_bod" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="isActive" column="is_active" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="isRemoved" column="is_removed" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="isLocked" column="is_locked" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="beginTime" column="begin_time" type="org.hibernate.type.TimestampType" />
+		<property name="endTime" column="end_time" type="org.hibernate.type.TimestampType" />
+		<property name="isTitleUp" column="is_title_up" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.ViewEmployeesSlotsRatingImpl" table="v_performance_appraisal_slots">
+		<id name="id" column="view_id" type="java.lang.String">
+			<generator class="assigned" />
+		</id>
+		<property name="aliasName" column="alias_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="numberOrder" column="number_order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodName" column="period_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="fromDate" column="from_date" type="org.hibernate.type.TimestampType" />
+		<property name="toDate" column="to_date" type="org.hibernate.type.TimestampType" />
+		<property name="ratingOrgId" column="rating_org_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatus" column="rating_status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatusBod" column="rating_status_bod" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatusPm" column="rating_status_pm" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsSlotStatisticalReportImpl" table="cds_slot_statistical_report">
+		<id name="slotId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_slot_statistical_report_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelId" column="level_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pmId" column="pm_uid" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="firstName" column="firstname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" column="lastname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="ratingStatusPm" column="rating_status_pm" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ratingStatusBod" column="rating_status_bod" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="pointName" column="point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pointValue" column="point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="maxPointName" column="max_point_name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="maxPointValue" column="max_point_value" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="toDate" column="to_date" type="org.hibernate.type.TimestampType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsLevelStatisticalReportImpl" table="cds_level_statistical_report">
+		<id name="levelId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_level_statistical_report_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="competencyId" column="competency_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="totalLevelPoint" column="total_level_point" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsCompetencyStatisticalReportImpl" table="cds_competency_statistical_report">
+		<id name="competencyId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_competency_statistical_report_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelRankingHash" column="level_ranking_hash" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="levelRankingValue" column="level_ranking_value" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsCdpImpl" table="cds_cdp">
+		<id name="CdsCdpId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_cdp_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="periodId" column="period_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="writtenBy" column="written_by" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="writtenAt" column="written_at" type="org.hibernate.type.TimestampType" />
+		<property name="writtenContent" column="written_content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="larion.progate.cds.model.impl.CdsPAFinalImpl" table="cds_performance_appraisal_final">
+		<id name="cdsPAFinalId" column="id" type="java.lang.Integer">
+			<generator class="sequence">
+				<param name="sequence">cds_performance_appraisal_final_id_seq</param>
+			</generator>
+		</id>
+		<property name="rootId" column="root_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="cdsTitleId" column="title_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>

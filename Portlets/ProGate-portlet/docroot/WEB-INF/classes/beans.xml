@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!-- Begin Author: Thien Nguyen Tung -->
+	<bean id="showSlideShowProduct"
+		class="com.larion.progate.organization.product.action.ShowingSlideShowProductAction">
+		<property name="viewName" value="organization/product/showSlideShowProduct" />
+	</bean>
+
+	<bean id="showingProductList"
+		class="com.larion.progate.organization.product.action.ShowingProductListAction">
+		<property name="viewName" value="organization/product/showingProductList" />
+	</bean>
+
+	<bean id="manageOrganization"
+		class="com.larion.progate.organization.management.action.ManagingOrganizationAction">
+		<property name="viewName" value="organization/management/manageOrganization" />
+	</bean>
+
+	<bean id="showOrgMenu"
+		class="com.larion.progate.organization.menu.action.ShowingOrgMenuAction">
+		<property name="viewName" value="organization/menu/view" />
+	</bean>
+
+	<bean id="manageUser"
+		class="com.larion.progate.user.management.action.ManagingUserAction">
+		<property name="viewName" value="user/management/manageUser" />
+	</bean>
+
+	<bean id="showMenu" class="com.larion.progate.menu.action.ShowingMenuAction">
+		<property name="viewName" value="menu/showMenu" />
+	</bean>
+	
+	<bean id="showPortalMenu" class="com.larion.progate.menu.action.ShowingPortalMenuAction">
+		<property name="viewName" value="menu/showPortalMenu" />
+	</bean>
+
+	<bean id="listUserApplication"
+		class="com.larion.progate.user.application.ListingUserApplicationAction">
+		<property name="viewName" value="user/application/listUserApplication" />
+	</bean>
+
+	<bean id="productManagement" class="com.larion.progate.product.action.ManagingProductAction">
+		<property name="viewName" value="product/management/manageProduct" />
+	</bean>
+
+	<bean id="organization.manageUser"
+		class="com.larion.progate.organization.user.management.action.ManagingUserAction">
+		<property name="viewName" value="organization/user/management/manageUser" />
+	</bean>
+	
+	<bean id="showJournal"
+		class="com.larion.progate.journal.action.ShowingJournalAction">
+		<property name="viewName" value="journal/showJournalArticles" />
+	</bean>
+	
+        
+ 
+	<bean id="ebsc"
+		class="com.larion.progate.ebsc.action.ShowingOrganizationListAction">
+		<property name="viewName" value="ebsc/showingOrganizationList" />
+	</bean>
+	<!-- End Author: Thien Nguyen Tung -->
+
+	<!-- BEGIN-CDS -->
+	<bean id="cds.configuration"
+		class="com.larion.progate.cds.configuration.controllers.ConfigCDSTreeController">
+		<property name="viewName"
+			value="cds/configuration/configCDSTree/configCDSTreeScreen" />
+	</bean>
+	<bean id="cds.buildingPermit" class="com.larion.progate.cds.action.BuildingPermitAction">
+		<property name="viewName" value="cds/buildingPermit/buildingPermitScreen" />
+	</bean>
+
+	<bean id="cds.evaluation" class="com.larion.progate.cds.action.EvaluationAction">
+		<property name="viewName" value="cds/evaluation/evaluationScreen" />
+	</bean>
+
+	<bean id="cds.statisticalreport.slot"
+		class="com.larion.progate.cds.action.SlotStatisticalReportAction">
+		<property name="viewName" value="cds/statisticalReport/slotStatisticalReport" />
+	</bean>
+
+	<bean id="cds.statisticalreport.levelMapping"
+		class="com.larion.progate.cds.action.LevelMappingStatisticalReportAction">
+		<property name="viewName"
+			value="cds/statisticalReport/levelMappingStatisticalReport" />
+	</bean>
+	<bean id="cds.statisticalreport.employeeState"
+		class="com.larion.progate.cds.action.EmployeeStateStatisticalReportAction">
+		<property name="viewName"
+			value="cds/statisticalReport/employeeStateStatisticalReport" />
+	</bean>
+
+	<bean id="cds.approval" class="com.larion.progate.cds.action.ApprovalAction">
+		<property name="viewName" value="cds/approval/approvalScreen" />
+	</bean>
+
+	<bean id="cds.cdp.evaluation" class="com.larion.progate.cds.action.CdpEvaluationAction">
+		<property name="viewName" value="cds/cdp/cdpEvaluation/cdpEvaluationScreen" />
+	</bean>
+	<bean id="cds.cdp.approval" class="com.larion.progate.cds.action.CdpApprovalAction">
+		<property name="viewName" value="cds/cdp/cdpApproval/cdpApprovalScreen" />
+	</bean>
+
+	<bean id="cds.inputData" class="com.larion.progate.cds.action.InputDataAction">
+		<property name="viewName" value="cds/inputData/inputDataScreen" />
+	</bean>
+
+	<bean id="cds.support" class="com.larion.progate.cds.action.SupportAction">
+		<property name="viewName" value="cds/support/supportScreen" />
+	</bean>
+        
+         
+	<!-- END-CDS -->
+
+	<!-- Left Menu -->
+	<bean id="showLeftMenu" class="com.larion.progate.leftMenu.view.LeftMenuAction">
+		<property name="viewName" value="left_menu/view" />
+	</bean>
+	<!-- ProGate News -->
+	<bean id="showProGateNews" class="com.larion.progate.news_homepage.action.NewsAction">
+		<property name="viewName" value="news_homepage/view" />
+	</bean>
+	<!-- My Blog -->
+	<bean id="showMyBlog" class="com.larion.progate.myblog.action.MyBlogAction">
+		<property name="viewName" value="myblog/view" />
+	</bean>
+	<bean id="showSubOrg" class="com.larion.progate.sub_org.action.SubOrgAction">
+		<property name="viewName" value="sub_org/view" />
+	</bean>
+	<bean id="showSubOrgPath" class="com.larion.progate.sub_org_path.action.SubOrgPathAction">
+		<property name="viewName" value="sub_org_path/view" />
+	</bean>
+	<bean id="showHierarchyOrg"
+		class="com.larion.progate.hierarchyOrg.action.HierarchyOrgAction">
+		<property name="viewName" value="hierarchyOrg/view" />
+	</bean>
+	<bean id="showForgetPassword"
+		class="com.larion.progate.forgetPassword.action.ForgetPasswordAction">
+		<property name="viewName" value="forgetPassword/view" />
+	</bean>
+	<bean id="showResetPassword"
+		class="com.larion.progate.resetPassword.action.ResetPasswordAction">
+		<property name="viewName" value="resetPassword/view" />
+	</bean>
+	<bean id="showBuildingPage"
+		class="com.larion.progate.buildingPage.action.BuildingPageAction">
+		<property name="viewName" value="buildingPage/view" />
+	</bean>
+	<!-- Product Overview -->
+	<bean id="productList" class="com.larion.progate.productOverview.action.ProductList">
+		<property name="viewName" value="product_overview/productList" />
+	</bean>
+
+	<bean id="newProductList" class="com.larion.progate.productOverview.action.ProductList">
+		<property name="viewName" value="product_overview/productListtByType" />
+	</bean>
+
+	<bean id="sellingProductList" class="com.larion.progate.productOverview.action.ProductList">
+		<property name="viewName" value="product_overview/productListtByType" />
+	</bean>
+
+	<bean id="discountProductList" class="com.larion.progate.productOverview.action.ProductList">
+		<property name="viewName" value="product_overview/productListtByType" />
+	</bean>
+
+	<bean id="productListPaging" class="com.larion.progate.productOverview.action.ProductList">
+		<property name="viewName" value="product_overview/productListtByType" />
+	</bean>
+
+	<bean id="courseList" class="com.larion.progate.productOverview.action.ProductList">
+		<property name="viewName" value="product_overview/productList" />
+	</bean>
+
+	<bean id="examList" class="com.larion.progate.productOverview.action.ProductList">
+		<property name="viewName" value="product_overview/productList" />
+	</bean>
+
+	<bean id="courseListHome" class="com.larion.progate.productOverview.action.ProductList">
+		<property name="viewName" value="product_overview/courseListHome" />
+	</bean>
+
+	<bean id="examListHome" class="com.larion.progate.productOverview.action.ProductList">
+		<property name="viewName" value="product_overview/courseListHome" />
+	</bean>
+	<!-- Org List -->
+	<bean id="showOrgList"
+		class="com.larion.progate.organization.management.action.OrgListAction">
+		<property name="viewName" value="organization/org_list/view" />
+	</bean>
+	<!-- BEGIN LMIS -->
+ 
+	<bean id="lmisChangeWorkingTime" class="com.larion.progate.lmis.action.ChangeWorkingTimeAction">
+		<property name="viewName" value="lmis/attendanceInfo/changeWorkingTime/changeWorkingTime"/>
+	</bean>
+	<bean id="lmisManagerAttendanceInfo" class="com.larion.progate.lmis.action.ManagerAttendanceInfoAction">
+		<property name="viewName" value="lmis/attendanceInfo/managerAttendance/attendanceInfo"/>
+	</bean>
+	<bean id="lmisDayOffInfo" class="com.larion.progate.lmis.action.DayOffInfoAction">
+		<property name="viewName" value="lmis/dayOffInfo/managerDayOff/dayOffInfo"/>
+	</bean>
+	<bean id="lmisSummaryReport" class="com.larion.progate.lmis.action.SummaryReportAction">
+		<property  name="viewName" value="lmis/statisticalReport/summaryReport/summaryReport"/>
+	</bean>
+	
+	<bean id="lmis.ConfigAttendanceInfo" class="com.larion.progate.lmis.action.ConfiguratingAttendanceInfoAction">
+		<property name="viewName" value="lmis/attendanceInfo/configuration/configuration"/>
+	</bean>
+	<bean id="lmis.ConfigOvertime" class="com.larion.progate.lmis.action.ConfiguratingOvertimeAction">
+		<property name="viewName" value="lmis/overtimeManagement/configuration/configuration"/>
+	</bean>
+	<bean id="lmis.RequestOverTime" class="com.larion.progate.lmis.action.RequestOverTimeAction">
+		<property name="viewName" value="lmis/overtimeManagement/request/request"/>
+	</bean>
+	<bean id="lmis.ConfigureDayOff" class="com.larion.progate.lmis.action.ConfiguratingDayOffAction">
+		<property name="viewName" value="lmis/dayOffInfo/configuration/configuration"/>
+	</bean>
+	<bean id="lmis.OvertimeReport" class="com.larion.progate.lmis.action.OvertimeReportAction">
+		<property name="viewName" value="lmis/overtimeManagement/overtimeReport/overtimeReport"/>
+	</bean>
+	<bean id="lmis.Statistic" class="com.larion.progate.lmis.action.StatisticAction">
+		<property name="viewName" value="lmis/statistic"/>
+	</bean>
+	
+	
+	<bean id="lmis.PersonalStatisticalReport" class="com.larion.progate.lmis.action.PersonalStatisticalReportAction">
+		<property name="viewName" value="lmis/statisticalReport/personal/personalStatisticalReport"/>
+	</bean>	
+	<bean id="lmis.ConfigPermission" class="com.larion.progate.lmis.action.ConfigPermissionAction">
+		<property name="viewName" value="lmis/attendanceInfo/configPermission/configPermission"/>
+	</bean>
+	<bean id="lmis.ConfigPermissionForDayOff" class="com.larion.progate.lmis.action.ConfigPermissionForDayOffAction">
+		<property name="viewName" value="lmis/attendanceInfo/configPermission/configPermission"/>
+	</bean>	
+	<bean id="lmis.ConfigPermissionForOvertime" class="com.larion.progate.lmis.action.ConfigPermissionForOvertimeAction">
+		<property name="viewName" value="lmis/attendanceInfo/configPermission/configPermission"/>
+	</bean>
+
+	<bean id="lmis.Support" class="com.larion.progate.lmis.action.SupportAction">
+		<property name="viewName" value="lmis/support"/>
+	</bean>
+	<!-- END LMIS -->
+
+        <bean id="changePassword" class="com.larion.progate.changepassword.action.ChangePasswordAction">
+	    <property name="viewName" value="changePassword/showChangePasswordForm"/>
+	</bean>
+
+</beans>

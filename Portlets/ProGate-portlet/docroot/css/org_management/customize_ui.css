@@ -1,0 +1,60 @@
+#portlet-small-icon-bar_Progate_ManageOrg_WAR_Progate_ManageOrgportlet_INSTANCE_Oz1Q {
+	visibility: hidden;
+}
+
+/** Password Help **/
+#password-help {
+	width:574px !important;
+	height: 322px!important;
+	overflow: auto;
+	display: none;
+	padding:7px;
+}
+
+#password-help li{
+	float:none;
+}
+#password-help ul li{
+	list-style-type:disc;
+}
+.fix_ul{
+	margin-left:0px;margin-top:0px;margin-bottom:0px;list-style-type:disc;
+}
+.fix_ul li{
+	
+}
+
+/** Dialog **/
+.ui-dialog-titlebar {
+	background: url("/ProGate-portlet/images/ui/ui-bg_gloss-wave_55_5c9ccc_500x100.png") repeat-x scroll 50% 50% #5C9CCC!important;
+	
+}
+.ui-dialog {
+    background-color: #FFFFFF;
+    border: 2px solid #828F95;
+    padding: 0;
+}
+.ui-dialog-title {
+	font-size: 18px;
+    font-weight: bold;
+    left: 5px;
+    position: relative;
+    top: 2px;
+}
+
+.ui-dialog-titlebar-close {
+	background: url("/ProGate-portlet/images/close-button.gif")!important;
+}
+
+.ui-dialog-buttonpane {
+	text-align: center!important;
+	right: 0px!important;
+	border-top: 1px solid #D3D3D3;
+	height: 35px;
+}
+
+/** Remove Clear DatePicker **/
+.ui-datepicker-clear {
+	visibility: hidden;
+}
+

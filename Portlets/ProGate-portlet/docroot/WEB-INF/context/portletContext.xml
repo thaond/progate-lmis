@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="cache" value="true" />
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/html/portlet/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean class="org.springframework.web.portlet.handler.ParameterHandlerMapping">
+		<property name="parameterMap">
+			<map>
+				<entry key="handleProduct" value-ref="handlingProductSpringController" />
+				<entry key="handleJournal" value-ref="handlingJournalSpringController" />
+				
+
+				<entry key="handleSlideShowProduct" value-ref="handlingSlideShowProductSpringController" />
+
+				<entry key="checkingValidImage" value-ref="checkingValidImageSpringController" />
+
+				<entry key="manageOrganization" value-ref="managingOrganizationSpringController" />
+
+				<entry key="productManagement" value-ref="commonController" />
+				<entry key="commonController" value-ref="commonController" />
+				<entry key="userManagement" value-ref="commonController" />
+
+				<entry key="showingOrgainzationDetails" value-ref="showingOrgainzationDetailsSpringController" />
+
+				<entry key="addNewsProGate" value-ref="addNewsProGateSpringController" />
+				<entry key="updateNewsProGate" value-ref="updateNewsProGateSpringController" />
+				<entry key="deleteNewsProGate" value-ref="deleteNewsProGateSpringController" />
+				<entry key="showProGateNews" value-ref="commonController" />
+
+				<entry key="addMyBlog" value-ref="addMyBlogSpringController" />
+				<entry key="updateMyBlog" value-ref="updateMyBlogSpringController" />
+				<entry key="deleteMyBlog" value-ref="deleteMyBlogSpringController" />
+				<entry key="showMyBlog" value-ref="commonController" />
+				<entry key="deleteSubOrg" value-ref="deleteSubOrgSpringController" />
+
+				<entry key="decentralizeUser" value-ref="decentralizeUserSpringController" />
+				<entry key="decentralizeUserInOrg" value-ref="decentralizeUserInOrgSpringController" />
+				<entry key="forgetPass" value-ref="ForgetPasswordSpringController" />
+				<entry key="showForgetPassword" value-ref="commonController" />
+
+				<entry key="resetPass" value-ref="ResetPasswordSpringController" />
+				<entry key="showResetPassword" value-ref="commonController" />
+				<entry key="cdsPoints" value-ref="cdsPointsController" />
+				<entry key="evaluationPeriods" value-ref="evaluationPeriodsController" />
+				<entry key="configMinimumReq" value-ref="configMinimumReqController" />
+				<entry key="configTitle" value-ref="configTitleController" /> 
+				<entry key="slotInformation" value-ref="slotInformationController" />
+	<!-- BEGIN LMIS -->
+			
+				<entry key="changeWorkingTimeDetail" value-ref="changeWorkingTimeController" />
+				<entry key="managerChangeWorkingTime" value-ref="managerChangeWorkingTimeController" />		
+				<entry key="otherChangeWorkingTime" value-ref="otherChangeWorkingTimeController" />
+				<entry key="managerAttendanceInfo" value-ref="managerAttendanceInfoController"/>
+				<entry key="otherAttendance" value-ref="otherAttendanceController"/>
+				<entry key="managerDayOffInfo" value-ref="managerDayOffInfoController"/>
+				<entry key="uploadFile" value-ref="uploadFileController"/>
+				<entry key="managerDayOffBy" value-ref="managerDayOffByController"/>
+				<entry key="otherDayOff" value-ref="otherDayOffController"/>
+				<entry key="reportDayOff" value-ref="reportDayOffController"/>
+				<entry key="reportOverTime" value-ref="reportOverTimeController"/>
+				<entry key="reportSummary" value-ref="reportSummaryController"/>
+				<entry key="requestOverTime" value-ref="RequestOverTimeController"/>
+				<entry key="manageRequestOverTime" value-ref="ManageRequestOverTimeController"/>
+				<entry key="otherRequestOverTime" value-ref="OtherRequestOverTimeController"/>
+				<entry key="requestOverTimeDetail" value-ref="RequestOverTimeDetailController"/>
+
+				<!-- END LMIS -->
+			</map>
+		</property>
+		<property name="order" value="0" />
+	</bean>
+
+	<bean id="portletModeHandlerMapping"
+		class="org.springframework.web.portlet.handler.PortletModeHandlerMapping">
+		<property name="portletModeMap">
+			<map>
+				<entry key="view">
+					<ref local="commonController" />
+				</entry>
+			</map>
+		</property>
+		<property name="order" value="1" />
+	</bean>
+
+	<bean id="commonController" class="com.larion.progate.common.controllers.CommonController">
+		<property name="viewName" value="common/view" />
+	</bean>
+
+	<bean id="handlingProductSpringController"
+		class="com.larion.progate.organization.product.controllers.HandlingProductController">
+		<property name="viewName" value="organization/product/handleProduct" />
+	</bean>
+	
+	<bean id="handlingJournalSpringController"
+		class="com.larion.progate.journal.controllers.HandlingJournalController">
+		<property name="viewName" value="journal/handleJournal" />
+	</bean>
+
+	<bean id="handlingSlideShowProductSpringController"
+		class="com.larion.progate.organization.product.controllers.HandlingSlideShowProductController">
+		<property name="viewName" value="organization/product/handleSlideShowProduct" />
+	</bean>
+
+	<bean id="checkingValidImageSpringController"
+		class="com.larion.progate.common.controllers.CheckingValidImageController">
+		<property name="viewName" value="organization/product/handleProduct" />
+	</bean>
+
+	<bean id="addNewsProGateSpringController"
+		class="com.larion.progate.news_homepage.controllers.AddNewsController">
+		<property name="viewName" value="news_homepage/addNewsProGate" />
+	</bean>
+
+	<bean id="updateNewsProGateSpringController"
+		class="com.larion.progate.news_homepage.controllers.UpdateNewsController">
+		<property name="viewName" value="news_homepage/updateNewsProGate" />
+	</bean>
+
+	<bean id="deleteNewsProGateSpringController"
+		class="com.larion.progate.news_homepage.controllers.DeleteNewsController">
+		<property name="viewName" value="news_homepage/updateNewsProGate" />
+	</bean>
+	<bean id="addMyBlogSpringController"
+		class="com.larion.progate.myblog.controllers.AddMyBlogController">
+		<property name="viewName" value="myblog/addMyBlog" />
+	</bean>
+
+	<bean id="updateMyBlogSpringController"
+		class="com.larion.progate.myblog.controllers.UpdateMyBlogController">
+		<property name="viewName" value="myblog/updateMyBlog" />
+	</bean>
+
+	<bean id="deleteMyBlogSpringController"
+		class="com.larion.progate.myblog.controllers.DeleteMyBlogController">
+		<property name="viewName" value="myblog/updateMyBlog" />
+	</bean>
+	<!-- <bean id="fileUploadController" class="com.larion.progate.productservice.controllers.FileUploadController"> 
+		<property name="commandClass" value="examples.FileUploadBean" /> <property 
+		name="formView" value="fileuploadform" /> <property name="successView" value="confirmation" 
+		/> </bean> -->
+
+	<!-- Manage Organization -->
+	<bean id="managingOrganizationSpringController" class="com.larion.progate.common.controllers.CommonController">
+		<property name="viewName" value="organization/management/manageOrganization" />
+	</bean>
+
+	<bean id="showingOrgainzationDetailsSpringController"
+		class="com.larion.progate.ebsc.controllers.ShowingOrgainzationDetailsController">
+		<property name="viewName" value="ebsc/showingOrgainzationDetails"></property>
+	</bean>
+
+	<bean id="deleteSubOrgSpringController"
+		class="com.larion.progate.sub_org.controllers.DeleteSubOrgController">
+		<property name="viewName" value="sub_org/view" />
+	</bean>
+	<bean id="ForgetPasswordSpringController"
+		class="com.larion.progate.forgetPassword.controllers.ForgetPasswordController">
+		<property name="viewName" value="forgetPassword/successPassRecovery" />
+	</bean>
+	<bean id="ResetPasswordSpringController"
+		class="com.larion.progate.resetPassword.controllers.ResetPasswordController">
+		<property name="viewName" value="resetPassword/test" />
+	</bean>
+	<!-- User Management -->
+	<bean id="decentralizeUserSpringController"
+		class="com.larion.progate.user.management.controllers.DecentralizingUserController">
+		<property name="viewName" value="user/management/decentralizeUser" />
+	</bean>
+
+	<bean id="decentralizeUserInOrgSpringController"
+		class="com.larion.progate.organization.user.management.controllers.DecentralizingUserController">
+		<property name="viewName" value="organization/user/management/decentralizeUser" />
+	</bean>
+	<!-- BEGIN-CDS -->
+	<!-- Configuration & Building Permit -->
+	<!-- <bean id="configCDSTreeController"
+		class="com.larion.progate.cds.configuration.controllers.ConfigCDSTreeController">
+		<property name="viewName" value="cds/configuration/configCDSTree/configCDSTreeScreen"></property>
+	</bean> -->
+
+	<bean id="cdsPointsController"
+	class="com.larion.progate.cds.configuration.controllers.CdsPointsController">
+		<property name="viewName" value="cds/configuration/cdsPoints/cdsPointsScreen"></property>
+	</bean>
+	
+	<bean id="evaluationPeriodsController"
+	class="com.larion.progate.cds.configuration.controllers.EvaluationPeriodsController">
+		<property name="viewName" value="cds/configuration/evaluationPeriods/evaluationPeriodsScreen"></property>
+	</bean>
+
+	<bean id="configTitleController"
+	class="com.larion.progate.cds.configuration.controllers.ConfigTitleController">
+		<property name="viewName" value="cds/configuration/configTitle/configTitleScreen"></property>
+	</bean>
+	
+	<bean id="configMinimumReqController"
+	class="com.larion.progate.cds.configuration.controllers.ConfigMinimumReqController">
+		<property name="viewName" value="cds/configuration/configMinimumReq/configMinimumReqScreen"></property>
+	</bean>
+	
+	<bean id="slotInformationController"
+	class="com.larion.progate.cds.evaluation.controllers.SlotInformationController">
+		<property name="viewName" value="cds/evaluation/slotInformationScreen"></property>
+	</bean>
+		<!-- END-CDS -->
+<!-- BEGIN LMIS -->
+
+	<bean id="changeWorkingTimeController"
+		class="com.larion.progate.lmis.controllers.ChangeWorkingTimeController">
+		<property name="viewName" value="lmis/attendanceInfo/changeWorkingTime/changeWorkingTime"></property>
+	</bean>
+	<bean id="managerChangeWorkingTimeController"
+		class="com.larion.progate.lmis.controllers.ManagerChangeWorkingTimeController">
+		<property name="viewName" value="lmis/attendanceInfo/changeWorkingTime/changeWorkingTime"></property>
+	</bean>
+	 
+	<bean id="otherChangeWorkingTimeController"
+		class="com.larion.progate.lmis.controllers.OtherChangeWorkingTimeController">
+		<property name="viewName" value="lmis/attendanceInfo/changeWorkingTime/changeWorkingTime"></property>
+	</bean>
+	
+	<bean id="managerAttendanceInfoController"
+		class="com.larion.progate.lmis.controllers.ManagerAttendanceInfoController">
+		<property name="viewName" value="lmis/attendanceInfo/managerAttendance/attendanceInfo"></property>
+	</bean>
+	
+	<bean id="otherAttendanceController"
+		class="com.larion.progate.lmis.controllers.OtherAttendanceInfoController">
+		<property name="viewName" value="lmis/attendanceInfo/managerAttendance/attendanceInfo"></property>
+	</bean>
+	
+	<bean id="uploadFileController"
+		class="com.larion.progate.lmis.controllers.UploadFileController">
+		<property name="viewName" value="lmis/attendanceInfo/managerAttendance/uploadFileAttendance"></property>
+	</bean>
+	
+	<bean id="managerDayOffInfoController"
+		class="com.larion.progate.lmis.controllers.ManagerDayOffInfoController">
+		<property name="viewName" value="lmis/dayOffInfo/managerDayOff/dayOffInfo"></property>
+	</bean>
+	
+	<bean id="managerDayOffByController"
+		class="com.larion.progate.lmis.controllers.ManagerDayOffByController">
+		<property name="viewName" value="lmis/dayOffInfo/managerDayOff/dayOffInfo"></property>
+	</bean>
+	
+	<bean id="otherDayOffController"
+		class="com.larion.progate.lmis.controllers.OtherDayOffController">
+		<property name="viewName" value="lmis/dayOffInfo/managerDayOff/dayOffInfo"></property>
+	</bean>
+	
+	<bean id="reportDayOffController"
+		class="com.larion.progate.lmis.controllers.ReportDayOffController">
+		<property name="viewName" value="lmis/statisticalReport/summaryReport/summaryReport"></property>
+	</bean>
+	
+	<bean id="reportOverTimeController"
+		class="com.larion.progate.lmis.controllers.ReportOverTimeController">
+		<property name="viewName" value="lmis/statisticalReport/summaryReport/summaryReport"></property>
+	</bean>
+	
+	<bean id="reportSummaryController"
+		class="com.larion.progate.lmis.controllers.ReportSummaryController">
+		<property name="viewName" value="lmis/statisticalReport/summaryReport/summaryReport"></property>
+	</bean>
+
+	<bean id="RequestOverTimeController"
+		class="com.larion.progate.lmis.controllers.RequestOverTimeController">
+		<property name="viewName" value="lmis/overtimeManagement/request/request"></property>
+	</bean>
+	<bean id="ManageRequestOverTimeController"
+		class="com.larion.progate.lmis.controllers.ManageRequestOverTimeController">
+		<property name="viewName" value="lmis/overtimeManagement/request/request"></property>
+	</bean>
+	<bean id="OtherRequestOverTimeController"
+		class="com.larion.progate.lmis.controllers.OtherRequestOverTimeController">
+		<property name="viewName" value="lmis/overtimeManagement/request/request"></property>
+	</bean>
+	<bean id="RequestOverTimeDetailController"
+		class="com.larion.progate.lmis.controllers.RequestOverTimeDetailController">
+		<property name="viewName" value="lmis/overtimeManagement/request/request"></property>
+	</bean>
+
+	<!-- END LMIS -->
+</beans>

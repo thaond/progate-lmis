@@ -1,0 +1,218 @@
+/*css for timepicker*/
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-left:2px; 
+    font: normal normal normal 13px / normal Arial, Helvetica, Verdana, sans-serif;
+}
+.wrapper .main{
+	position:relative;
+	border: solid 1px #0080ff;
+	min-width: 800px;
+	height:auto;
+}
+
+.header {
+    height: 36px;
+	background: url("<%= request.getContextPath () %>/images/attendance_information/bg_line.png") repeat-x scroll left top transparent;
+	text-align: left;
+	position: relative;
+	padding-top:0px;
+}
+
+.wrapper .header-left {
+	background-image: url(<%= request.getContextPath () %>/images/attendance_information/bg-header-left.png);
+	height: 36px;
+	width: 5px;
+	float:left;
+}
+.wrapper .header-right {
+	background-image:url(<%= request.getContextPath () %>/images/attendance_information/bg-header-right.png);
+	background-position:top right;
+	background-repeat:no-repeat;
+	padding-right:3px;
+	height: 36px;
+	width: 5px;
+	float:right;
+	
+}
+.header .title_icon {
+	float:left; 
+    height: 35px;
+    margin-left: 5px;
+}
+
+.header .title_icon #title {
+    padding-left: 0px;
+    font-size: 16px;
+    color: #ffffff;
+    vertical-align: middle;
+    width: 175px;
+    position: relative;
+    top: 10px;
+}
+
+.wrapper .main .upate_icon{
+	float:right;
+	position:relative;
+    height: 30px;
+	vertical-align:middle;
+	width:250px;	
+}
+.wrapper .main .update_icon label{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color: #00F;
+	font-weight:bold;
+}
+.wrapper .main .content{
+	height: auto;
+	min-width: 750px;
+	width: 99%;
+	margin-left:5px;
+	margin-right:5px;
+	left: 5px;
+	border-style: solid;
+	border-color: #c0c0c0;
+	border-width: 1px;
+	background-color: #d7e9fb;
+	font-size: 12px;
+	clear:both;
+}
+
+/************* search  *****************************/
+.main .filter{
+	height:60px;
+	width:100%;
+	padding-top:10px;
+}
+.main .filter .label{
+	position:relative; 
+	float:left; 
+	padding-top:17px; 
+	height:30px;
+	vertical-align:middle;
+	padding-left:10px;
+}
+.main .filter .datetime{
+	position:relative; 
+	float:left; 
+	padding-top:15px; 
+	height:30px;
+	vertical-align:middle;
+	padding-left:10px;
+}
+
+.main .filter .searchwrapper {
+	float:left;
+	width:256px; /*follow your image's size*/
+	position:relative; /*important*/
+	padding-top:15px;
+	padding-left:20px;
+	height:30px;
+	
+}
+.main .filter #search_button{
+	position:relative; 
+	float:left;
+	height:30px;
+	padding-top:10px; 
+	vertical-align:middle;
+	padding-left:10px;
+}
+ 
+.filter .searchwrapper #searchbox {
+	width:241px;
+	height:20px;
+}
+ 
+.filter #search-label{
+	color:#F90;
+}
+.filter input{
+	height:20px; 
+	vertical-align:middle;
+}
+ 
+
+/****************************************************************/
+/***************************/
+.main .table-content{
+        width: 99%;
+		margin-right:5px;
+		padding-left: 5px;
+		padding-right:5px;
+		padding-bottom:10px;
+}
+.header-of-table th{
+       background: url(<%= request.getContextPath()%>/images/attendance_information/bg_line.png) repeat-x;  
+       height: 32px; 
+	   /*border: 0px solid #ececec;*/
+	   color:#FFF;
+	   vertical-align:middle;
+	   text-align: center;
+}
+tr.oddrow{
+	background-color:#ffffff;   
+	border:1px #ececec;
+}
+tr.evenrow{
+    background-color:#d4e2e6 ;
+	border:1px #ececec;
+}
+tr.oddrow:hover{
+	background-color:#9AFEFF;   
+	border:2px #ececec;
+}
+tr.evenrow:hover{
+    background-color:#9AFEFF ;
+	border:2px #ececec;
+}
+/***** style of select tag>*/
+.select-tag{
+	background-color: white transparent;
+	width:100%;
+	color:
+}
+#list-of-status select{
+	width:96%;
+}
+.button input{
+	width:65px;
+	background:url("<%= request.getContextPath () %>/images/attendance_information/QL_Cham_Cong/button-blue.png") no-repeat;
+	font:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	font-size:14px;
+	height:28px;
+	vertical-align:middle;
+	font-weight:bold;
+	border:0px;
+}
+/*************** fake input type=file image************/
+div.fileinputs {
+	position: relative;
+}
+
+div.fakefile {
+	position: absolute;
+	top: -9px;
+	left: -2px;
+	z-index: 2;
+	height: 30px;
+	width: 374px;
+}
+
+input.file {
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+}

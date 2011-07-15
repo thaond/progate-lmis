@@ -1,0 +1,25 @@
+/****************************************************************
+	Repair Question View
+******************************************************************/
+#questionDialog{
+	background: url("/ProGate-portlet/images/support_org_profile/info.gif") no-repeat scroll 16px 16px transparent;
+    color: #000000;
+    display: none;
+    font-size: 13px;
+    height: 120px;
+    margin: 0;
+    padding: 1em 0.75em;
+    text-align: justify;
+}
+.ui-dialog-container #questionDialog{
+	 display: block;
+}
+#questionMessage{
+	padding-left: 45px;
+    padding-right: 40px;
+    padding-top: 5px;
+}
+.folder-news-question .small-image-other{
+	padding: 10px;
+    width: 100%;
+}

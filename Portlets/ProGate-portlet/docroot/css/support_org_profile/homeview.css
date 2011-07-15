@@ -1,0 +1,311 @@
+/*******************************************
+   Home View Support
+************************************************/
+.support-org .container a{
+	text-decoration: none;	
+	color: #30A1BE;
+}
+.support-org .container{
+	width:99%;
+}
+.support-org .add-support-org{
+	float:right;padding:7px;padding-right:0px;
+}
+.support-org .container .support-distance{
+	height:30px;
+	margin-top:10px;
+}
+.support-org .container #f_btn1{
+	background-image: url("<%=request.getContextPath()%>/images/news_org/calendar.gif");
+    background-repeat: no-repeat;
+    border: 1px solid #C5DBEC;
+    color: #2E6E9E;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    width: 15px;
+}
+
+.support-org .container .inputtype{
+	float: left;
+    width: 432px;
+}
+
+.support-org .button-align{
+	margin-left:auto;
+	margin-right:auto;
+	width:599px;
+}
+.support-org .container .inputtext{
+	border: 1px solid #BDC7D8;
+    float: left;
+    font-family: Arial;
+    font-size: 13px;
+    height: 25px;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+.support-org .container .general-news{
+	padding: 30px 0 35px 35px;
+}
+
+.support-org .navigation {
+	border: 1px solid black;
+	float:left;
+	padding:3px;
+	margin:5px;
+}
+.support-org .asset-metadata{
+	
+}
+.support-org .img-subject{
+	border: 1px solid #A5A5A5;
+    height: 100px;
+    margin-right: 8px;
+    margin-top: 2px;
+    width: 145px;
+}
+ 
+.support-org .first-news{
+	float: left;
+    padding: 18px 11px 0 0;
+    width: 610px;
+} 
+.support-org .content-first-news{
+	padding-left: 0;
+	text-align: justify;
+	width: 618px;
+}
+
+
+.support-org .fl{
+	float:left;
+}
+
+.support-org .link-title{	
+    text-decoration: none;
+}
+.support-org .link-title:link{
+  color: black;
+  text-decoration: none;
+}
+.support-org .link-title:visited{
+  color: #960000 !important;
+  text-decoration: none;
+}
+.support-org .link-title:hover{
+  color: orange !important;
+  text-decoration: none;
+}	
+.support-org .link-active:active{
+  color: #336699;
+  text-decoration: none;
+}
+
+.support-org .question-link{	
+    text-decoration: none;
+}
+.support-org .question-link:link{
+  color: black;
+  text-decoration: none;
+}
+.support-org .question-link:visited{
+  color: #960000 !important;
+  text-decoration: none;
+}
+.support-org .question-link:hover{
+  color: orange !important;
+  text-decoration: none;
+}	
+.support-org .question-link:active{
+  color: #336699;
+  text-decoration: none;
+}
+
+.support-org .img-topsubject{
+ 	border: 1px solid #A5A5A5;
+    margin-right: 8px;
+    width: 165px;
+}
+
+.support-org .folder-news{
+  margin-top: 0px;
+  width: 618px;
+}
+
+.support-org .othernews-header{	
+    margin-top: 30px;
+}
+
+.support-org .othernews-title{
+	color: #8A0000;
+    font: bold 17px arial;
+    padding-right: 10px;
+}
+
+.support-org .othernews{
+	width: 643px;
+}
+.support-org .othernews li{
+	background-image: url("<%=request.getContextPath()%>/images/news_org/blue-square.gif");
+    background-position: 0 7px;
+    background-repeat: no-repeat;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    position: relative;
+    width: 676px;
+}
+
+.support-org .link-othernews{
+ 	font: 12px arial;
+ 	text-decoration: none;
+}
+.support-org .link-othernews:link{
+  	color: #336699;
+  	text-decoration: none;
+}
+.support-org .link-othernews:visited{
+ 	color: #960000 !important;
+  	text-decoration: none;
+}
+.support-org .link-othernews:hover{
+  	color: orange !important;
+  	text-decoration: none;
+}	
+.support-org .link-othernews:active{
+  	color: #336699;
+  	text-decoration: none;
+}
+.support-org .container .label {   
+     color: #8A0000;
+    font: bold 17px arial;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    vertical-align: middle;
+    width: 598px;
+}
+.support-org .container .paging{
+    float: right;
+    width: 448px;
+    padding-bottom: 30px;
+}
+.support-org .container #selected {
+    background: none repeat scroll 0 0 #30A1BE;
+    color: #FFFFFF;
+    float: left;
+    padding: 4px 6px;
+    text-decoration: none;
+}
+.support-org .container .paging a {
+    border: 1px solid #C3C3C3;
+    color: #30A1BE;
+    float: left;
+    font: bold 9pt Arial,Helvetica,sans-serif;
+    margin: 0 3px;
+    padding: 4px 6px;
+    text-decoration: none;
+}
+
+.support-org .container .paging a:hover{
+	background: none repeat scroll 0 0 #30A1BE;
+    border: 1px solid #ECECEC;
+    color: #FFFFFF;
+}
+.support-org ul li{
+	list-style-type: none;
+    padding-bottom: 10px;
+}
+.support-org ul{
+	margin: 0 0 0 10px;
+}
+.support-org .container ul li{
+	list-style-type: none;
+    padding-bottom: 20px;
+    text-align: justify;
+    width: 580px;
+}
+.support-org .container .dot-line{
+	border-bottom: 1px dotted gray;
+    float: left;
+    margin-left: 65px;
+    margin-top: -23px;
+    width: 555px;
+}
+.support-org .container .header{
+	font-size: 17px;
+	font-weight:bold;
+	background-color: white;
+	color:#E46C0A;
+}
+.support-org .container .header a{
+	font-size: 16px;
+	font-weight:bold;
+	background-color: white;
+	color:#E46C0A;
+}
+.support-org .container .list-content{
+	margin-top:20px;
+	margin-left:30px;
+	width:96%;
+}
+.support-org .container .inner-dot{
+	border-bottom: 1px dotted gray;margin-left:30px;margin-bottom:20px;
+}
+.support-org .container .chatonline {
+	float: left;
+    margin-top: 10px;
+    width: 150px;
+    margin-bottom:30px;
+}
+.support-org .container .folder-news{
+	margin-bottom: 20px;
+  padding: 0 11px 0 0;
+  text-align: justify;
+  width: 100%;
+}
+
+.support-org .container .folder-news .small-image{
+	margin-left: 20px;
+	margin-bottom: 5px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.support-org .container .folder-news .small-image-other{
+	margin-left: 20px;
+	margin-bottom: 5px;
+    margin-top: 0;
+    padding: 0;
+}
+.support-org .container .folder-news .under-line{
+	margin-left: 35px;
+	margin-bottom: 0px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.support-org .container .folder-news .text-guilde{
+	margin-bottom: 30px;
+    margin-left: 30px;
+    margin-top: 0;
+    padding: 0;
+    text-align:justify;
+    width:95%;
+}
+
+.support-org .container .folder-news-question:hover{
+	background-color:#DBEEF4;
+	background-image: url("<%=request.getContextPath()%>/images/support_org_profile/arrow_move.png");
+    background-position: center left;
+    background-repeat: no-repeat;
+    text-align:justify;
+}
+.support-org .container .folder-news-question {
+    margin-bottom: 10px;
+    padding: 0 11px;
+    text-align: justify;
+    width:97%;
+}
+
