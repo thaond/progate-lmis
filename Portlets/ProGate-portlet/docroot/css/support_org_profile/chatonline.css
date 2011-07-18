@@ -1,0 +1,123 @@
+
+/****************************************************************
+	Add ChatOnline View
+******************************************************************/
+.support-org .row-chat{
+	float: left;
+	margin-bottom: 10px;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+.support-org .row-chat{
+	float: left;
+	margin-bottom: 10px;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+.support-org #yahoo{ 
+    background-image:url("<%=request.getContextPath()%>/images/support_org_profile/yahoo.jpeg");
+    padding-left:15px;
+    background-repeat:no-repeat;
+    background-position: left top;
+}
+.support-org #yahoo1{ 
+    background-image:url("<%=request.getContextPath()%>/images/support_org_profile/yahoo.jpeg");
+    padding-left:15px;
+    background-repeat:no-repeat;
+    background-position: left top;
+}
+.support-org #yahoo2{ 
+    background-image:url("<%=request.getContextPath()%>/images/support_org_profile/yahoo.jpeg");
+    padding-left:15px;
+    background-repeat:no-repeat;
+    background-position: left top;
+}
+.support-org #yahoo3{ 
+    background-image:url("<%=request.getContextPath()%>/images/support_org_profile/yahoo.jpeg");
+    padding-left:15px;
+    background-repeat:no-repeat;
+    background-position: left top;
+}
+.support-org #chatOnlineList{
+	margin-top:30px;
+	margin-left:30px;
+}
+
+.support-org .checkHidden{
+	float:left; 
+	margin-left: 16px;
+	margin-right:5px;
+}
+.support-org .chat-text{
+	border: 1px solid #BDC7D8;
+    font-family: Arial;
+    font-size: 13px;
+    height: 25px;
+    margin-bottom: 2px;
+    margin-left: 15px;
+    margin-top: -3px;
+    width: 220px;
+}
+.support-org .chat-label{
+	font-family: Arial;
+    font-size: 13px;
+    padding-left: 60px;
+    padding-right: 3px;
+    text-align: left;
+    vertical-align: middle;
+    width: 145px;
+}
+.support-org .sample{
+	margin-left: 5px;
+  margin-right: 10px;
+  margin-top: -8px;
+}
+/****************************************************************
+	Repair Chat Online
+******************************************************************/
+#dialogDeleteChatOnline{
+	background: url("/ProGate-portlet/images/support_org_profile/info.gif") no-repeat scroll 16px 16px transparent;
+    color: #000000;
+    display: none;
+    font-size: 13px;
+    height: 120px;
+    margin: 0;
+    padding: 1em 0.75em;
+    text-align: justify;
+}
+.ui-dialog-container #dialogDeleteChatOnline{
+	 display: block;
+}
+
+
+/****************************************************************
+	Chat Online Type
+******************************************************************/
+.desc { color:#6b6b6b;}
+.desc a {color:#0092dd;}
+
+.dropdown dd, .dropdown dt, .dropdown ul { margin:0px; padding:0px; }
+.dropdown dd { position:relative; }
+.dropdown a, .dropdown a:visited {text-decoration:none; outline:none;color:#2200EE;}
+.dropdown a:hover { }
+.dropdown dt a:hover {border: 1px solid #C5DBEC;}
+.dropdown dt a {
+    background: url("arrow.png") no-repeat scroll right center #EAF4FD;
+    border: 1px solid #C5DBEC;
+    display: block;
+    height: 25px;
+    margin-top: 4px;
+    padding-right: 20px;
+    width: 182px;
+}
+.dropdown dt a span {cursor:pointer; display:block; padding: 0 0 15px;width: 205px;}
+.dropdown dd ul { background:#EAF4FD none repeat scroll 0 0; border:1px solid #C5DBEC; color:#C5C0B0; display:none;
+                  left:0px; padding: 0px; position:absolute; top:2px;min-width:202px; list-style:none;width: 30px;}
+.dropdown span.value { display:none;}
+.dropdown dd ul li a { display: block;padding: 10px 0 20px; width: 202px;}
+.dropdown dd ul li a:hover { background-color:#C5DBEC;}
+
+.dropdown img.flag {   border: medium none; margin: 0 10px 0 0;}
+.flagvisibility { display:block;}
+.dropdown dd ul li{list-style-type: none; padding-bottom: 0;}

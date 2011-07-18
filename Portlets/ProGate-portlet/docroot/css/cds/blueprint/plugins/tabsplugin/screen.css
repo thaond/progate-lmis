@@ -1,0 +1,82 @@
+/* -----------------------------------------------------------------------
+
+
+ Tabs Plugin 0.2 for the Blueprint CSS Framework
+ http://blueprintcss.org
+
+   * Copyright (c) 2008-Present. Refer to the main Blueprint license.
+   * See README for instructions on how to use this plugin.
+   * For credits and origins, see AUTHORS.
+
+----------------------------------------------------------------------- */
+
+.tabs { 
+	/*border-bottom:1px solid #ccc;*/
+	height:auto; 
+	/*margin:0 0 .75em 0;*/
+	margin: 0;
+	overflow:auto;
+	padding-left:2px; 
+}
+* html .tabs { height:1%; /* fixing IE 6 */ }
+.tabs li {
+	-moz-border-radius: 7px 7px 0 0;
+  /* border:1px solid #ccc; */
+  border-bottom:none;
+  float:left;
+  line-height:1.5; 
+  list-style-type:none;
+  margin:0 .25em 0 0;
+  padding:0;
+}
+.tabs li a { 
+	-moz-border-radius: 7px 7px 0 0;
+  background: #DCE6F2;
+  border:1px solid #30A1BE;
+  border-bottom:none;
+  color:#222;
+  cursor:pointer;
+  display:block;
+  float:left;
+  /*font-weight:bold;*/
+  padding:.15em 1em;
+}
+.tabs li a.actived { 
+  background:#31859C;
+  border:1px solid #31859C;
+  border-bottom:none;
+  color:#fff;
+  cursor:default;
+  font-weight:bold;
+}
+.tabs li a.disabled { 
+  background-color: rgb(220, 219, 218); 
+  color: gray; 
+  cursor:default; 
+  border: 1px solid lightgray; 
+  border-bottom: none;
+}
+.tabs li a.disabled:focus, .tabs li a.disabled:hover { 
+  /*color:#fafafa;*/
+  background:rgb(220, 219, 218);
+}	
+.tabs li a, .tabs li a:focus, .tabs li a:hover { 
+  text-decoration:none;
+}
+.tabs li a:focus, .tabs li a:hover { 
+  /*color:#555;*/
+  background: #C6D9F1;
+  outline:none;
+  /*font-weight:bold;*/
+}
+.tabs li a.actived:focus, .tabs li a.actived:hover { 
+  /*color:#fafafa;*/
+  background:#31859C;
+}	
+.tabs li.label { 
+	border:none;
+	font-weight:bold;
+	line-height:1.5; 
+	margin-right:.2em; 
+	padding:.25em .33em .25em .33em;
+}

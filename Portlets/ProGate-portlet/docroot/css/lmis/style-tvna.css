@@ -1,0 +1,313 @@
+.event{
+	float:right;
+	padding-right:5px;
+	padding-top:5px;
+}
+
+.back{
+	float:right;
+	
+}
+.downloadEx{
+	float:left;
+	padding-right:10px;
+}
+.tvna_style1{
+	margin-left:0.5em;
+	margin-top:1em;
+	width:200px;
+}
+.tvna_style2{
+	vertical-align: super;
+	color:blue;
+	font-weight: bold;
+	text-decoration: none;
+}
+.styleMar1{
+	float:right;
+	margin-left:0.3em;
+	margin-top:0.1em;
+}
+.styleInput15{
+	margin-left:20px;
+	width: 15em;
+	height:1.5em;
+}
+.styleInput10{
+	margin-left:20px;
+	width: 10em;
+	height:1.5em;
+}
+.styleInput7{
+	margin-left:20px;
+	width: 7em;
+	height:1.5em;
+}
+.styleSTT{
+	width:50px;
+}
+.cls-num-right{
+	padding-right: 10px;
+    text-align: right;
+}
+.filter div{
+	float:left;
+	margin-left:2em;
+}
+.filter{
+	padding-top:10px;
+	padding-bottom:25px;
+}
+
+
+/***************************************Dialog***********/
+#editAttendance, #viewCalDayOff, #message, #deleteComfirm, #sendSuccess{
+	display:none;
+}
+
+
+ /************************end dialog****************/
+#editAttendance table div{
+	padding-top:20px;
+}
+#viewCalDayOff table div{
+	padding-top:20px;
+}
+/********************progress bar*****************/
+/* ProgressBar */
+.ui-progressbar {
+	width: 400px;
+	height: 20px;
+	border: 1px #ccc solid;
+	background: #E0E8F3 url(images/bg.gif) repeat-x scroll 0%;
+	position: relative;
+}
+
+.ui-progressbar-wrap {
+	position: relative;
+	height: auto;
+	width: auto;
+	line-height: 18px;
+	_line-height: 16px;
+}
+
+.ui-progressbar-bar {
+	background: #9CBFEE url(images/progress-bg.gif) repeat-x scroll left
+		center;
+	border-bottom: 1px solid #7FA9E4;
+	border-right: 1px solid #7FA9E4;
+	border-top: 1px solid #D1E4FD;
+	position: absolute;
+}
+
+.ui-progressbar-text {
+	color: #fff;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 11px;
+	font-weight: bold;
+	padding-left: 5px;
+	text-align: center;
+}
+
+.ui-progressbar-text-back {
+	color: #000;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 1px;
+}
+
+.ui-progressbar-disabled {
+	opacity: .5;
+	filter: Alpha(Opacity =   50);
+}
+
+/* custom */
+.ui-progressbar-text.right-align {
+	text-align: right;
+	padding: 0 5px 0 0;
+}
+
+.ui-progressbar-inner-custom {
+	background: url(images/custom-bar.gif) repeat-x scroll left center;
+	border-bottom: 1px solid #EFEFEF;
+	border-right: 0pt none;
+	border-top: 1px solid #BEBEBE;
+	height: 15px;
+}
+
+.bold {
+	color: red !important;
+}
+
+.ui-hidden {
+	left: -10000px;
+	position: absolute;
+	top: -10000px;
+	visibility: hidden;
+}
+
+.filter #view {
+    background: url("/ProGate-portlet/images/lmis/small-button.png") no-repeat scroll left center transparent;
+    border: medium none;
+    color: #FFFFFF;
+    font-size: 10pt;
+    height: 26px;
+    width: 55px;
+}
+
+/* progress bar container */
+.progressbar {
+	border: 1px solid #c0c0c0;
+	color: Black;
+	height: 15px;
+	position: relative;
+	width: 448px;
+	float:right;
+}
+
+.progressbar div.progress {
+	background: url("<%=request.getContextPath()%>/images/lmis/xanh.png");
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	float: left;
+}
+
+.progressbar div.progress .text {
+	color: #ffffff;
+	position: absolute;
+	text-align: center;
+}
+
+.progressbar div.over-progress {
+	background-color: BurlyWood;
+	float: right;
+	width: 0px;
+	height: 100%;
+}
+
+.progressbar div.over-progress  .text {
+	float: right;
+	text-align: center;
+	width: 0px;
+}
+
+.progressbar div.text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+/* progress bar container Phat */
+.progressbarPhat {
+	border: 1px solid #c0c0c0;
+	color: Black;
+	height: 15px;
+	position: relative;
+	width: 100%;
+	float:right;
+}
+
+.progressbarPhat div.progress {
+	background:url("<%=request.getContextPath()%>/images/lmis/xanh.png");
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	float: left;
+}
+
+.progressbarPhat div.progress .text {
+	color: white;
+	position: absolute;
+	text-align: center;
+}
+
+.progressbarPhat div.over-progress {
+	background-color: BurlyWood;
+	float: right;
+	width: 0px;
+	height: 100%;
+}
+
+.progressbarPhat div.over-progress  .text {
+	float: right;
+	text-align: center;
+	width: 0px;
+}
+
+.progressbarPhat div.text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.lmis-paging{
+	padding:0 10px;
+	margin-top:-15px;
+	padding-bottom:5px;
+}
+
+
+.button{
+	float:right;
+	padding-right:14px;
+	margin-top:-13px;
+	height:32px;
+}
+.button input{
+	background-image: url(<%= request.getContextPath () %>/images/lmis/Dong_Y.png) ;
+	background-repeat: no-repeat;
+	font: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 14px;
+	height: 28px;
+	vertical-align: middle;
+	font-weight: normal;
+	border: 0px;
+	cursor: pointer;
+	width:80px;
+}
+.button .btnNotAgree{
+	background-image: url(<%= request.getContextPath () %>/images/lmis/Khong_Dong_Y.png);
+	width:110px;
+}
+
+.messageConfirm {
+	margin: 15px 0 0 20px
+}
+.messageConfirm img {
+	float:left;
+}
+.messageConfirm label{
+	float:right;
+	margin-top:12px;
+	margin-right:30px;
+}
+.ui-dialog-buttonpane {
+	border-top: none !important;
+}
+#backgroundLoading{
+display:none;
+position:fixed;
+_position:absolute; /* hack for internet explorer 6*/
+height:100%;
+width:100%;
+top:0;
+left:0;
+background:#000000;
+border:1px solid #cecece;
+z-index:1;
+}
+#backgroundLoading #imgLoad{
+top:50%;
+left:50%;
+margin-left:-100px;
+margin-top:-50px;
+position: absolute;
+width:100px;
+height:100px;
+}

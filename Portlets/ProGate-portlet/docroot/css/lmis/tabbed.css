@@ -1,0 +1,97 @@
+/* -----------------------------------------------------------------------
+
+
+ nav-tabs Plugin 0.2 for the Blueprint CSS Framework
+ http://blueprintcss.org
+
+   * Copyright (c) 2008-Present. Refer to the main Blueprint license.
+   * See README for instructions on how to use this plugin.
+   * For credits and origins, see AUTHORS.
+
+----------------------------------------------------------------------- */
+
+.nav-tabs { 
+	/*border-bottom:1px solid #ccc;*/
+	height:auto; 
+	/*margin:0 0 .75em 0;*/
+	margin: 0;
+	overflow:auto;
+	padding-left:0; 
+}
+* html .nav-tabs { height:1%; /* fixing IE 6 */ }
+.nav-tabs li {
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+	background-color:#DCE6F2;
+	border:1px solid #0081C2;
+	border-bottom:none;
+	float:left;
+	line-height:2; 
+	list-style-type:none;
+	margin:0 .25em 0 0;
+	padding:0;
+}
+.nav-tabs li a { 
+	-moz-border-radius: 3px 3px 0 0;
+	/*background:#ddd;*/
+  border:0px solid #2465BD;
+  border-bottom:none;
+  color:#222;
+  cursor:pointer;
+  display:block;
+  float:left;
+  /*font-weight:bold;*/
+  padding:.15em 1em;
+}
+.nav-tabs li a.actived { 
+  background:#2465BD;
+  border:1px solid #2465BD;
+  border-bottom:none;
+  color:#fff;
+  cursor:default;
+  font-weight:bold;
+}
+
+.nav-tabs li a, .nav-tabs li a:focus, .nav-tabs li a:hover { 
+  text-decoration:none;
+}
+.nav-tabs li a:focus, .nav-tabs li a:hover { 
+  color:#FFF;
+  background:#2465BD;
+  outline:none;
+  /*font-weight:bold;*/
+}
+.nav-tabs li a.actived:focus, .nav-tabs li a.actived:hover { 
+  color:#fafafa;
+  background:#2465BD;
+}
+
+.nav-tabs li.label { 
+	border:none;
+	font-weight:bold;
+	line-height:1.5; 
+	margin-right:.5em; 
+	padding:.25em .33em .25em .33em;
+}
+.wrap-tabbed {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#000;
+}
+.wrap-tabbed .boder-bottom-tab {
+	/* width:923px;
+	height:8px;
+	background-color:#9FCBEF; */
+}
+.nav-tab li a.disabled {
+  background:none;
+  border:0px ;
+  border-bottom:none;
+}
+.nav-tabs li a.disabled:hover {
+	background: none;
+	color: #000000;
+	cursor:default;
+}
+
