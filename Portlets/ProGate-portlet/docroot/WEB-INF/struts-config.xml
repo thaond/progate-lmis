@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<!-- Action Mappings -->
+	<action-mappings>
+
+		<!-- Organization Management -->
+		<action path="/organization_management/view" forward="portlet.organization.management.view"></action>
+		
+		<action path="/organization_management/org_new" forward="portlet.organization.management.org_new"></action>
+		
+		<action path="/organization_management/org_edit_action"
+			type="com.larion.progate.organization.management.action.OrgEditAction">
+			<forward name="portlet.organization.management.org_edit"
+				path="portlet.organization.management.org_edit"></forward>
+			<forward name="portlet.organization.management.org_management"
+				path="/organization_management/org_management" redirect="true"></forward>
+		</action>
+		
+		<action path="/organization_management/org_management"
+			type="com.larion.progate.organization.management.action.OrgManagementAction">
+			<forward name="portlet.organization.management.org_management"
+				path="portlet.organization.management.org_management"></forward>
+			<forward name="portlet.organization.management.org_edit"
+				path="portlet.organization.management.org_edit"></forward>
+			<forward name="portlet.organization.management.org_new" path="portlet.organization.management.org_new"></forward>
+		</action>
+
+		<!-- Video -->
+		<action path="/video/view" forward="portlet.video.view" />
+		
+		<action path="/video/add" forward="portlet.video.add" />
+		
+		<action path="/video/edit" forward="portlet.video.edit" />
+
+		<action path="/video/add_video" type="com.larion.progate.video.action.AddVideoAction">
+			<forward name="portlet.video.add" path="portlet.video.add" />
+		</action>
+
+		<action path="/video/edit_video" type="com.larion.progate.video.action.EditVideoAction">
+			<forward name="portlet.video.edit" path="portlet.video.edit" />
+		</action>
+
+		<action path="/video/del_video"
+			type="com.larion.progate.video.action.DeleteVideoAction">
+			<forward name="portlet.video.add" path="portlet.video.add" />
+			<forward name="portlet.video.edit" path="portlet.video.edit" />
+		</action>
+
+		<!-- Organization Information -->
+		<action path="/InformationOrg/view" forward="portlet.InformationOrg.view"></action>
+
+		<action path="/InformationOrg/UpdateAction"
+			type="com.larion.progate.informationOrg.action.UpdateAction">
+			<forward name="portlet.InformationOrg.update" path="portlet.InformationOrg.update" />
+		</action>
+
+		<!-- Certification Management -->
+		<action path="/certification_mgmt/view" forward="portlet.certification_mgmt.view" />
+
+		<action path="/certification_mgmt/save_certification"
+			type="com.larion.progate.certificationMgmt.action.SaveCertification">
+			<forward name="portlet.certification_mgmt.view" path="portlet.certification_mgmt.view" />
+		</action>
+
+		<!-- Achievement Management -->
+		<action path="/achievement_mgmt/view" forward="portlet.achievement_mgmt.view" />
+
+		<action path="/achievement_mgmt/save_achievement"
+			type="com.larion.progate.achievementMgmt.action.SaveAchievement">
+			<forward name="portlet.achievement_mgmt.view" path="portlet.achievement_mgmt.view" />
+		</action>
+
+		<!-- Customer Recommendation -->
+		<action path="/customer_rmd/view" forward="portlet.customer_rmd.view" />
+
+		<!-- Partner View -->
+		<action path="/partner_view/view" forward="portlet.partner_view.view" />
+
+		<!-- NewsOrgProfile -->
+		<action path="/NewsOrgProfile/emptyNews" forward="portlet.NewsOrgProfile.emptyNews"></action>
+
+		<action path="/NewsOrgProfile/addNews" forward="portlet.NewsOrgProfile.addNews"></action>
+
+		<action path="/NewsOrgProfile/repairNews" forward="portlet.NewsOrgProfile.repairNews"></action>
+
+		<action path="/NewsOrgProfile/AddNews"
+			type="com.larion.progate.newsorgprofile.action.AddNewsAction">
+			<forward name="portlet.NewsOrgProfile.saveNews" path="portlet.NewsOrgProfile.saveNews" />
+		</action>
+
+		<action path="/NewsOrgProfile/AddNews"
+			type="com.larion.progate.newsorgprofile.action.AddNewsAction">
+			<forward name="portlet.NewsOrgProfile.addNews" path="portlet.NewsOrgProfile.addNews" />
+			<forward name="portlet.NewsOrgProfile.repairNews" path="portlet.NewsOrgProfile.repairNews" />
+		</action>
+
+		<action path="/NewsOrgProfile/DeleteNews"
+			type="com.larion.progate.newsorgprofile.action.DeleteNewsAction">
+			<forward name="portlet.NewsOrgProfile.addNews" path="portlet.NewsOrgProfile.addNews" />
+			<forward name="portlet.NewsOrgProfile.repairNews" path="portlet.NewsOrgProfile.repairNews" />
+		</action>
+
+		<action path="/NewsOrgProfile/RepairNews"
+			type="com.larion.progate.newsorgprofile.action.RepairNewsAction">
+			<forward name="portlet.NewsOrgProfile.repairNews" path="portlet.NewsOrgProfile.repairNews" />
+		</action>
+
+		<!-- Overall -->
+		<action path="/pg_overview/view" forward="portlet.pg_overview.view" />
+		
+		<action path="/pg_overview/edit" forward="portlet.pg_overview.edit" />
+		
+		<action path="/pg_overview/add" forward="portlet.pg_overview.add" />
+
+		<action path="/pg_overview/add_action"
+			type="com.larion.progate.overview.action.AddOverallAction">
+			<forward name="portlet.pg_overview.add" path="portlet.pg_overview.add"></forward>
+
+		</action>
+		
+		<action path="/pg_overview/edit_action"
+			type="com.larion.progate.overview.action.EditOverallAction">
+			<forward name="portlet.pg_overview.edit" path="portlet.pg_overview.edit"></forward>
+
+		</action>
+
+		<!-- Product Service ProGate -->
+		<action path="/product_service_progate/view" forward="portlet.product_service_progate.view" />
+
+		<!-- Product Service Org -->
+		<action path="/product_service_org/view" forward="portlet.product_service_org.view" />
+
+		<!-- Logo & Banner -->
+		<action path="/organization_logo/view" forward="portlet.organization.logo.view" />
+		
+		<action path="/organization_logo/update" forward="portlet.organization.logo.update" />
+		
+		<action path="/organization_logo/uploadSuccess" forward="portlet.organization.logo.uploadSuccess" />
+		
+		<action path="/organization_logo/updateBanner" forward="portlet.organization.logo.updateBanner" />
+		
+		<action path="/organization_logo/upload"
+			type="com.larion.progate.organization.logo.action.UploadAction">
+
+		</action>
+
+		<action path="/organization_logo/delete"
+			type="com.larion.progate.organization.logo.action.DeleteLogoAction">
+
+			<forward name="portlet.organization.logo.deleteSuccess" path="portlet.organization.logo.deleteSuccess" />
+
+		</action>
+
+		<action path="/organization_logo/updateSlogan"
+			type="com.larion.progate.organization.logo.action.UpdateSloganAction">
+
+			<forward name="portlet.organization.logo.deleteSuccess" path="portlet.organization.logo.deleteSuccess" />
+
+		</action>
+
+		<action path="/organization_logo/updateLogo"
+			type="com.larion.progate.organization.logo.action.UpdateLogoAction">
+			<forward name="portlet.organization.logo.view" path="portlet.organization.logo.view" />
+			<forward name="portlet.organization.logo.update" path="portlet.organization.logo.update" />
+			<forward name="portlet.organization.logo.updateBanner" path="portlet.organization.logo.updateBanner" />
+		</action>
+
+		<!-- Develop History -->
+		<action path="/developHistory/view" forward="portlet.developHistory.view" />
+		
+		<action path="/developHistory/edit" forward="portlet.developHistory.edit" />
+		
+		<action path="/developHistory/add" forward="portlet.developHistory.add" />
+
+		<action path="/developHistory/add_action"
+			type="com.larion.progate.developHistory.action.AddDevHistoryAction">
+			<forward name="portlet.developHistory.add" path="portlet.developHistory.add"></forward>
+
+		</action>
+		
+		<action path="/developHistory/edit_action"
+			type="com.larion.progate.developHistory.action.EditDevHistoryAction">
+			<forward name="portlet.developHistory.edit" path="portlet.developHistory.edit"></forward>
+
+		</action>
+
+		<!-- Org Map -->
+		<action path="/orgMap/view" forward="portlet.orgMap.view" />
+		
+		<action path="/orgMap/edit" forward="portlet.orgMap.edit" />
+		
+		<action path="/orgMap/add" forward="portlet.orgMap.add" />
+
+		<action path="/orgMap/add_action" type="com.larion.progate.orgMap.action.AddOrgMapAction">
+			<forward name="portlet.orgMap.add" path="portlet.orgMap.add"></forward>
+
+		</action>
+		
+		<action path="/orgMap/edit_action"
+			type="com.larion.progate.orgMap.action.EditOrgMapAction">
+			<forward name="portlet.orgMap.edit" path="portlet.orgMap.edit"></forward>
+		</action>
+
+		<!-- Customer Org -->
+		<action path="/customer/view" forward="portlet.customer.view" />
+		
+		<action path="/customer/edit" forward="portlet.customer.edit" />
+		
+		<action path="/customer/add" forward="portlet.customer.add" />
+		
+		<action path="/customer/detail" forward="portlet.customer.detail" />
+
+		<action path="/customer/add_action"
+			type="com.larion.progate.customer.action.AddCustomerAction">
+			<forward name="portlet.customer.add" path="portlet.customer.add"></forward>
+		</action>
+		
+		<action path="/customer/edit_action"
+			type="com.larion.progate.customer.action.EditCustomerAction">
+			<forward name="portlet.customer.edit" path="portlet.customer.edit"></forward>
+		</action>
+
+		<action path="/customer/del_action"
+			type="com.larion.progate.customer.action.DeleteCustomerAction">
+			<forward name="portlet.customer.view" path="portlet.customer.view"></forward>
+		</action>
+
+		<!-- Org Support -->
+		<action path="/SupportOrgProfile/view" forward="SupportOrgProfile.view"></action>
+
+		<action path="/SupportOrgProfile/config" forward="SupportOrgProfile.config"></action>
+
+		<action path="/SupportOrgProfile/guilde" forward="SupportOrgProfile.guilde"></action>
+
+		<action path="/SupportOrgProfile/repairGuilde" forward="portlet.SupportOrgProfile.repairGuilde"></action>
+
+		<action path="/SupportOrgProfile/addGuilde" forward="portlet.SupportOrgProfile.addGuilde"></action>
+
+		<action path="/SupportOrgProfile/addQuestion" forward="portlet.SupportOrgProfile.addQuestion"></action>
+
+		<action path="/SupportOrgProfile/repairQuestion" forward="portlet.SupportOrgProfile.repairQuestion"></action>
+
+		<action path="/SupportOrgProfile/addLibrary" forward="portlet.SupportOrgProfile.addLibrary"></action>
+
+		<action path="/SupportOrgProfile/repairLibrary" forward="portlet.SupportOrgProfile.repairLibrary"></action>
+
+		<action path="/SupportOrgProfile/addChatOnline" forward="portlet.SupportOrgProfile.addChatOnline"></action>
+
+		<action path="/SupportOrgProfile/repairChatOnline" forward="portlet.SupportOrgProfile.repairChatOnline"></action>
+
+		<!-- Guidle Support Org Profile -->
+		<action path="/SupportOrgProfile/AddGuildeAction"
+			type="com.larion.progate.supportorgprofile.action.AddGuildeAction">
+			<forward name="portlet.SupportOrgProfile.addGuilde" path="portlet.SupportOrgProfile.addGuilde"></forward>
+			<forward name="portlet.SupportOrgProfile.repairGuilde" path="portlet.SupportOrgProfile.repairGuilde"></forward>
+		</action>
+
+		<action path="/SupportOrgProfile/DeleteGuildeAction"
+			type="com.larion.progate.supportorgprofile.action.DeleteGuildeAction">
+			<forward name="portlet.SupportOrgProfile.addGuilde" path="portlet.SupportOrgProfile.addGuilde"></forward>
+			<forward name="portlet.SupportOrgProfile.repairGuilde" path="portlet.SupportOrgProfile.repairGuilde"></forward>
+		</action>
+
+		<action path="/SupportOrgProfile/RepairGuildeAction"
+			type="com.larion.progate.supportorgprofile.action.RepairGuildeAction">
+			<forward name="portlet.SupportOrgProfile.repairGuilde" path="portlet.SupportOrgProfile.repairGuilde"></forward>
+		</action>
+
+		<!-- Question Support Org Profile -->
+		<action path="/SupportOrgProfile/AddQuestionAction"
+			type="com.larion.progate.supportorgprofile.action.AddQuestionAction">
+			<forward name="portlet.SupportOrgProfile.addQuestion" path="portlet.SupportOrgProfile.addQuestion"></forward>
+			<forward name="portlet.SupportOrgProfile.repairQuestion"
+				path="portlet.SupportOrgProfile.repairQuestion"></forward>
+		</action>
+
+		<action path="/SupportOrgProfile/DeleteQuestionAction"
+			type="com.larion.progate.supportorgprofile.action.DeleteQuestionAction">
+			<forward name="portlet.SupportOrgProfile.addQuestion" path="portlet.SupportOrgProfile.addQuestion"></forward>
+			<forward name="portlet.SupportOrgProfile.repairQuestion"
+				path="portlet.SupportOrgProfile.repairQuestion"></forward>
+		</action>
+
+		<action path="/SupportOrgProfile/RepairQuestionAction"
+			type="com.larion.progate.supportorgprofile.action.RepairQuestionAction">
+			<forward name="portlet.SupportOrgProfile.repairQuestion"
+				path="portlet.SupportOrgProfile.repairQuestion"></forward>
+		</action>
+
+		<!-- Video Support Org Profile -->
+		<action path="/SupportOrgProfile/AddLibraryAction"
+			type="com.larion.progate.supportorgprofile.action.AddLibraryAction">
+			<forward name="portlet.SupportOrgProfile.addLibrary" path="portlet.SupportOrgProfile.addLibrary"></forward>
+			<forward name="portlet.SupportOrgProfile.repairLibrary" path="portlet.SupportOrgProfile.repairLibrary"></forward>
+		</action>
+
+		<action path="/SupportOrgProfile/DeleteLibraryAction"
+			type="com.larion.progate.supportorgprofile.action.DeleteLibraryAction">
+			<forward name="portlet.SupportOrgProfile.addLibrary" path="portlet.SupportOrgProfile.addLibrary"></forward>
+			<forward name="portlet.SupportOrgProfile.repairLibrary" path="portlet.SupportOrgProfile.repairLibrary"></forward>
+		</action>
+
+		<action path="/SupportOrgProfile/RepairLibraryAction"
+			type="com.larion.progate.supportorgprofile.action.RepairLibraryAction">
+			<forward name="portlet.SupportOrgProfile.repairLibrary" path="portlet.SupportOrgProfile.repairLibrary"></forward>
+			<forward name="portlet.SupportOrgProfile.addLibrary" path="portlet.SupportOrgProfile.addLibrary"></forward>
+		</action>
+
+		<!-- ChatOnline Support Org Profile -->
+		<action path="/SupportOrgProfile/AddChatOnlineAction"
+			type="com.larion.progate.supportorgprofile.action.AddChatOnlineAction">
+			<forward name="portlet.SupportOrgProfile.addChatOnline" path="portlet.SupportOrgProfile.addChatOnline"></forward>
+			<forward name="portlet.SupportOrgProfile.repairChatOnline"
+				path="portlet.SupportOrgProfile.repairChatOnline"></forward>
+		</action>
+
+		<action path="/SupportOrgProfile/DeleteChatOnlineAction"
+			type="com.larion.progate.supportorgprofile.action.DeleteChatOnlineAction">
+			<forward name="portlet.SupportOrgProfile.addChatOnline" path="portlet.SupportOrgProfile.addChatOnline"></forward>
+			<forward name="portlet.SupportOrgProfile.repairChatOnline"
+				path="portlet.SupportOrgProfile.repairChatOnline"></forward>
+		</action>
+
+		<action path="/SupportOrgProfile/RepairChatOnlineAction"
+			type="com.larion.progate.supportorgprofile.action.RepairChatOnlineAction">
+			<forward name="portlet.SupportOrgProfile.repairChatOnline"
+				path="portlet.SupportOrgProfile.repairChatOnline"></forward>
+		</action>
+
+	    <!-- New Manage Org -->
+	    <action path="/NewManageOrg/org_list" forward="portlet.NewManageOrg.org_list"></action>
+	    <action path="/NewManageOrg/org_create" forward="portlet.NewManageOrg.org_create"></action>
+	    <action path="/NewManageOrg/org_manage" type="com.larion.progate.organization.management.action.NewManagingOrgAction">
+	    	<forward name="portlet.NewManageOrg.org_create" path="portlet.NewManageOrg.org_create"></forward>
+	    </action>
+	    
+	    <!-- Sign Up  -->
+		  <action path="/SignUp/view" forward="portlet.SignUp.view"></action>
+		  <action path="/SignUp/SignUpAction" type="com.larion.progate.sign_up.action.SignUpAction">
+			  <forward name="portlet.SignUp.view" path="portlet.SignUp.view"></forward>
+			  <forward name="portlet.SignUp.success" path="portlet.SignUp.success"></forward>
+		  </action>
+		  <action path="/SignUp/ReSendMailAction" type="com.larion.progate.sign_up.action.ReSendMailAction">
+			  <forward name="portlet.ReSendMail.view" path="portlet.ReSendMail.view"></forward>
+			  <forward name="portlet.ReSendMail.success" path="portlet.ReSendMail.success"></forward>
+		  </action>
+		  
+		  <!--  Login -->
+		<action path="/login/view" forward="portlet.login.view"/>
+		
+		<action path="/login/login" type="com.larion.progate.login.action.LoginAction">
+			<forward name="portlet.login.view" path="portlet.login.view" />
+		</action>
+		
+		<action path="/login/pass_recovery" forward="portlet.login.PassRecovery" />
+		
+		<action path="/login/validate_recovery" type="com.larion.progate.login.action.PassRecoveryAction">
+			<forward name="portlet.login.PassRecovery" path="portlet.login.PassRecovery"/>
+			<forward name="portlet.login.SuccessRecovery" path="portlet.login.PassRecovery"></forward>
+		</action>
+		
+		<action path="/login/go_home" forward="portlet.login.view" />
+		
+	
+	</action-mappings>
+
+	<!-- Message Resources -->
+
+	<message-resources parameter="content.Language" />
+	<message-resources parameter="Resource_vn" key="myResources"
+		null="true"></message-resources>
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+		<set-property property="moduleAware" value="true" />
+		<set-property property="definitions-parser-validate"
+			value="true" />
+	</plug-in>
+</struts-config>

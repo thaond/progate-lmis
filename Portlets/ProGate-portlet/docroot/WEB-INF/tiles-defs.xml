@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	<!-- Common Template -->
+	<definition name="portlet.common" path="/portlet/common/template.jsp"></definition>
+
+	<!-- Organization Management -->
+	<definition name="portlet.organization.management.view"
+		extends="portlet.common">
+		<put name="portlet_content" value="/portlet/organization/management/view.jsp"></put>
+	</definition>
+	
+	<definition name="portlet.organization.management.org_management"
+		extends="portlet.common">
+		<put name="portlet_content" value="/portlet/organization/management/org_management.jsp"></put>
+	</definition>
+	
+	<definition name="portlet.organization.management.org_new"
+		extends="portlet.common">
+		<put name="portlet_content" value="/portlet/organization/management/org_new.jsp"></put>
+	</definition>
+	
+	<definition name="portlet.organization.management.org_edit"
+		extends="portlet.common">
+		<put name="portlet_content" value="/portlet/organization/management/org_edit.jsp"></put>
+	</definition>
+
+	<!-- Video -->
+	<definition name="portlet.video" path="/portlet/video/template.jsp" />
+
+	<definition name="portlet.video.view" extends="portlet.video">
+		<put name="portlet_content" value="/portlet/video/view.jsp" />
+	</definition>
+	
+	<definition name="portlet.video.add" extends="portlet.video">
+		<put name="portlet_content" value="/portlet/video/include/addVideo.jsp" />
+	</definition>
+	
+	<definition name="portlet.video.edit" extends="portlet.video">
+		<put name="portlet_content" value="/portlet/video/include/editVideo.jsp" />
+	</definition>
+
+	<!-- Organization Information -->
+	<definition name="portlet.InformationOrg" path="/portlet/InformationOrg/template.jsp"></definition>
+
+	<definition name="portlet.InformationOrg.view" extends="portlet.InformationOrg">
+		<put name="portlet_content" value="/portlet/InformationOrg/view.jsp"></put>
+	</definition>
+
+	<definition name="portlet.InformationOrg.update" extends="portlet.InformationOrg">
+		<put name="portlet_content" value="/portlet/InformationOrg/saveInformation.jsp"></put>
+	</definition>
+
+	<!-- Certification Management -->
+	<definition name="portlet.certification_mgmt" path="/portlet/certification_mgmt/template.jsp" />
+
+	<definition name="portlet.certification_mgmt.view" extends="portlet.certification_mgmt">
+		<put name="portlet_content" value="/portlet/certification_mgmt/view.jsp" />
+	</definition>
+
+	<!-- Achievement Management -->
+	<definition name="portlet.achievement_mgmt" path="/portlet/achievement_mgmt/template.jsp" />
+
+	<definition name="portlet.achievement_mgmt.view" extends="portlet.achievement_mgmt">
+		<put name="portlet_content" value="/portlet/achievement_mgmt/view.jsp" />
+	</definition>
+
+	<!-- Customer Recommendation -->
+	<definition name="portlet.customer_rmd" path="/portlet/customer_rmd/template.jsp" />
+
+	<definition name="portlet.customer_rmd.view" extends="portlet.customer_rmd">
+		<put name="portlet_content" value="/portlet/customer_rmd/view.jsp" />
+	</definition>
+
+	<!-- Partner View -->
+	<definition name="portlet.partner_view" path="/portlet/partner_view/template.jsp" />
+
+	<definition name="portlet.partner_view.view" extends="portlet.partner_view">
+		<put name="portlet_content" value="/portlet/partner_view/view.jsp" />
+	</definition>
+
+	<!-- Certification Management -->
+	<definition name="portlet.NewsOrgProfile" path="/portlet/NewsOrgProfile/template.jsp"></definition>
+
+	<definition name="portlet.NewsOrgProfile.addNews" extends="portlet.NewsOrgProfile">
+		<put name="portlet_content" value="/portlet/NewsOrgProfile/addNews.jsp"></put>
+	</definition>
+
+	<definition name="portlet.NewsOrgProfile.repairNews"
+		extends="portlet.NewsOrgProfile">
+		<put name="portlet_content" value="/portlet/NewsOrgProfile/repairNews.jsp"></put>
+	</definition>
+
+	<definition name="portlet.NewsOrgProfile.repairNews"
+		extends="portlet.NewsOrgProfile">
+		<put name="portlet_content" value="/portlet/NewsOrgProfile/repairNews.jsp"></put>
+	</definition>
+
+	<definition name="portlet.NewsOrgProfile.emptyNews" extends="portlet.NewsOrgProfile">
+		<put name="portlet_content" value="/portlet/NewsOrgProfile/emptyNews.jsp"></put>
+	</definition>
+
+	<definition name="portlet.NewsOrgProfile.saveNews" extends="portlet.NewsOrgProfile">
+		<put name="portlet_content" value="/portlet/NewsOrgProfile/saveNews.jsp"></put>
+	</definition>
+
+	<!-- Overall -->
+	<definition name="portlet.pg_overview" path="/portlet/pg_overview/template.jsp" />
+
+	<definition name="portlet.pg_overview.view" extends="portlet.pg_overview">
+		<put name="portlet_content" value="/portlet/pg_overview/view.jsp" />
+	</definition>
+	
+	<definition name="portlet.pg_overview.edit" extends="portlet.pg_overview">
+		<put name="portlet_content" value="/portlet/pg_overview/editOverview.jsp" />
+	</definition>
+
+	<definition name="portlet.pg_overview.add" extends="portlet.pg_overview">
+		<put name="portlet_content" value="/portlet/pg_overview/addOverview.jsp" />
+	</definition>
+
+
+	<!-- Product Service ProGate -->
+	<definition name="portlet.product_service_progate"
+		path="/portlet/product_service_progate/template.jsp" />
+
+	<definition name="portlet.product_service_progate.view"
+		extends="portlet.product_service_progate">
+		<put name="portlet_content" value="/portlet/product_service_progate/view.jsp" />
+	</definition>
+
+	<!-- Product Service Org -->
+	<definition name="portlet.product_service_org" path="/portlet/product_service_org/template.jsp" />
+
+	<definition name="portlet.product_service_org.view" extends="portlet.product_service_org">
+		<put name="portlet_content" value="/portlet/product_service_org/view.jsp" />
+	</definition>
+
+	<!-- Logo & Banner -->
+	<definition name="portlet.organization.logo" path="/portlet/organization_logo/template.jsp" />
+	
+	<definition name="portlet.organization.logo.view" extends="portlet.organization.logo">
+		<put name="portlet_content" value="/portlet/organization_logo/view.jsp" />
+	</definition>
+	
+	<definition name="portlet.organization.logo.update" extends="portlet.organization.logo">
+		<put name="portlet_content" value="/portlet/organization_logo/update.jsp" />
+	</definition>
+	
+	<definition name="portlet.organization.logo.uploadSuccess"
+		extends="portlet.organization.logo">
+		<put name="portlet_content" value="/portlet/organization_logo/uploadSuccess.jsp" />
+	</definition>
+
+	<definition name="portlet.organization.logo.deleteSuccess"
+		extends="portlet.organization.logo">
+		<put name="portlet_content" value="/portlet/organization_logo/deleteSuccess.jsp" />
+	</definition>
+
+	<definition name="portlet.organization.logo.updateBanner"
+		extends="portlet.organization.logo">
+		<put name="portlet_content" value="/portlet/organization_logo/updateBanner.jsp" />
+	</definition>
+	
+	<!-- Develop History -->
+	<definition name="portlet.developHistory" path="/portlet/developHistory/template.jsp" />
+
+	<definition name="portlet.developHistory.view" extends="portlet.developHistory">
+		<put name="portlet_content" value="/portlet/developHistory/view.jsp" />
+	</definition>
+
+	<definition name="portlet.developHistory.edit" extends="portlet.developHistory">
+		<put name="portlet_content" value="/portlet/developHistory/editHistory.jsp" />
+	</definition>
+
+	<definition name="portlet.developHistory.add" extends="portlet.developHistory">
+		<put name="portlet_content" value="/portlet/developHistory/addHistory.jsp" />
+	</definition>
+
+	<!-- Org Map -->
+	<definition name="portlet.orgMap" path="/portlet/orgMap/template.jsp" />
+
+	<definition name="portlet.orgMap.view" extends="portlet.orgMap">
+		<put name="portlet_content" value="/portlet/orgMap/view.jsp" />
+	</definition>
+
+	<definition name="portlet.orgMap.edit" extends="portlet.orgMap">
+		<put name="portlet_content" value="/portlet/orgMap/editOrgMap.jsp" />
+	</definition>
+
+	<definition name="portlet.orgMap.add" extends="portlet.orgMap">
+		<put name="portlet_content" value="/portlet/orgMap/addOrgMap.jsp" />
+	</definition>
+
+	<!-- Org Support -->
+	<definition name="portlet.SupportOrgProfile" path="/portlet/support_org_profile/template.jsp">
+	</definition>
+
+	<!-- Customer Org -->
+	<definition name="portlet.customer" path="/portlet/customer/template.jsp" />
+
+	<definition name="portlet.customer.view" extends="portlet.customer">
+		<put name="portlet_content" value="/portlet/customer/view.jsp" />
+	</definition>
+
+	<definition name="portlet.customer.edit" extends="portlet.customer">
+		<put name="portlet_content" value="/portlet/customer/editCustomer.jsp" />
+	</definition>
+
+	<definition name="portlet.customer.add" extends="portlet.customer">
+		<put name="portlet_content" value="/portlet/customer/addCustomer.jsp" />
+	</definition>
+	
+	<definition name="portlet.customer.detail" extends="portlet.customer">
+		<put name="portlet_content" value="/portlet/customer/detailCustomer.jsp" />
+	</definition>
+
+	<definition name="SupportOrgProfile.view" extends="portlet.SupportOrgProfile">
+		<put name="portlet_content" value="/portlet/support_org_profile/view.jsp"></put>
+	</definition>
+
+	<definition name="SupportOrgProfile.config" extends="portlet.SupportOrgProfile">
+		<put name="portlet_content" value="/portlet/support_org_profile/config.jsp"></put>
+	</definition>
+
+	<definition name="SupportOrgProfile.guilde" extends="portlet.SupportOrgProfile">
+		<put name="portlet_content" value="/portlet/support_org_profile/guilde/generalGuilde.jsp"></put>
+	</definition>
+
+	<!-- Guidle Support Org Profile -->
+	<definition name="portlet.SupportOrgProfile.addGuilde"
+		extends="portlet.SupportOrgProfile">
+		<put name="portlet_content" value="/portlet/support_org_profile/guilde/addGuilde.jsp"></put>
+	</definition>
+
+	<definition name="portlet.SupportOrgProfile.repairGuilde"
+		extends="portlet.SupportOrgProfile">
+		<put name="portlet_content" value="/portlet/support_org_profile/guilde/repairGuilde.jsp"></put>
+	</definition>
+
+	<!-- Library Support Org Profile -->
+	<definition name="portlet.SupportOrgProfile.addLibrary"
+		extends="portlet.SupportOrgProfile">
+		<put name="portlet_content" value="/portlet/support_org_profile/library/addLibrary.jsp"></put>
+	</definition>
+
+	<definition name="portlet.SupportOrgProfile.repairLibrary"
+		extends="portlet.SupportOrgProfile">
+		<put name="portlet_content" value="/portlet/support_org_profile/library/repairLibrary.jsp"></put>
+	</definition>
+
+	<!-- Question Support Org Profile -->
+	<definition name="portlet.SupportOrgProfile.addQuestion"
+		extends="portlet.SupportOrgProfile">
+		<put name="portlet_content" value="/portlet/support_org_profile/question/addQuestion.jsp"></put>
+	</definition>
+
+	<definition name="portlet.SupportOrgProfile.repairQuestion"
+		extends="portlet.SupportOrgProfile">
+		<put name="portlet_content"
+			value="/portlet/support_org_profile/question/repairQuestion.jsp"></put>
+	</definition>
+
+	<!-- ChatOnline Support Org Profile -->
+	<definition name="portlet.SupportOrgProfile.addChatOnline"
+		extends="portlet.SupportOrgProfile">
+		<put name="portlet_content"
+			value="/portlet/support_org_profile/chatonline/addChatOnline.jsp"></put>
+	</definition>
+
+	<definition name="portlet.SupportOrgProfile.repairChatOnline"
+		extends="portlet.SupportOrgProfile">
+		<put name="portlet_content"
+			value="/portlet/support_org_profile/chatonline/repairChatOnline.jsp"></put>
+	</definition>
+	
+	<!-- New Manage Org -->
+	<definition name="portlet.NewManageOrg" path="/portlet/organization/management/new/template.jsp">
+  </definition>
+  
+  <definition name="portlet.NewManageOrg.org_list" extends="portlet.NewManageOrg">
+  	<put name="portlet_content" value="/portlet/organization/management/new/org_list.jsp"></put>
+  </definition>
+  
+   
+  <definition name="portlet.NewManageOrg.org_create" extends="portlet.NewManageOrg">
+  	<put name="portlet_content" value="/portlet/organization/management/new/org_create.jsp"></put>
+  </definition>
+  
+  <!-- Sign Up -->
+  <definition name="portlet.SignUp" path="/portlet/sign_up/SignUp/template.jsp"></definition>
+	<definition name="portlet.SignUp.view" extends="portlet.SignUp">
+		<put name="portlet_content" value="/portlet/sign_up/SignUp/view.jsp"></put>
+	</definition>
+	<definition name="portlet.SignUp.success" extends="portlet.SignUp">
+		<put name="portlet_content" value="/portlet/sign_up/SignUp/success.jsp"></put>
+	</definition>
+	<definition name="portlet.ReSendMail" path="/portlet/sign_up/ReSendMail/template.jsp"></definition>
+	<definition name="portlet.ReSendMail.view" extends="portlet.ReSendMail">
+		<put name="portlet_content" value="/portlet/sign_up/ReSendMail/view.jsp"></put>
+	</definition>
+	<definition name="portlet.ReSendMail.success" extends="portlet.ReSendMail">
+		<put name="portlet_content" value="/portlet/sign_up/ReSendMail/success.jsp"></put>
+	</definition>
+	
+	<!-- Login -->
+	
+	<definition name="portlet.login.view" extends="portlet.common">
+     	<put name="portlet_content" value="/portlet/login/view.jsp"></put>
+   </definition>
+    
+   <definition name="portlet.login.PassRecovery" extends="portlet.common">
+        <put name="portlet_content" value="/portlet/login/PassRecovery.jsp"/>
+    </definition>
+    
+    <definition name="portlet.login.SuccessPassRecovery" extends="portlet.common">
+        <put name="portlet_content" value="/portlet/login/SuccessPassRecovery.jsp"/>
+    </definition>
+  
+</tiles-definitions>
