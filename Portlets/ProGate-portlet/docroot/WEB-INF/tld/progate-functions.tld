@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	<tlib-version>1.2</tlib-version>
+	<uri>progate-functions</uri>
+	<function>
+		<name>isChecked</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			boolean isChecked(int, java.util.List)
+		</function-signature>
+	</function>
+	
+	<!-- CDS Configuration-->
+	
+	<!-- CDS Evaluation Period Screen-->
+	<function>
+		<name>isNotUsed</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			boolean isNotUsed(int)
+		</function-signature>
+	</function>
+	<!-- END CDS Evaluation Period Screen -->
+	
+	<!-- CDS Title Dialog-->
+	<function>
+		<name>getLevelCountByCompetencyId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			int getLevelCountByCompetencyId(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getLevelCountByMinimumRequirementId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			int getLevelCountByMinimumRequirementId(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getLevelsByMinimumRequirementId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.List getLevelsByMinimumRequirementId(int)
+		</function-signature>
+	</function>
+	<!-- End CDS Title Dialog-->
+	
+	<!-- CDS Title Screen -->
+	<function>
+		<name>getTitleCompetenciesByTitleId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.List getTitleCompetenciesByTitleId(int)
+		</function-signature>
+	</function>
+
+	<function>
+		<name>getTitleMRLevelsNameByTitleId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			String getTitleMRLevelsNameByTitleId(int)
+		</function-signature>
+	</function>
+	<!-- End CDS Title Screen -->
+	
+	<!--  End CDS Configuration-->
+	
+	<function>
+		<name>getUserNameByUserId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			String getUserNameByUserId(int)
+		</function-signature>
+	</function>
+	<!-- CDS Evaluation -->
+	
+	<!-- currentResult and prepare screen -->
+	<function>
+		<name>getFinalLevelsByCompetencyId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.List getFinalLevelsByCompetencyId(int, int, int, int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getFinalSlotsByLevelId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.List getFinalSlotsByLevelId(int, int, int, int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getMaxLevelPoint</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			int getMaxLevelPoint(int, int)
+		</function-signature>
+	</function>
+	<!-- End currentResult and prepare screen -->
+	
+	<!-- prepare screen -->
+	<function>
+		<name>getLevelCountByCompetencyIdAndSlotStatus</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			int getLevelCountByCompetencyIdAndSlotStatus(int, int, int, int)
+		</function-signature>
+	</function>
+	<function>
+		<name>getSlotCountByLevelIdAndSlotStatus</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			int getSlotCountByLevelIdAndSlotStatus(int, int, int, int)
+		</function-signature>
+	</function>
+	<!-- End prepare screen -->
+	
+	<!-- Evaluate Slot screen -->
+	<function>
+		<name>getCompetencyNameByCompetencyId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			String getCompetencyNameByCompetencyId(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getPeriodByPeriodId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			Object getPeriodByPeriodId(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getUserFullnameByUserId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			String getUserFullnameByUserId(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getPALevelsByPACompetencyId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			Object getPALevelsByPACompetencyId(int, int, int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getPASlotsByPALevelId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			Object getPASlotsByPALevelId(int, int, int)
+		</function-signature>
+	</function>
+	<!-- End Evaluation -->
+	
+	<!-- Report -->
+	<function>
+		<name>getLevelsByCompetencyId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.List getLevelsByCompetencyId(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getSlotsByLevelId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.List getSlotsByLevelId(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getSlotCountByCompetencyId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			int getSlotCountByCompetencyId(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getSlotCountByLevelId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			int getSlotCountByLevelId(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getLevelRankingByCompetencyId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			String getLevelRankingByCompetencyId(int, int, int, int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getSlotsReportByCompetencyId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.List getSlotsReportByCompetencyId(int, int, int, int)
+		</function-signature>
+	</function>
+	
+	<!-- Approval Functions -->
+	<function>
+		<name>getProjectIdOfEmployeeByPeriod</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			int getProjectIdOfEmployeeByPeriod(int, int)
+		</function-signature>
+	</function>
+	
+	<!-- Input Data Functions -->
+	<function>
+		<name>getProjectNameByProjectId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			String getProjectNameByProjectId(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>checkImportedOrNot</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			boolean checkImportedOrNot(int, int)
+		</function-signature>
+	</function>
+	
+	<!-- Slot Statistical Report Functions -->
+	<function>
+		<name>getSSRLevelsByCompetencyId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			Object getSSRLevelsByCompetencyId(int, int, int, int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getSSRSlotsByLevelId</name>
+		<function-class>com.larion.progate.cds.utils.Functions
+		</function-class>
+		<function-signature>
+			Object getSSRSlotsByLevelId(int, int, int, int)
+		</function-signature>
+	</function>
+	<!-- Begin LMIS -->
+	<!-- TVNA -->
+	
+	<function>
+		<name>getHour</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			String getHour(java.util.Date)
+		</function-signature>		
+	</function>
+	
+	<function>
+		<name>getMin</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			String getMin(java.util.Date)
+		</function-signature>		
+	</function>
+	
+	<function>
+		<name>getStaffCodeByUserId</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			String getStaffCodeByUserId(int,int)
+		</function-signature>		
+	</function>
+	
+	<function>
+		<name>addHourMin</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.Date addHourMin(java.util.Date)
+		</function-signature>		
+	</function>
+	
+	<function>
+		<name>getFullName</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			java.lang.String getFullName(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getAbsenceName</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			java.lang.String getAbsenceName(int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getAVGTimeStartMonth</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.Date getAVGTimeStartMonth(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getAVGTimeStartYear</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.Date getAVGTimeStartYear(int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getAVGTimeEndMonth</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.Date getAVGTimeEndMonth(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getAVGTimeEndYear</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.Date getAVGTimeEndYear(int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTimeLate</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			int getTimeLate(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTimeLatePernalty</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			int getTimeLatePernalty(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTimeLateFinal</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getTimeLateFinal(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTimeEarly</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			int getTimeEarly(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTimeEarlyPernalty</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			int getTimeEarlyPernalty(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTimeEarlyFinal</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			int getTimeEarlyFinal(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTotalWorkingTime</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getTotalWorkingTime(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getAbsenceDetail</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getAbsenceDetail(int,int,int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTotalDayOff</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getTotalDayOff(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTotalTimeFinalReward</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getTotalTimeFinalReward(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTotalHourOT</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getTotalHourOT(int,int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getOTFinal</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getOTFinal(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTotalDayAbsenceCompensasion</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getTotalDayAbsenceCompensasion(int,int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getDayCompensationNextMonth</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getDayCompensationNextMonth(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getOverTimeHour</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getOverTimeHour(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getTotalHourOverTimeReward</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getTotalHourOverTimeReward(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getDetailSummayReportDouble</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getDetailSummayReportDouble(int,int,int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getDetailSummayReportDate</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			java.util.Date getDetailSummayReportDate(int,int,int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getDetailSummayReportInt</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			int getDetailSummayReportInt(int,int,int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getDayOffHavePermission</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getDayOffHavePermission(int,int,int,int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getDayOffDontHavePermission</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			double getDayOffDontHavePermission(int,int,int,int)
+		</function-signature>
+	</function>
+<!-- 	TuyenTN -->
+	<function>
+		<name>getDayOfWeek</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			java.lang.String getDayOfWeek(java.util.Date)
+		</function-signature>		
+	</function>
+	<function>
+		<name>isFutureDay</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			boolean isFutureDay(java.util.Date)
+		</function-signature>		
+	</function>
+	
+	
+	<function>
+		<name>getOrgNameByOrgId</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			java.lang.String getOrgNameByOrgId(int)
+		</function-signature>		
+	</function>
+	<function>
+		<name>compareDate</name>
+		<function-class>com.larion.progate.common.utils.Functions
+		</function-class>
+		<function-signature>
+			int compareDate(java.util.Date, java.util.Date)
+		</function-signature>		
+	</function>
+	<!-- 	end TuyenTN-->
+	<!-- End LMIS-->
+</taglib>
