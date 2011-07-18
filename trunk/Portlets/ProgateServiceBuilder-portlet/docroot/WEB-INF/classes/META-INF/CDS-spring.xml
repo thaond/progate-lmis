@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<bean id="larion.progate.cds.service.CompetencyLocalService.impl" class="larion.progate.cds.service.impl.CompetencyLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CompetencyLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CompetencyLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CompetencyLocalServiceUtil" class="larion.progate.cds.service.CompetencyLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CompetencyLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CompetencyService.impl" class="larion.progate.cds.service.impl.CompetencyServiceImpl" />
+	<bean id="larion.progate.cds.service.CompetencyService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CompetencyService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CompetencyServiceUtil" class="larion.progate.cds.service.CompetencyServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CompetencyService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CompetencyPersistence.impl" class="larion.progate.cds.service.persistence.CompetencyPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CompetencyUtil" class="larion.progate.cds.service.persistence.CompetencyUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CompetencyPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.LevelLocalService.impl" class="larion.progate.cds.service.impl.LevelLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.LevelLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.LevelLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.LevelLocalServiceUtil" class="larion.progate.cds.service.LevelLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.LevelLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.LevelService.impl" class="larion.progate.cds.service.impl.LevelServiceImpl" />
+	<bean id="larion.progate.cds.service.LevelService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.LevelService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.LevelServiceUtil" class="larion.progate.cds.service.LevelServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.LevelService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.LevelPersistence.impl" class="larion.progate.cds.service.persistence.LevelPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.LevelUtil" class="larion.progate.cds.service.persistence.LevelUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.LevelPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.LevelFinder.impl" class="larion.progate.cds.service.persistence.LevelFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.LevelFinderUtil" class="larion.progate.cds.service.persistence.LevelFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.LevelFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.SlotLocalService.impl" class="larion.progate.cds.service.impl.SlotLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.SlotLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.SlotLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.SlotLocalServiceUtil" class="larion.progate.cds.service.SlotLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.SlotLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.SlotService.impl" class="larion.progate.cds.service.impl.SlotServiceImpl" />
+	<bean id="larion.progate.cds.service.SlotService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.SlotService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.SlotServiceUtil" class="larion.progate.cds.service.SlotServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.SlotService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.SlotPersistence.impl" class="larion.progate.cds.service.persistence.SlotPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.SlotUtil" class="larion.progate.cds.service.persistence.SlotUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.SlotPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.SlotFinder.impl" class="larion.progate.cds.service.persistence.SlotFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.SlotFinderUtil" class="larion.progate.cds.service.persistence.SlotFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.SlotFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPointsLocalService.impl" class="larion.progate.cds.service.impl.CdsPointsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPointsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPointsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPointsLocalServiceUtil" class="larion.progate.cds.service.CdsPointsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPointsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPointsService.impl" class="larion.progate.cds.service.impl.CdsPointsServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPointsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPointsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPointsServiceUtil" class="larion.progate.cds.service.CdsPointsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPointsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPointsPersistence.impl" class="larion.progate.cds.service.persistence.CdsPointsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPointsUtil" class="larion.progate.cds.service.persistence.CdsPointsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPointsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsEvaluationPeriodsLocalService.impl" class="larion.progate.cds.service.impl.CdsEvaluationPeriodsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsEvaluationPeriodsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsEvaluationPeriodsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsEvaluationPeriodsLocalServiceUtil" class="larion.progate.cds.service.CdsEvaluationPeriodsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsEvaluationPeriodsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsEvaluationPeriodsService.impl" class="larion.progate.cds.service.impl.CdsEvaluationPeriodsServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsEvaluationPeriodsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsEvaluationPeriodsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsEvaluationPeriodsServiceUtil" class="larion.progate.cds.service.CdsEvaluationPeriodsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsEvaluationPeriodsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsEvaluationPeriodsPersistence.impl" class="larion.progate.cds.service.persistence.CdsEvaluationPeriodsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsEvaluationPeriodsUtil" class="larion.progate.cds.service.persistence.CdsEvaluationPeriodsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsEvaluationPeriodsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsEvaluationPeriodsFinder.impl" class="larion.progate.cds.service.persistence.CdsEvaluationPeriodsFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsEvaluationPeriodsFinderUtil" class="larion.progate.cds.service.persistence.CdsEvaluationPeriodsFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsEvaluationPeriodsFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitlesLocalService.impl" class="larion.progate.cds.service.impl.CdsTitlesLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsTitlesLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsTitlesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitlesLocalServiceUtil" class="larion.progate.cds.service.CdsTitlesLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsTitlesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitlesService.impl" class="larion.progate.cds.service.impl.CdsTitlesServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsTitlesService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsTitlesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitlesServiceUtil" class="larion.progate.cds.service.CdsTitlesServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsTitlesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsTitlesPersistence.impl" class="larion.progate.cds.service.persistence.CdsTitlesPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsTitlesUtil" class="larion.progate.cds.service.persistence.CdsTitlesUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsTitlesPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitleCompetenciesLocalService.impl" class="larion.progate.cds.service.impl.CdsTitleCompetenciesLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsTitleCompetenciesLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsTitleCompetenciesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitleCompetenciesLocalServiceUtil" class="larion.progate.cds.service.CdsTitleCompetenciesLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsTitleCompetenciesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitleCompetenciesService.impl" class="larion.progate.cds.service.impl.CdsTitleCompetenciesServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsTitleCompetenciesService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsTitleCompetenciesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitleCompetenciesServiceUtil" class="larion.progate.cds.service.CdsTitleCompetenciesServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsTitleCompetenciesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsTitleCompetenciesPersistence.impl" class="larion.progate.cds.service.persistence.CdsTitleCompetenciesPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsTitleCompetenciesUtil" class="larion.progate.cds.service.persistence.CdsTitleCompetenciesUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsTitleCompetenciesPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementsLocalService.impl" class="larion.progate.cds.service.impl.CdsMinimumRequirementsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsMinimumRequirementsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementsLocalServiceUtil" class="larion.progate.cds.service.CdsMinimumRequirementsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsMinimumRequirementsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementsService.impl" class="larion.progate.cds.service.impl.CdsMinimumRequirementsServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsMinimumRequirementsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementsServiceUtil" class="larion.progate.cds.service.CdsMinimumRequirementsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsMinimumRequirementsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsMinimumRequirementsPersistence.impl" class="larion.progate.cds.service.persistence.CdsMinimumRequirementsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsMinimumRequirementsUtil" class="larion.progate.cds.service.persistence.CdsMinimumRequirementsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsMinimumRequirementsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitleMinimumRequirementsLocalService.impl" class="larion.progate.cds.service.impl.CdsTitleMinimumRequirementsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsTitleMinimumRequirementsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsTitleMinimumRequirementsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitleMinimumRequirementsLocalServiceUtil" class="larion.progate.cds.service.CdsTitleMinimumRequirementsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsTitleMinimumRequirementsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitleMinimumRequirementsService.impl" class="larion.progate.cds.service.impl.CdsTitleMinimumRequirementsServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsTitleMinimumRequirementsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsTitleMinimumRequirementsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsTitleMinimumRequirementsServiceUtil" class="larion.progate.cds.service.CdsTitleMinimumRequirementsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsTitleMinimumRequirementsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsTitleMinimumRequirementsPersistence.impl" class="larion.progate.cds.service.persistence.CdsTitleMinimumRequirementsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsTitleMinimumRequirementsUtil" class="larion.progate.cds.service.persistence.CdsTitleMinimumRequirementsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsTitleMinimumRequirementsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementLevelsLocalService.impl" class="larion.progate.cds.service.impl.CdsMinimumRequirementLevelsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementLevelsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsMinimumRequirementLevelsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementLevelsLocalServiceUtil" class="larion.progate.cds.service.CdsMinimumRequirementLevelsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsMinimumRequirementLevelsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementLevelsService.impl" class="larion.progate.cds.service.impl.CdsMinimumRequirementLevelsServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementLevelsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsMinimumRequirementLevelsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsMinimumRequirementLevelsServiceUtil" class="larion.progate.cds.service.CdsMinimumRequirementLevelsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsMinimumRequirementLevelsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsMinimumRequirementLevelsPersistence.impl" class="larion.progate.cds.service.persistence.CdsMinimumRequirementLevelsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsMinimumRequirementLevelsUtil" class="larion.progate.cds.service.persistence.CdsMinimumRequirementLevelsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsMinimumRequirementLevelsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewListTitleCompetenciesLocalService.impl" class="larion.progate.cds.service.impl.ViewListTitleCompetenciesLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewListTitleCompetenciesLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewListTitleCompetenciesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewListTitleCompetenciesLocalServiceUtil" class="larion.progate.cds.service.ViewListTitleCompetenciesLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewListTitleCompetenciesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewListTitleCompetenciesService.impl" class="larion.progate.cds.service.impl.ViewListTitleCompetenciesServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewListTitleCompetenciesService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewListTitleCompetenciesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewListTitleCompetenciesServiceUtil" class="larion.progate.cds.service.ViewListTitleCompetenciesServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewListTitleCompetenciesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewListTitleCompetenciesPersistence.impl" class="larion.progate.cds.service.persistence.ViewListTitleCompetenciesPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewListTitleCompetenciesUtil" class="larion.progate.cds.service.persistence.ViewListTitleCompetenciesUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.ViewListTitleCompetenciesPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewListTitleMinimumRequirementsLocalService.impl" class="larion.progate.cds.service.impl.ViewListTitleMinimumRequirementsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewListTitleMinimumRequirementsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewListTitleMinimumRequirementsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewListTitleMinimumRequirementsLocalServiceUtil" class="larion.progate.cds.service.ViewListTitleMinimumRequirementsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewListTitleMinimumRequirementsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewListTitleMinimumRequirementsService.impl" class="larion.progate.cds.service.impl.ViewListTitleMinimumRequirementsServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewListTitleMinimumRequirementsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewListTitleMinimumRequirementsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewListTitleMinimumRequirementsServiceUtil" class="larion.progate.cds.service.ViewListTitleMinimumRequirementsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewListTitleMinimumRequirementsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewListTitleMinimumRequirementsPersistence.impl" class="larion.progate.cds.service.persistence.ViewListTitleMinimumRequirementsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewListTitleMinimumRequirementsUtil" class="larion.progate.cds.service.persistence.ViewListTitleMinimumRequirementsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.ViewListTitleMinimumRequirementsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalCompeteniesLocalService.impl" class="larion.progate.cds.service.impl.CdsPAFinalCompeteniesLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPAFinalCompeteniesLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPAFinalCompeteniesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalCompeteniesLocalServiceUtil" class="larion.progate.cds.service.CdsPAFinalCompeteniesLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPAFinalCompeteniesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalCompeteniesService.impl" class="larion.progate.cds.service.impl.CdsPAFinalCompeteniesServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPAFinalCompeteniesService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPAFinalCompeteniesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalCompeteniesServiceUtil" class="larion.progate.cds.service.CdsPAFinalCompeteniesServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPAFinalCompeteniesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPAFinalCompeteniesPersistence.impl" class="larion.progate.cds.service.persistence.CdsPAFinalCompeteniesPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPAFinalCompeteniesUtil" class="larion.progate.cds.service.persistence.CdsPAFinalCompeteniesUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPAFinalCompeteniesPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalLevelsLocalService.impl" class="larion.progate.cds.service.impl.CdsPAFinalLevelsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPAFinalLevelsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPAFinalLevelsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalLevelsLocalServiceUtil" class="larion.progate.cds.service.CdsPAFinalLevelsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPAFinalLevelsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalLevelsService.impl" class="larion.progate.cds.service.impl.CdsPAFinalLevelsServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPAFinalLevelsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPAFinalLevelsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalLevelsServiceUtil" class="larion.progate.cds.service.CdsPAFinalLevelsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPAFinalLevelsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPAFinalLevelsPersistence.impl" class="larion.progate.cds.service.persistence.CdsPAFinalLevelsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPAFinalLevelsUtil" class="larion.progate.cds.service.persistence.CdsPAFinalLevelsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPAFinalLevelsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalSlotsLocalService.impl" class="larion.progate.cds.service.impl.CdsPAFinalSlotsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPAFinalSlotsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPAFinalSlotsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalSlotsLocalServiceUtil" class="larion.progate.cds.service.CdsPAFinalSlotsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPAFinalSlotsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalSlotsService.impl" class="larion.progate.cds.service.impl.CdsPAFinalSlotsServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPAFinalSlotsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPAFinalSlotsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalSlotsServiceUtil" class="larion.progate.cds.service.CdsPAFinalSlotsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPAFinalSlotsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPAFinalSlotsPersistence.impl" class="larion.progate.cds.service.persistence.CdsPAFinalSlotsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPAFinalSlotsUtil" class="larion.progate.cds.service.persistence.CdsPAFinalSlotsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPAFinalSlotsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalCompetenciesLocalService.impl" class="larion.progate.cds.service.impl.ViewFinalCompetenciesLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewFinalCompetenciesLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewFinalCompetenciesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalCompetenciesLocalServiceUtil" class="larion.progate.cds.service.ViewFinalCompetenciesLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewFinalCompetenciesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalCompetenciesService.impl" class="larion.progate.cds.service.impl.ViewFinalCompetenciesServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewFinalCompetenciesService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewFinalCompetenciesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalCompetenciesServiceUtil" class="larion.progate.cds.service.ViewFinalCompetenciesServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewFinalCompetenciesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewFinalCompetenciesPersistence.impl" class="larion.progate.cds.service.persistence.ViewFinalCompetenciesPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewFinalCompetenciesUtil" class="larion.progate.cds.service.persistence.ViewFinalCompetenciesUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.ViewFinalCompetenciesPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewFinalCompetenciesFinder.impl" class="larion.progate.cds.service.persistence.ViewFinalCompetenciesFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewFinalCompetenciesFinderUtil" class="larion.progate.cds.service.persistence.ViewFinalCompetenciesFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.ViewFinalCompetenciesFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalLevelsLocalService.impl" class="larion.progate.cds.service.impl.ViewFinalLevelsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewFinalLevelsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewFinalLevelsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalLevelsLocalServiceUtil" class="larion.progate.cds.service.ViewFinalLevelsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewFinalLevelsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalLevelsService.impl" class="larion.progate.cds.service.impl.ViewFinalLevelsServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewFinalLevelsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewFinalLevelsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalLevelsServiceUtil" class="larion.progate.cds.service.ViewFinalLevelsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewFinalLevelsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewFinalLevelsPersistence.impl" class="larion.progate.cds.service.persistence.ViewFinalLevelsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewFinalLevelsUtil" class="larion.progate.cds.service.persistence.ViewFinalLevelsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.ViewFinalLevelsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewFinalLevelsFinder.impl" class="larion.progate.cds.service.persistence.ViewFinalLevelsFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewFinalLevelsFinderUtil" class="larion.progate.cds.service.persistence.ViewFinalLevelsFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.ViewFinalLevelsFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalSlotsLocalService.impl" class="larion.progate.cds.service.impl.ViewFinalSlotsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewFinalSlotsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewFinalSlotsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalSlotsLocalServiceUtil" class="larion.progate.cds.service.ViewFinalSlotsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewFinalSlotsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalSlotsService.impl" class="larion.progate.cds.service.impl.ViewFinalSlotsServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewFinalSlotsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewFinalSlotsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalSlotsServiceUtil" class="larion.progate.cds.service.ViewFinalSlotsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewFinalSlotsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewFinalSlotsPersistence.impl" class="larion.progate.cds.service.persistence.ViewFinalSlotsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewFinalSlotsUtil" class="larion.progate.cds.service.persistence.ViewFinalSlotsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.ViewFinalSlotsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewFinalSlotsFinder.impl" class="larion.progate.cds.service.persistence.ViewFinalSlotsFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewFinalSlotsFinderUtil" class="larion.progate.cds.service.persistence.ViewFinalSlotsFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.ViewFinalSlotsFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalTitlesLocalService.impl" class="larion.progate.cds.service.impl.ViewFinalTitlesLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewFinalTitlesLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewFinalTitlesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalTitlesLocalServiceUtil" class="larion.progate.cds.service.ViewFinalTitlesLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewFinalTitlesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalTitlesService.impl" class="larion.progate.cds.service.impl.ViewFinalTitlesServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewFinalTitlesService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewFinalTitlesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewFinalTitlesServiceUtil" class="larion.progate.cds.service.ViewFinalTitlesServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewFinalTitlesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewFinalTitlesPersistence.impl" class="larion.progate.cds.service.persistence.ViewFinalTitlesPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewFinalTitlesUtil" class="larion.progate.cds.service.persistence.ViewFinalTitlesUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.ViewFinalTitlesPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewFinalTitlesFinder.impl" class="larion.progate.cds.service.persistence.ViewFinalTitlesFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewFinalTitlesFinderUtil" class="larion.progate.cds.service.persistence.ViewFinalTitlesFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.ViewFinalTitlesFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewSlotInformationLocalService.impl" class="larion.progate.cds.service.impl.ViewSlotInformationLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewSlotInformationLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewSlotInformationLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewSlotInformationLocalServiceUtil" class="larion.progate.cds.service.ViewSlotInformationLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewSlotInformationLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewSlotInformationService.impl" class="larion.progate.cds.service.impl.ViewSlotInformationServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewSlotInformationService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewSlotInformationService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewSlotInformationServiceUtil" class="larion.progate.cds.service.ViewSlotInformationServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewSlotInformationService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewSlotInformationPersistence.impl" class="larion.progate.cds.service.persistence.ViewSlotInformationPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewSlotInformationUtil" class="larion.progate.cds.service.persistence.ViewSlotInformationUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.ViewSlotInformationPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewSlotInformationFinder.impl" class="larion.progate.cds.service.persistence.ViewSlotInformationFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewSlotInformationFinderUtil" class="larion.progate.cds.service.persistence.ViewSlotInformationFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.ViewSlotInformationFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPASlotsLocalService.impl" class="larion.progate.cds.service.impl.CdsPASlotsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPASlotsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPASlotsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPASlotsLocalServiceUtil" class="larion.progate.cds.service.CdsPASlotsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPASlotsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPASlotsService.impl" class="larion.progate.cds.service.impl.CdsPASlotsServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPASlotsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPASlotsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPASlotsServiceUtil" class="larion.progate.cds.service.CdsPASlotsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPASlotsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPASlotsPersistence.impl" class="larion.progate.cds.service.persistence.CdsPASlotsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPASlotsUtil" class="larion.progate.cds.service.persistence.CdsPASlotsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPASlotsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPASlotsFinder.impl" class="larion.progate.cds.service.persistence.CdsPASlotsFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPASlotsFinderUtil" class="larion.progate.cds.service.persistence.CdsPASlotsFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsPASlotsFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPALevelsLocalService.impl" class="larion.progate.cds.service.impl.CdsPALevelsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPALevelsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPALevelsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPALevelsLocalServiceUtil" class="larion.progate.cds.service.CdsPALevelsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPALevelsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPALevelsService.impl" class="larion.progate.cds.service.impl.CdsPALevelsServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPALevelsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPALevelsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPALevelsServiceUtil" class="larion.progate.cds.service.CdsPALevelsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPALevelsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPALevelsPersistence.impl" class="larion.progate.cds.service.persistence.CdsPALevelsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPALevelsUtil" class="larion.progate.cds.service.persistence.CdsPALevelsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPALevelsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPALevelsFinder.impl" class="larion.progate.cds.service.persistence.CdsPALevelsFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPALevelsFinderUtil" class="larion.progate.cds.service.persistence.CdsPALevelsFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsPALevelsFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPACompetenciesLocalService.impl" class="larion.progate.cds.service.impl.CdsPACompetenciesLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPACompetenciesLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPACompetenciesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPACompetenciesLocalServiceUtil" class="larion.progate.cds.service.CdsPACompetenciesLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPACompetenciesLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPACompetenciesService.impl" class="larion.progate.cds.service.impl.CdsPACompetenciesServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPACompetenciesService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPACompetenciesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPACompetenciesServiceUtil" class="larion.progate.cds.service.CdsPACompetenciesServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPACompetenciesService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPACompetenciesPersistence.impl" class="larion.progate.cds.service.persistence.CdsPACompetenciesPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPACompetenciesUtil" class="larion.progate.cds.service.persistence.CdsPACompetenciesUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPACompetenciesPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPACompetenciesFinder.impl" class="larion.progate.cds.service.persistence.CdsPACompetenciesFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPACompetenciesFinderUtil" class="larion.progate.cds.service.persistence.CdsPACompetenciesFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsPACompetenciesFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalLevelsLocalService.impl" class="larion.progate.cds.service.impl.ViewPerformanceAppraisalLevelsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalLevelsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewPerformanceAppraisalLevelsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalLevelsLocalServiceUtil" class="larion.progate.cds.service.ViewPerformanceAppraisalLevelsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewPerformanceAppraisalLevelsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalLevelsService.impl" class="larion.progate.cds.service.impl.ViewPerformanceAppraisalLevelsServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalLevelsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewPerformanceAppraisalLevelsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalLevelsServiceUtil" class="larion.progate.cds.service.ViewPerformanceAppraisalLevelsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewPerformanceAppraisalLevelsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewPerformanceAppraisalLevelsPersistence.impl" class="larion.progate.cds.service.persistence.ViewPerformanceAppraisalLevelsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewPerformanceAppraisalLevelsUtil" class="larion.progate.cds.service.persistence.ViewPerformanceAppraisalLevelsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.ViewPerformanceAppraisalLevelsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewPerformanceAppraisalLevelsFinder.impl" class="larion.progate.cds.service.persistence.ViewPerformanceAppraisalLevelsFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewPerformanceAppraisalLevelsFinderUtil" class="larion.progate.cds.service.persistence.ViewPerformanceAppraisalLevelsFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.ViewPerformanceAppraisalLevelsFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalSlotsLocalService.impl" class="larion.progate.cds.service.impl.ViewPerformanceAppraisalSlotsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalSlotsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewPerformanceAppraisalSlotsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalSlotsLocalServiceUtil" class="larion.progate.cds.service.ViewPerformanceAppraisalSlotsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewPerformanceAppraisalSlotsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalSlotsService.impl" class="larion.progate.cds.service.impl.ViewPerformanceAppraisalSlotsServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalSlotsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewPerformanceAppraisalSlotsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewPerformanceAppraisalSlotsServiceUtil" class="larion.progate.cds.service.ViewPerformanceAppraisalSlotsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewPerformanceAppraisalSlotsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewPerformanceAppraisalSlotsPersistence.impl" class="larion.progate.cds.service.persistence.ViewPerformanceAppraisalSlotsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewPerformanceAppraisalSlotsUtil" class="larion.progate.cds.service.persistence.ViewPerformanceAppraisalSlotsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.ViewPerformanceAppraisalSlotsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewPerformanceAppraisalSlotsFinder.impl" class="larion.progate.cds.service.persistence.ViewPerformanceAppraisalSlotsFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewPerformanceAppraisalSlotsFinderUtil" class="larion.progate.cds.service.persistence.ViewPerformanceAppraisalSlotsFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.ViewPerformanceAppraisalSlotsFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingLocalService.impl" class="larion.progate.cds.service.impl.CdsPerformanceAppraisalSlotRatingLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingLocalServiceUtil" class="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingService.impl" class="larion.progate.cds.service.impl.CdsPerformanceAppraisalSlotRatingServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingServiceUtil" class="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPerformanceAppraisalSlotRatingService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotRatingPersistence.impl" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotRatingPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotRatingUtil" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotRatingUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotRatingPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotRatingFinder.impl" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotRatingFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotRatingFinderUtil" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotRatingFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotRatingFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsLocalService.impl" class="larion.progate.cds.service.impl.CdsPerformanceAppraisalSlotCommentsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsLocalServiceUtil" class="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsService.impl" class="larion.progate.cds.service.impl.CdsPerformanceAppraisalSlotCommentsServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsServiceUtil" class="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPerformanceAppraisalSlotCommentsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotCommentsPersistence.impl" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotCommentsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotCommentsUtil" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotCommentsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotCommentsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotCommentsFinder.impl" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotCommentsFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotCommentsFinderUtil" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotCommentsFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsPerformanceAppraisalSlotCommentsFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalsLocalService.impl" class="larion.progate.cds.service.impl.CdsPerformanceAppraisalsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPerformanceAppraisalsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalsLocalServiceUtil" class="larion.progate.cds.service.CdsPerformanceAppraisalsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPerformanceAppraisalsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalsService.impl" class="larion.progate.cds.service.impl.CdsPerformanceAppraisalsServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPerformanceAppraisalsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPerformanceAppraisalsServiceUtil" class="larion.progate.cds.service.CdsPerformanceAppraisalsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPerformanceAppraisalsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalsPersistence.impl" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalsUtil" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPerformanceAppraisalsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalsFinder.impl" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalsFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPerformanceAppraisalsFinderUtil" class="larion.progate.cds.service.persistence.CdsPerformanceAppraisalsFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsPerformanceAppraisalsFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewEmployeesInProjectsLocalService.impl" class="larion.progate.cds.service.impl.ViewEmployeesInProjectsLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewEmployeesInProjectsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewEmployeesInProjectsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewEmployeesInProjectsLocalServiceUtil" class="larion.progate.cds.service.ViewEmployeesInProjectsLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewEmployeesInProjectsLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewEmployeesInProjectsService.impl" class="larion.progate.cds.service.impl.ViewEmployeesInProjectsServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewEmployeesInProjectsService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewEmployeesInProjectsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewEmployeesInProjectsServiceUtil" class="larion.progate.cds.service.ViewEmployeesInProjectsServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewEmployeesInProjectsService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewEmployeesInProjectsPersistence.impl" class="larion.progate.cds.service.persistence.ViewEmployeesInProjectsPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewEmployeesInProjectsUtil" class="larion.progate.cds.service.persistence.ViewEmployeesInProjectsUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.ViewEmployeesInProjectsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewEmployeesInProjectsFinder.impl" class="larion.progate.cds.service.persistence.ViewEmployeesInProjectsFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewEmployeesInProjectsFinderUtil" class="larion.progate.cds.service.persistence.ViewEmployeesInProjectsFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.ViewEmployeesInProjectsFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewEmployeesSlotsRatingLocalService.impl" class="larion.progate.cds.service.impl.ViewEmployeesSlotsRatingLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewEmployeesSlotsRatingLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewEmployeesSlotsRatingLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewEmployeesSlotsRatingLocalServiceUtil" class="larion.progate.cds.service.ViewEmployeesSlotsRatingLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewEmployeesSlotsRatingLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewEmployeesSlotsRatingService.impl" class="larion.progate.cds.service.impl.ViewEmployeesSlotsRatingServiceImpl" />
+	<bean id="larion.progate.cds.service.ViewEmployeesSlotsRatingService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.ViewEmployeesSlotsRatingService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.ViewEmployeesSlotsRatingServiceUtil" class="larion.progate.cds.service.ViewEmployeesSlotsRatingServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.ViewEmployeesSlotsRatingService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewEmployeesSlotsRatingPersistence.impl" class="larion.progate.cds.service.persistence.ViewEmployeesSlotsRatingPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewEmployeesSlotsRatingUtil" class="larion.progate.cds.service.persistence.ViewEmployeesSlotsRatingUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.ViewEmployeesSlotsRatingPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.ViewEmployeesSlotsRatingFinder.impl" class="larion.progate.cds.service.persistence.ViewEmployeesSlotsRatingFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.ViewEmployeesSlotsRatingFinderUtil" class="larion.progate.cds.service.persistence.ViewEmployeesSlotsRatingFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.ViewEmployeesSlotsRatingFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsSlotStatisticalReportLocalService.impl" class="larion.progate.cds.service.impl.CdsSlotStatisticalReportLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsSlotStatisticalReportLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsSlotStatisticalReportLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsSlotStatisticalReportLocalServiceUtil" class="larion.progate.cds.service.CdsSlotStatisticalReportLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsSlotStatisticalReportLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsSlotStatisticalReportService.impl" class="larion.progate.cds.service.impl.CdsSlotStatisticalReportServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsSlotStatisticalReportService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsSlotStatisticalReportService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsSlotStatisticalReportServiceUtil" class="larion.progate.cds.service.CdsSlotStatisticalReportServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsSlotStatisticalReportService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsSlotStatisticalReportPersistence.impl" class="larion.progate.cds.service.persistence.CdsSlotStatisticalReportPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsSlotStatisticalReportUtil" class="larion.progate.cds.service.persistence.CdsSlotStatisticalReportUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsSlotStatisticalReportPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsSlotStatisticalReportFinder.impl" class="larion.progate.cds.service.persistence.CdsSlotStatisticalReportFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsSlotStatisticalReportFinderUtil" class="larion.progate.cds.service.persistence.CdsSlotStatisticalReportFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsSlotStatisticalReportFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsLevelStatisticalReportLocalService.impl" class="larion.progate.cds.service.impl.CdsLevelStatisticalReportLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsLevelStatisticalReportLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsLevelStatisticalReportLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsLevelStatisticalReportLocalServiceUtil" class="larion.progate.cds.service.CdsLevelStatisticalReportLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsLevelStatisticalReportLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsLevelStatisticalReportService.impl" class="larion.progate.cds.service.impl.CdsLevelStatisticalReportServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsLevelStatisticalReportService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsLevelStatisticalReportService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsLevelStatisticalReportServiceUtil" class="larion.progate.cds.service.CdsLevelStatisticalReportServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsLevelStatisticalReportService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsLevelStatisticalReportPersistence.impl" class="larion.progate.cds.service.persistence.CdsLevelStatisticalReportPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsLevelStatisticalReportUtil" class="larion.progate.cds.service.persistence.CdsLevelStatisticalReportUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsLevelStatisticalReportPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsLevelStatisticalReportFinder.impl" class="larion.progate.cds.service.persistence.CdsLevelStatisticalReportFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsLevelStatisticalReportFinderUtil" class="larion.progate.cds.service.persistence.CdsLevelStatisticalReportFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsLevelStatisticalReportFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsCompetencyStatisticalReportLocalService.impl" class="larion.progate.cds.service.impl.CdsCompetencyStatisticalReportLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsCompetencyStatisticalReportLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsCompetencyStatisticalReportLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsCompetencyStatisticalReportLocalServiceUtil" class="larion.progate.cds.service.CdsCompetencyStatisticalReportLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsCompetencyStatisticalReportLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsCompetencyStatisticalReportService.impl" class="larion.progate.cds.service.impl.CdsCompetencyStatisticalReportServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsCompetencyStatisticalReportService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsCompetencyStatisticalReportService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsCompetencyStatisticalReportServiceUtil" class="larion.progate.cds.service.CdsCompetencyStatisticalReportServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsCompetencyStatisticalReportService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsCompetencyStatisticalReportPersistence.impl" class="larion.progate.cds.service.persistence.CdsCompetencyStatisticalReportPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsCompetencyStatisticalReportUtil" class="larion.progate.cds.service.persistence.CdsCompetencyStatisticalReportUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsCompetencyStatisticalReportPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsCompetencyStatisticalReportFinder.impl" class="larion.progate.cds.service.persistence.CdsCompetencyStatisticalReportFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsCompetencyStatisticalReportFinderUtil" class="larion.progate.cds.service.persistence.CdsCompetencyStatisticalReportFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsCompetencyStatisticalReportFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsCdpLocalService.impl" class="larion.progate.cds.service.impl.CdsCdpLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsCdpLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsCdpLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsCdpLocalServiceUtil" class="larion.progate.cds.service.CdsCdpLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsCdpLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsCdpService.impl" class="larion.progate.cds.service.impl.CdsCdpServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsCdpService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsCdpService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsCdpServiceUtil" class="larion.progate.cds.service.CdsCdpServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsCdpService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsCdpPersistence.impl" class="larion.progate.cds.service.persistence.CdsCdpPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsCdpUtil" class="larion.progate.cds.service.persistence.CdsCdpUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsCdpPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsCdpFinder.impl" class="larion.progate.cds.service.persistence.CdsCdpFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsCdpFinderUtil" class="larion.progate.cds.service.persistence.CdsCdpFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsCdpFinder.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalLocalService.impl" class="larion.progate.cds.service.impl.CdsPAFinalLocalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPAFinalLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPAFinalLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalLocalServiceUtil" class="larion.progate.cds.service.CdsPAFinalLocalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPAFinalLocalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalService.impl" class="larion.progate.cds.service.impl.CdsPAFinalServiceImpl" />
+	<bean id="larion.progate.cds.service.CdsPAFinalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
+		<property name="target" ref="larion.progate.cds.service.CdsPAFinalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.CdsPAFinalServiceUtil" class="larion.progate.cds.service.CdsPAFinalServiceUtil">
+		<property name="service" ref="larion.progate.cds.service.CdsPAFinalService.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsPAFinalPersistence.impl" class="larion.progate.cds.service.persistence.CdsPAFinalPersistenceImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsPAFinalUtil" class="larion.progate.cds.service.persistence.CdsPAFinalUtil">
+		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPAFinalPersistence.impl" />
+	</bean>
+</beans>

@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model-hints>
+	<model name="larion.progate.cds.model.Competency">
+		<field name="competencyId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="numberOrder" type="int" />
+		<field name="createdBy" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedBy" type="int" />
+		<field name="updatedAt" type="Date" />
+	</model>
+	<model name="larion.progate.cds.model.Level">
+		<field name="rootId" type="int" />
+		<field name="levelId" type="Integer" />
+		<field name="competencyId" type="int" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="numberOrder" type="int" />
+		<field name="aliasName" type="String" />
+		<field name="createdBy" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedBy" type="int" />
+		<field name="updatedAt" type="Date" />
+	</model>
+	<model name="larion.progate.cds.model.Slot">
+		<field name="rootId" type="int" />
+		<field name="slotId" type="Integer" />
+		<field name="levelId" type="int" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="numberOrder" type="int" />
+		<field name="aliasName" type="String" />
+		<field name="createdBy" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedBy" type="int" />
+		<field name="updatedAt" type="Date" />
+	</model>
+	<model name="larion.progate.cds.model.CdsPoints">
+		<field name="pointId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="pointName" type="String" />
+		<field name="pointValue" type="int" />
+		<field name="description" type="String" />
+		<field name="createdBy" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedBy" type="int" />
+		<field name="updatedAt" type="Date" />
+	</model>
+	<model name="larion.progate.cds.model.CdsEvaluationPeriods">
+		<field name="CdsEvaluationPeriodsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="fromDate" type="Date" />
+		<field name="toDate" type="Date" />
+		<field name="startDate" type="Date" />
+		<field name="endDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="createdBy" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedBy" type="int" />
+		<field name="updatedAt" type="Date" />
+		<field name="isModified" type="boolean" />
+	</model>
+	<model name="larion.progate.cds.model.CdsTitles">
+		<field name="cdsTitleId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="abbreviation" type="String" />
+		<field name="numberOrder" type="int" />
+		<field name="createdBy" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedBy" type="int" />
+		<field name="updatedAt" type="Date" />
+	</model>
+	<model name="larion.progate.cds.model.CdsTitleCompetencies">
+		<field name="CdsTitleCompetenciesId" type="Integer" />
+		<field name="cdsTitleId" type="int" />
+		<field name="competencyId" type="int" />
+		<field name="pointHash" type="int" />
+		<field name="pointValue" type="String" />
+	</model>
+	<model name="larion.progate.cds.model.CdsMinimumRequirements">
+		<field name="minimumRequirementId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="numberOrder" type="int" />
+		<field name="createdBy" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedBy" type="int" />
+		<field name="updatedAt" type="Date" />
+	</model>
+	<model name="larion.progate.cds.model.CdsTitleMinimumRequirements">
+		<field name="CdsTitleMinimumRequirementsId" type="Integer" />
+		<field name="titleId" type="int" />
+		<field name="minimumRequirementId" type="int" />
+		<field name="minimumRequirementLevelId" type="int" />
+	</model>
+	<model name="larion.progate.cds.model.CdsMinimumRequirementLevels">
+		<field name="minimumRequirementLevelId" type="Integer" />
+		<field name="minimumRequirementId" type="int" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="numberOrder" type="int" />
+		<field name="createdBy" type="int" />
+		<field name="createdAt" type="Date" />
+		<field name="updatedBy" type="int" />
+		<field name="updatedAt" type="Date" />
+	</model>
+	<model name="larion.progate.cds.model.ViewListTitleCompetencies">
+		<field name="id" type="String" />
+		<field name="titleId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="titleName" type="String" />
+		<field name="abbreviation" type="String" />
+		<field name="competencyId" type="int" />
+		<field name="competencyName" type="String" />
+		<field name="competencyNumberOrder" type="int" />
+		<field name="pointHash" type="int" />
+		<field name="pointValue" type="String" />
+	</model>
+	<model name="larion.progate.cds.model.ViewListTitleMinimumRequirements">
+		<field name="id" type="String" />
+		<field name="titleId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="titleName" type="String" />
+		<field name="abbreviation" type="String" />
+		<field name="minimumRequirementId" type="int" />
+		<field name="minimumRequirementName" type="String" />
+		<field name="minimumRequirementNumberOrder" type="int" />
+		<field name="levelId" type="int" />
+		<field name="level" type="String" />
+	</model>
+	<model name="larion.progate.cds.model.CdsPAFinalCompetenies">
+		<field name="cdsPAFinalCompeteniesId" type="Integer" />
+		<field name="paId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="competencyId" type="int" />
+		<field name="levelRankingHash" type="int" />
+		<field name="levelRankingValue" type="String" />
+	</model>
+	<model name="larion.progate.cds.model.CdsPAFinalLevels">
+		<field name="CdsPAFinalLevelsId" type="Integer" />
+		<field name="paId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="levelId" type="int" />
+		<field name="totalLevelPoint" type="int" />
+		<field name="isPassed" type="boolean" />
+	</model>
+	<model name="larion.progate.cds.model.CdsPAFinalSlots">
+		<field name="CdsPAFinalSlotsId" type="Integer" />
+		<field name="paId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="slotId" type="int" />
+		<field name="ratingStatus" type="boolean" />
+		<field name="pointName" type="String" />
+		<field name="maxPointName" type="String" />
+		<field name="pointValue" type="int" />
+		<field name="maxPointValue" type="int" />
+		<field name="isPassed" type="boolean" />
+	</model>
+	<model name="larion.progate.cds.model.ViewFinalCompetencies">
+		<field name="competencyId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="userId" type="int" />
+		<field name="levelRankingHash" type="int" />
+		<field name="levelRankingValue" type="String" />
+	</model>
+	<model name="larion.progate.cds.model.ViewFinalLevels">
+		<field name="levelId" type="Integer" />
+		<field name="competencyId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="userId" type="int" />
+		<field name="totalLevelPoint" type="int" />
+		<field name="isPassed" type="boolean" />
+	</model>
+	<model name="larion.progate.cds.model.ViewFinalSlots">
+		<field name="slotId" type="Integer" />
+		<field name="levelId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="userId" type="int" />
+		<field name="ratingStatus" type="boolean" />
+		<field name="pointName" type="String" />
+		<field name="maxPointName" type="String" />
+		<field name="pointValue" type="int" />
+		<field name="maxPointValue" type="int" />
+		<field name="isPassed" type="boolean" />
+	</model>
+	<model name="larion.progate.cds.model.ViewFinalTitles">
+		<field name="ViewFinalTitlesId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="titleId" type="int" />
+		<field name="titleName" type="String" />
+	</model>
+	<model name="larion.progate.cds.model.ViewSlotInformation">
+		<field name="viewSlotInformationId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="slotId" type="int" />
+		<field name="pointName" type="String" />
+		<field name="maxPointName" type="String" />
+		<field name="isPassed" type="boolean" />
+		<field name="periodName" type="String" />
+		<field name="fromDate" type="Date" />
+		<field name="toDate" type="Date" />
+		<field name="pmName" type="String" />
+		<field name="orgName" type="String" />
+	</model>
+	<model name="larion.progate.cds.model.CdsPASlots">
+		<field name="CdsPASlotsId" type="Integer" />
+		<field name="paId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="periodId" type="int" />
+		<field name="userId" type="int" />
+		<field name="slotId" type="int" />
+		<field name="pmUid" type="int" />
+		<field name="bodUid" type="int" />
+		<field name="ratingOrgId" type="int" />
+		<field name="ratingStatus" type="int" />
+		<field name="ratingStatusPm" type="int" />
+		<field name="ratingStatusBod" type="int" />
+		<field name="pointName" type="String" />
+		<field name="maxPointName" type="String" />
+		<field name="pointValue" type="int" />
+		<field name="maxPointValue" type="int" />
+		<field name="isPassed" type="boolean" />
+	</model>
+	<model name="larion.progate.cds.model.CdsPALevels">
+		<field name="CdsPALevelsId" type="Integer" />
+		<field name="paId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="periodId" type="int" />
+		<field name="userId" type="int" />
+		<field name="levelId" type="int" />
+		<field name="totalLevelPoint" type="int" />
+		<field name="isPassed" type="boolean" />
+	</model>
+	<model name="larion.progate.cds.model.CdsPACompetencies">
+		<field name="CdsPACompetenciesId" type="Integer" />
+		<field name="paId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="periodId" type="int" />
+		<field name="userId" type="int" />
+		<field name="competencyId" type="int" />
+		<field name="levelRankingHash" type="int" />
+		<field name="levelRankingValue" type="String" />
+	</model>
+	<model name="larion.progate.cds.model.ViewPerformanceAppraisalLevels">
+		<field name="id" type="String" />
+		<field name="levelId" type="int" />
+		<field name="numberOrder" type="int" />
+		<field name="competencyId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="levelName" type="String" />
+		<field name="paId" type="int" />
+		<field name="userId" type="int" />
+		<field name="periodId" type="int" />
+		<field name="totalLevelPoint" type="int" />
+		<field name="isPassed" type="boolean" />
+	</model>
+	<model name="larion.progate.cds.model.ViewPerformanceAppraisalSlots">
+		<field name="id" type="String" />
+		<field name="slotId" type="int" />
+		<field name="levelId" type="int" />
+		<field name="competencyId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="slotName" type="String" />
+		<field name="aliasName" type="String" />
+		<field name="description" type="String" />
+		<field name="paId" type="int" />
+		<field name="slotNumberOrder" type="int" />
+		<field name="levelNumberOrder" type="int" />
+		<field name="competencyNumberOrder" type="int" />
+		<field name="userId" type="int" />
+		<field name="periodId" type="int" />
+		<field name="periodName" type="String" />
+		<field name="fromDate" type="Date" />
+		<field name="toDate" type="Date" />
+		<field name="bodUid" type="int" />
+		<field name="pmUid" type="int" />
+		<field name="ratingOrgId" type="int" />
+		<field name="ratingStatus" type="int" />
+		<field name="ratingStatusBod" type="int" />
+		<field name="ratingStatusPm" type="int" />
+		<field name="pointName" type="String" />
+		<field name="maxPointName" type="String" />
+		<field name="pointValue" type="int" />
+		<field name="maxPointValue" type="int" />
+		<field name="isPassed" type="boolean" />
+	</model>
+	<model name="larion.progate.cds.model.CdsPerformanceAppraisalSlotRating">
+		<field name="CdsPerformanceAppraisalSlotRatingId" type="Integer" />
+		<field name="paId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="periodId" type="int" />
+		<field name="userId" type="int" />
+		<field name="slotId" type="int" />
+		<field name="ratingBy" type="int" />
+		<field name="ratingAt" type="Date" />
+		<field name="ratingStatus" type="boolean" />
+		<field name="userType" type="int" />
+		<field name="pointName" type="String" />
+		<field name="pointValue" type="int" />
+		<field name="ratingOrgId" type="int" />
+	</model>
+	<model name="larion.progate.cds.model.CdsPerformanceAppraisalSlotComments">
+		<field name="CdsPerformanceAppraisalSlotCommentsId" type="Integer" />
+		<field name="paId" type="int" />
+		<field name="rootId" type="int" />
+		<field name="periodId" type="int" />
+		<field name="userId" type="int" />
+		<field name="slotId" type="int" />
+		<field name="commentBy" type="int" />
+		<field name="commentAt" type="Date" />
+		<field name="commentContent" type="String" />
+	</model>
+	<model name="larion.progate.cds.model.CdsPerformanceAppraisals">
+		<field name="cdsPerformanceAppraisalsId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="periodId" type="int" />
+		<field name="userId" type="int" />
+		<field name="titleId" type="int" />
+		<field name="ratingStatus" type="int" />
+		<field name="ratingStatusPm" type="int" />
+		<field name="ratingStatusBod" type="int" />
+		<field name="isLocked" type="boolean" />
+		<field name="pmList" type="String" />
+		<field name="orgList" type="String" />
+		<field name="bodList" type="String" />
+		<field name="isTitleUp" type="boolean" />
+	</model>
+	<model name="larion.progate.cds.model.ViewEmployeesInProjects">
+		<field name="id" type="String" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="position" type="String" />
+		<field name="titleAbbreviation" type="String" />
+		<field name="titleName" type="String" />
+		<field name="orgId" type="int" />
+		<field name="orgList" type="String" />
+		<field name="pmList" type="String" />
+		<field name="periodId" type="int" />
+		<field name="periodName" type="String" />
+		<field name="fromDate" type="Date" />
+		<field name="toDate" type="Date" />
+		<field name="periodStatus" type="int" />
+		<field name="ratingStatus" type="int" />
+		<field name="ratingStatusPm" type="int" />
+		<field name="ratingStatusBod" type="int" />
+		<field name="isActive" type="boolean" />
+		<field name="isRemoved" type="boolean" />
+		<field name="isLocked" type="boolean" />
+		<field name="beginTime" type="Date" />
+		<field name="endTime" type="Date" />
+		<field name="isTitleUp" type="boolean" />
+	</model>
+	<model name="larion.progate.cds.model.ViewEmployeesSlotsRating">
+		<field name="id" type="String" />
+		<field name="aliasName" type="String" />
+		<field name="description" type="String" />
+		<field name="numberOrder" type="int" />
+		<field name="userId" type="int" />
+		<field name="periodId" type="int" />
+		<field name="periodName" type="String" />
+		<field name="fromDate" type="Date" />
+		<field name="toDate" type="Date" />
+		<field name="ratingOrgId" type="int" />
+		<field name="ratingStatus" type="int" />
+		<field name="ratingStatusBod" type="int" />
+		<field name="ratingStatusPm" type="int" />
+	</model>
+	<model name="larion.progate.cds.model.CdsSlotStatisticalReport">
+		<field name="slotId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="levelId" type="int" />
+		<field name="name" type="String" />
+		<field name="description" type="String" />
+		<field name="periodId" type="int" />
+		<field name="userId" type="int" />
+		<field name="pmId" type="int" />
+		<field name="firstName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="ratingStatusPm" type="int" />
+		<field name="ratingStatusBod" type="int" />
+		<field name="pointName" type="String" />
+		<field name="pointValue" type="int" />
+		<field name="maxPointName" type="String" />
+		<field name="maxPointValue" type="int" />
+		<field name="toDate" type="Date" />
+		<field name="status" type="int" />
+	</model>
+	<model name="larion.progate.cds.model.CdsLevelStatisticalReport">
+		<field name="levelId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="competencyId" type="int" />
+		<field name="name" type="String" />
+		<field name="periodId" type="int" />
+		<field name="userId" type="int" />
+		<field name="totalLevelPoint" type="int" />
+	</model>
+	<model name="larion.progate.cds.model.CdsCompetencyStatisticalReport">
+		<field name="competencyId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="name" type="String" />
+		<field name="periodId" type="int" />
+		<field name="userId" type="int" />
+		<field name="levelRankingHash" type="int" />
+		<field name="levelRankingValue" type="String" />
+	</model>
+	<model name="larion.progate.cds.model.CdsCdp">
+		<field name="CdsCdpId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="periodId" type="int" />
+		<field name="userId" type="int" />
+		<field name="writtenBy" type="int" />
+		<field name="writtenAt" type="Date" />
+		<field name="writtenContent" type="String" />
+	</model>
+	<model name="larion.progate.cds.model.CdsPAFinal">
+		<field name="cdsPAFinalId" type="Integer" />
+		<field name="rootId" type="int" />
+		<field name="userId" type="int" />
+		<field name="cdsTitleId" type="int" />
+	</model>
+</model-hints>
