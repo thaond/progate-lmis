@@ -1,0 +1,102 @@
+.paging-content {
+	width: 100%;
+    float: right;
+}
+
+.pagenav a {
+  text-decoration: none;
+}
+
+td.thead, th.thead, div.thead {
+  padding: 4px;
+}
+
+.tborder {
+    background: none repeat scroll 0 0 #D1D1E1;
+    border: 1px solid #0B198C;
+    color: #000000;
+}
+
+.tborder td {
+    border: 1px solid PowderBlue;
+    padding: 4px 6px 4px 6px;
+}
+
+.alt1, .alt1Active {
+    background: none repeat scroll 0 0 #F5F5FF;
+    color: #000000;
+}
+.alt2, .alt2Active {
+    background: none repeat scroll 0 0 #E1E4F2;
+    color: #000000;
+}
+
+.pagingfont {
+    font-family: Arial,Helvetica,Verdana,sans-serif;
+    font-size: 13px;
+}
+
+.vbmenu_control {
+    background: none repeat scroll 0 0 #738FBF;
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,Verdana,sans-serif;
+    font-size: 13px;
+    padding: 3px 6px;
+    white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.vbmenu_popup {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #0B198C;
+    color: #000000;
+}
+
+.vbmenu_option {
+    background: none repeat scroll 0 0 #BBC7CE;
+    color: #000000;
+    cursor: pointer;
+    font-family: Arial,Helvetica,Verdana,sans-serif;
+    font-size: 13px;
+    white-space: nowrap;
+}
+.vbmenu_option a:link, .vbmenu_option_alink {
+    color: #22229C;
+    text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited {
+    color: #22229C;
+    text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.thead {
+    background: none repeat scroll 0 0 #5C7099;
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,Verdana,sans-serif;
+    font-size: 13px;
+}
+.thead a:link, .thead_alink {
+    color: #FFFFFF;
+}
+.thead a:visited, .thead_avisited {
+    color: #FFFFFF;
+}
+.thead a:hover, .thead a:active, .thead_ahover {
+    color: #FFFF00;
+}
+ 

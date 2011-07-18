@@ -1,0 +1,449 @@
+.nu-bottom-left-corner {
+	WIDTH: 5px; BACKGROUND: url(/ProGate-portlet/images/sprite_border_corner.gif) no-repeat -55px 0px; HEIGHT: 25px
+}
+.nu-bottom-right-corner {
+	WIDTH: 5px; BACKGROUND: url(/ProGate-portlet/images/sprite_border_corner.gif) no-repeat -165px 0px; HEIGHT: 25px
+}
+.nu-dot {
+	BACKGROUND: url(/ProGate-portlet/images/tbl_dot_line.gif) repeat-x left bottom; HEIGHT: 5px
+}
+.tb-new-user {
+	FONT-SIZE: 8pt
+}
+.tb-new-user TD {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; PADDING-TOP: 3px
+}
+.td-color TD {
+	TEXT-ALIGN: left; PADDING-LEFT: 5px; PADDING-RIGHT: 10px; VERTICAL-ALIGN: middle
+}
+.password_strength {
+	WIDTH: 20px; HEIGHT: 7px
+}
+.bt-help {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 18px; PADDING-RIGHT: 0px; BACKGROUND: url(/ProGate-portlet/images/help_icon.gif) no-repeat; CURSOR: pointer; PADDING-TOP: 1px
+}
+TD .td-note {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; COLOR: red
+}
+.txt-field {
+	TEXT-ALIGN: left; WIDTH: 96%; FONT-SIZE: 10pt
+}
+.label-field {
+	PADDING-LEFT: 2px; WIDTH: 100%
+}
+.select-field {
+	TEXT-ALIGN: left; WIDTH: 102%; FONT-SIZE: 10pt
+}
+.bt-check-validate {
+	TEXT-ALIGN: center; WIDTH: 102%; FONT-SIZE: 10pt; CURSOR: pointer; PADDING-TOP: 0px
+}
+.bt-check-validate-admin {
+	TEXT-ALIGN: center; WIDTH: 98%; CURSOR: pointer; PADDING-TOP: 0px
+}
+.align-top {
+	VERTICAL-ALIGN: top; PADDING-TOP: 0px
+}
+#meter1 {
+	BORDER-BOTTOM: #636363 1px solid; BORDER-LEFT: #636363 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 0; MARGIN: 3px 2px 2px; PADDING-LEFT: 0px; WIDTH: 40px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 7px; FONT-SIZE: 0px; BORDER-TOP: #636363 1px solid; BORDER-RIGHT: #636363 1px solid; PADDING-TOP: 0px
+}
+#meter2 {
+	BORDER-BOTTOM: #636363 1px solid; BORDER-LEFT: #636363 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 0; MARGIN: 3px 2px 2px; PADDING-LEFT: 0px; WIDTH: 40px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 7px; FONT-SIZE: 0px; BORDER-TOP: #636363 1px solid; BORDER-RIGHT: #636363 1px solid; PADDING-TOP: 0px
+}
+#meter3 {
+	BORDER-BOTTOM: #636363 1px solid; BORDER-LEFT: #636363 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 0; MARGIN: 3px 2px 2px; PADDING-LEFT: 0px; WIDTH: 40px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 7px; FONT-SIZE: 0px; BORDER-TOP: #636363 1px solid; BORDER-RIGHT: #636363 1px solid; PADDING-TOP: 0px
+}
+#meter4 {
+	BORDER-BOTTOM: #636363 1px solid; BORDER-LEFT: #636363 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 0; MARGIN: 3px 2px 2px; PADDING-LEFT: 0px; WIDTH: 40px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 7px; FONT-SIZE: 0px; BORDER-TOP: #636363 1px solid; BORDER-RIGHT: #636363 1px solid; PADDING-TOP: 0px
+}
+
+.border-cs {
+	BORDER-BOTTOM: #578ff7 1px solid; BORDER-LEFT: #578ff7 1px solid; BORDER-TOP: #578ff7 1px solid; BORDER-RIGHT: #578ff7 1px solid
+}
+.tbl-popup-header TD {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 10px; PADDING-RIGHT: 2px; BACKGROUND: url(/ProGate-portlet/images/line.gif) repeat-x left top; COLOR: #ffffff; FONT-WEIGHT: bold; PADDING-TOP: 4px
+}
+.td-content-popup {
+	PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #f2f2f2; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px
+}
+.tbl-help {
+	PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #f2f2f2; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.td-color-content TD {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #ffffff; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+}
+.border-left1 {
+	BORDER-BOTTOM: #c0c0c0 1px solid; BORDER-LEFT: #c0c0c0 1px solid; BORDER-TOP: #c0c0c0 1px solid; BORDER-RIGHT: #c0c0c0 0px solid
+}
+.border-left-org {
+	BORDER-BOTTOM: #c0c0c0 1px solid; BORDER-LEFT: #c0c0c0 0px solid; BORDER-TOP: #c0c0c0 1px solid; BORDER-RIGHT: #c0c0c0 0px solid
+}
+.border-left2 {
+	BORDER-BOTTOM: #c0c0c0 1px solid; BORDER-LEFT: #c0c0c0 1px solid; BORDER-TOP: #c0c0c0 0px solid; BORDER-RIGHT: #c0c0c0 0px solid
+}
+.border-right1 {
+	BORDER-BOTTOM: #c0c0c0 1px solid; BORDER-LEFT: #c0c0c0 0px solid; BORDER-TOP: #c0c0c0 1px solid; BORDER-RIGHT: #c0c0c0 1px solid
+}
+.border-right2 {
+	BORDER-BOTTOM: #c0c0c0 1px solid; BORDER-LEFT: #c0c0c0 0px solid; BORDER-TOP: #c0c0c0 0px solid; BORDER-RIGHT: #c0c0c0 1px solid
+}
+.td-bt-popup TD {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.div-scroll {
+	POSITION: relative; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; HEIGHT: 380px; OVERFLOW: auto; PADDING-TOP: 0px
+}
+.meter_msg {
+	COLOR: red; FONT-WEIGHT: bold
+}
+.title1 {
+	COLOR: #993300; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.tbl-help UL {
+	PADDING-LEFT: 15px
+}
+.tbl-help UL LI {
+	LIST-STYLE-TYPE: disc !important
+}
+.hidden-field {
+	WIDTH: 0px; HEIGHT: 0px; VISIBILITY: hidden
+}
+.disabled {
+	COLOR: #800517
+}
+.select-field-right {
+	WIDTH: 100%; FLOAT: left; HEIGHT: 24px; FONT-SIZE: 10pt; VERTICAL-ALIGN: middle
+}
+.description-header {
+	MARGIN-BOTTOM: 2px; HEIGHT: 20px
+}
+TD .td-note-plus {
+	PADDING-TOP: 2px
+}
+.calendar {
+	BORDER-BOTTOM: #000 2px solid; POSITION: relative; BORDER-LEFT: #fff 2px solid; DISPLAY: none; FONT-FAMILY: tahoma, verdana, sans-serif; BACKGROUND: #c8d0d4; COLOR: #000; FONT-SIZE: 11px; BORDER-TOP: #fff 2px solid; CURSOR: default; BORDER-RIGHT: #000 2px solid
+}
+.calendar TABLE {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; FONT-FAMILY: tahoma, verdana, sans-serif; BACKGROUND: #c8d0d4; COLOR: #000; FONT-SIZE: 11px; BORDER-TOP: #000 1px solid; CURSOR: default; BORDER-RIGHT: #fff 1px solid
+}
+.calendar .button {
+	BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #fff 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar .nav {
+	BACKGROUND: url(menuarrow.gif) no-repeat 100% 100%
+}
+.calendar THEAD .title {
+	BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #788084; COLOR: #fff; BORDER-TOP: #000 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar THEAD .headrow {
+	
+}
+.calendar THEAD .daynames {
+	
+}
+.calendar THEAD .name {
+	BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #e8f0f4; PADDING-TOP: 2px
+}
+.calendar THEAD .weekend {
+	COLOR: #f00
+}
+.calendar THEAD .hilite {
+	BORDER-BOTTOM: #000 2px solid; BORDER-LEFT: #fff 2px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #d8e0e4; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #fff 2px solid; BORDER-RIGHT: #000 2px solid; PADDING-TOP: 0px
+}
+.calendar THEAD .active {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #b8c0c4; PADDING-LEFT: 2px; PADDING-RIGHT: 0px; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #fff 1px solid; PADDING-TOP: 2px
+}
+.calendar TBODY .day {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; WIDTH: 2em; PADDING-RIGHT: 4px; PADDING-TOP: 2px
+}
+.calendar TBODY .othermonth.day {
+	COLOR: #aaa; FONT-SIZE: 80%
+}
+.calendar TBODY .oweekend.othermonth.day {
+	COLOR: #faa
+}
+.calendar TABLE .wn {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 3px; BACKGROUND: #e8f4f0; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 2px
+}
+.calendar TBODY .rowhilite TD {
+	BACKGROUND: #d8e4e0
+}
+.calendar TBODY .rowhilite TD.wn {
+	BACKGROUND: #c8d4d0
+}
+.calendar TBODY TD.hilite {
+	BORDER-BOTTOM: #000 1px solid; BORDER-LEFT: #fff 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 3px; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar TBODY TD.active {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #fff 1px solid; PADDING-TOP: 2px
+}
+.calendar TBODY TD.selected {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #d8e0e4; BORDER-TOP: #000 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #fff 1px solid; PADDING-TOP: 2px
+}
+.calendar TBODY TD.weekend {
+	COLOR: #f00
+}
+.calendar TBODY TD.today {
+	COLOR: #00f; FONT-WEIGHT: bold
+}
+.calendar TBODY .disabled {
+	COLOR: #999
+}
+.calendar TBODY .emptycell {
+	VISIBILITY: hidden
+}
+.calendar TBODY .emptyrow {
+	DISPLAY: none
+}
+.calendar TFOOT .footrow {
+	
+}
+.calendar TFOOT .ttip {
+	BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #788084; COLOR: #fff; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar TFOOT .hilite {
+	BORDER-BOTTOM: #000 1px solid; BORDER-LEFT: #fff 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #d8e0e4; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar TFOOT .active {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 0px; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #fff 1px solid; PADDING-TOP: 2px
+}
+.calendar .combo {
+	Z-INDEX: 100; BORDER-BOTTOM: #000 1px solid; POSITION: absolute; BORDER-LEFT: #fff 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; WIDTH: 4em; PADDING-RIGHT: 1px; DISPLAY: none; BACKGROUND: #d8e0e4; FONT-SIZE: 90%; BORDER-TOP: #fff 1px solid; TOP: 0px; CURSOR: default; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px; LEFT: 0px
+}
+.calendar .combo .label {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+.calendar .combo .label-IEfix {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+.calendar .combo .label-IEfix {
+	WIDTH: 4em
+}
+.calendar .combo .active {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #c8d0d4; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #fff 1px solid; PADDING-TOP: 0px
+}
+.calendar .combo .hilite {
+	BACKGROUND: #048; COLOR: #aef
+}
+.calendar TD.time {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 1px; BACKGROUND-COLOR: #e8f0f4; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar TD.time .hour {
+	BORDER-BOTTOM: #889 1px solid; BORDER-LEFT: #889 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 4px; PADDING-RIGHT: 3px; BORDER-TOP: #889 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #889 1px solid; PADDING-TOP: 0px
+}
+.calendar TD.time .minute {
+	BORDER-BOTTOM: #889 1px solid; BORDER-LEFT: #889 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 4px; PADDING-RIGHT: 3px; BORDER-TOP: #889 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #889 1px solid; PADDING-TOP: 0px
+}
+.calendar TD.time .ampm {
+	BORDER-BOTTOM: #889 1px solid; BORDER-LEFT: #889 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 4px; PADDING-RIGHT: 3px; BORDER-TOP: #889 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #889 1px solid; PADDING-TOP: 0px
+}
+.calendar TD.time .ampm {
+	TEXT-ALIGN: center
+}
+.calendar TD.time .colon {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 2px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.calendar TD.time SPAN.hilite {
+	BORDER-BOTTOM-COLOR: #000; BACKGROUND-COLOR: #667; BORDER-TOP-COLOR: #000; COLOR: #fff; BORDER-RIGHT-COLOR: #000; BORDER-LEFT-COLOR: #000
+}
+.calendar TD.time SPAN.active {
+	BORDER-BOTTOM-COLOR: #f00; BACKGROUND-COLOR: #000; BORDER-TOP-COLOR: #f00; COLOR: #0f0; BORDER-RIGHT-COLOR: #f00; BORDER-LEFT-COLOR: #f00
+}
+#alertModalContainer {
+	Z-INDEX: 10000; POSITION: absolute; BACKGROUND-COLOR: transparent; WIDTH: 100%; HEIGHT: 100%; TOP: 0px; LEFT: 0px
+}
+#alertMaskObj {
+	Z-INDEX: 20000; POSITION: relative; FILTER: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); BACKGROUND-COLOR: #cccccc; WIDTH: 100%; DISPLAY: block; HEIGHT: 100%; TOP: 0px; LEFT: 0px; opacity: 0.5
+}
+#alertBox {
+	BACKGROUND-IMAGE: url(alert.png); Z-INDEX: 50000; BORDER-BOTTOM: #578ff7 1px solid; POSITION: relative; BORDER-LEFT: #578ff7 1px solid; BACKGROUND-COLOR: #a3d4f3; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 20px 30px; BORDER-TOP: #578ff7 1px solid; BORDER-RIGHT: #578ff7 1px solid
+}
+#alertModalContainer > #alertBox {
+	POSITION: fixed
+}
+#alertHeader {
+	HEIGHT: 20px
+}
+#alertHeader H1 {
+	PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #a3d4f3; MARGIN: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; FLOAT: left !important; COLOR: #555555; FONT-SIZE: 10pt; FONT-WEIGHT: bold; PADDING-TOP: 4px
+}
+#alertCloseIcon {
+	BACKGROUND-IMAGE: url(/ProGate-portlet/images/tool-sprites.gif); MARGIN: 5px 5px 5px 2px; WIDTH: 15px; DISPLAY: block; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 0px 0px; FLOAT: right; HEIGHT: 15px; OVERFLOW: hidden; CURSOR: pointer
+}
+#alertBox P {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #fff; MARGIN: 5px; PADDING-LEFT: 8px; PADDING-RIGHT: 3px; FONT: 9pt tahoma, arial, helvetica, sans-serif; PADDING-TOP: 5px; font-size-adjust: none
+}
+#alertBox #alertCloseBtn {
+	BORDER-BOTTOM: #bd9573 1px solid; POSITION: relative; TEXT-ALIGN: center; BORDER-LEFT: #bd9573 1px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #fcf4ed; MARGIN: 10px auto; PADDING-LEFT: 3px; WIDTH: 50px; PADDING-RIGHT: 3px; DISPLAY: block; FONT: 9pt tahoma, arial, helvetica, sans-serif; COLOR: #000; BORDER-TOP: #bd9573 1px solid; BORDER-RIGHT: #bd9573 1px solid; TEXT-DECORATION: none; PADDING-TOP: 3px; font-size-adjust: none
+}
+#confirmModalContainer {
+	Z-INDEX: 10000; POSITION: absolute; BACKGROUND-COLOR: transparent; WIDTH: 100%; HEIGHT: 100%; TOP: 0px; LEFT: 0px
+}
+#confirmMaskObj {
+	Z-INDEX: 20000; POSITION: absolute; FILTER: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); BACKGROUND-COLOR: #cccccc; WIDTH: 100%; DISPLAY: block; HEIGHT: 100%; TOP: 0px; LEFT: 0px; opacity: 0.5
+}
+#confirmBox {
+	BACKGROUND-IMAGE: url(alert.png); Z-INDEX: 50000; BORDER-BOTTOM: #578ff7 1px solid; POSITION: relative; BORDER-LEFT: #578ff7 1px solid; BACKGROUND-COLOR: #a3d4f3; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 20px 30px; BORDER-TOP: #578ff7 1px solid; BORDER-RIGHT: #578ff7 1px solid
+}
+#confirmModalContainer > #confirmBox {
+	POSITION: fixed
+}
+#confirmHeader {
+	HEIGHT: 20px
+}
+#confirmHeader H1 {
+	PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #a3d4f3; MARGIN: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; FLOAT: left !important; COLOR: #555555; FONT-SIZE: 10pt; FONT-WEIGHT: bold; PADDING-TOP: 4px
+}
+#confirmCloseIcon {
+	BACKGROUND-IMAGE: url(/ProGate-portlet/images/tool-sprites.gif); MARGIN: 5px 5px 5px 2px; WIDTH: 15px; DISPLAY: block; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: 0px 0px; FLOAT: right; HEIGHT: 15px; OVERFLOW: hidden; CURSOR: pointer
+}
+#confirmBox P {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #fff; MARGIN: 5px; PADDING-LEFT: 8px; PADDING-RIGHT: 3px; FONT: 9pt tahoma, arial, helvetica, sans-serif; PADDING-TOP: 5px; font-size-adjust: none
+}
+#confirmBox #ok {
+	BORDER-BOTTOM: #bd9573 1px solid; POSITION: relative; TEXT-ALIGN: center; BORDER-LEFT: #bd9573 1px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #fcf4ed; MARGIN: 10px 3px 10px auto; PADDING-LEFT: 3px; WIDTH: 50px; PADDING-RIGHT: 3px; FONT: 9pt tahoma, arial, helvetica, sans-serif; COLOR: #000; BORDER-TOP: #bd9573 1px solid; BORDER-RIGHT: #bd9573 1px solid; TEXT-DECORATION: none; PADDING-TOP: 3px; font-size-adjust: none
+}
+#confirmBox #cancel {
+	BORDER-BOTTOM: #bd9573 1px solid; POSITION: relative; TEXT-ALIGN: center; BORDER-LEFT: #bd9573 1px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #fcf4ed; MARGIN: 10px auto; PADDING-LEFT: 3px; WIDTH: 50px; PADDING-RIGHT: 3px; FONT: 9pt tahoma, arial, helvetica, sans-serif; COLOR: #000; BORDER-TOP: #bd9573 1px solid; BORDER-RIGHT: #bd9573 1px solid; TEXT-DECORATION: none; PADDING-TOP: 3px; font-size-adjust: none
+}
+#confirmBox #yes {
+	BORDER-BOTTOM: #bd9573 1px solid; POSITION: relative; TEXT-ALIGN: center; BORDER-LEFT: #bd9573 1px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #fcf4ed; MARGIN: 10px 3px 10px auto; PADDING-LEFT: 3px; WIDTH: 50px; PADDING-RIGHT: 3px; FONT: 9pt tahoma, arial, helvetica, sans-serif; COLOR: #000; BORDER-TOP: #bd9573 1px solid; BORDER-RIGHT: #bd9573 1px solid; TEXT-DECORATION: none; PADDING-TOP: 3px; font-size-adjust: none
+}
+#confirmBox #no {
+	BORDER-BOTTOM: #bd9573 1px solid; POSITION: relative; TEXT-ALIGN: center; BORDER-LEFT: #bd9573 1px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #fcf4ed; MARGIN: 10px auto; PADDING-LEFT: 3px; WIDTH: 50px; PADDING-RIGHT: 3px; FONT: 9pt tahoma, arial, helvetica, sans-serif; COLOR: #000; BORDER-TOP: #bd9573 1px solid; BORDER-RIGHT: #bd9573 1px solid; TEXT-DECORATION: none; PADDING-TOP: 3px; font-size-adjust: none
+}
+.calendar {
+	BORDER-BOTTOM: #000 2px solid; POSITION: relative; BORDER-LEFT: #fff 2px solid; DISPLAY: none; FONT-FAMILY: tahoma, verdana, sans-serif; BACKGROUND: #c8d0d4; COLOR: #000; FONT-SIZE: 11px; BORDER-TOP: #fff 2px solid; CURSOR: default; BORDER-RIGHT: #000 2px solid
+}
+.calendar TABLE {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; FONT-FAMILY: tahoma, verdana, sans-serif; BACKGROUND: #c8d0d4; COLOR: #000; FONT-SIZE: 11px; BORDER-TOP: #000 1px solid; CURSOR: default; BORDER-RIGHT: #fff 1px solid
+}
+.calendar .button {
+	BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #fff 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar .nav {
+	BACKGROUND: url(menuarrow.gif) no-repeat 100% 100%
+}
+.calendar THEAD .title {
+	BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #788084; COLOR: #fff; BORDER-TOP: #000 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar THEAD .headrow {
+	
+}
+.calendar THEAD .daynames {
+	
+}
+.calendar THEAD .name {
+	BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #e8f0f4; PADDING-TOP: 2px
+}
+.calendar THEAD .weekend {
+	COLOR: #f00
+}
+.calendar THEAD .hilite {
+	BORDER-BOTTOM: #000 2px solid; BORDER-LEFT: #fff 2px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #d8e0e4; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #fff 2px solid; BORDER-RIGHT: #000 2px solid; PADDING-TOP: 0px
+}
+.calendar THEAD .active {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #b8c0c4; PADDING-LEFT: 2px; PADDING-RIGHT: 0px; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #fff 1px solid; PADDING-TOP: 2px
+}
+.calendar TBODY .day {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; WIDTH: 2em; PADDING-RIGHT: 4px; PADDING-TOP: 2px
+}
+.calendar TBODY .othermonth.day {
+	COLOR: #aaa; FONT-SIZE: 80%
+}
+.calendar TBODY .oweekend.othermonth.day {
+	COLOR: #faa
+}
+.calendar TABLE .wn {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 3px; BACKGROUND: #e8f4f0; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 2px
+}
+.calendar TBODY .rowhilite TD {
+	BACKGROUND: #d8e4e0
+}
+.calendar TBODY .rowhilite TD.wn {
+	BACKGROUND: #c8d4d0
+}
+.calendar TBODY TD.hilite {
+	BORDER-BOTTOM: #000 1px solid; BORDER-LEFT: #fff 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 3px; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar TBODY TD.active {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #fff 1px solid; PADDING-TOP: 2px
+}
+.calendar TBODY TD.selected {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #d8e0e4; BORDER-TOP: #000 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #fff 1px solid; PADDING-TOP: 2px
+}
+.calendar TBODY TD.weekend {
+	COLOR: #f00
+}
+.calendar TBODY TD.today {
+	COLOR: #00f; FONT-WEIGHT: bold
+}
+.calendar TBODY .disabled {
+	COLOR: #999
+}
+.calendar TBODY .emptycell {
+	VISIBILITY: hidden
+}
+.calendar TBODY .emptyrow {
+	DISPLAY: none
+}
+.calendar TFOOT .footrow {
+	
+}
+.calendar TFOOT .ttip {
+	BORDER-BOTTOM: #000 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #788084; COLOR: #fff; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar TFOOT .hilite {
+	BORDER-BOTTOM: #000 1px solid; BORDER-LEFT: #fff 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: #d8e0e4; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar TFOOT .active {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 0px; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #fff 1px solid; PADDING-TOP: 2px
+}
+.calendar .combo {
+	Z-INDEX: 100; BORDER-BOTTOM: #000 1px solid; POSITION: absolute; BORDER-LEFT: #fff 1px solid; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; WIDTH: 4em; PADDING-RIGHT: 1px; DISPLAY: none; BACKGROUND: #d8e0e4; FONT-SIZE: 90%; BORDER-TOP: #fff 1px solid; TOP: 0px; CURSOR: default; BORDER-RIGHT: #000 1px solid; PADDING-TOP: 1px; LEFT: 0px
+}
+.calendar .combo .label {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+.calendar .combo .label-IEfix {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+.calendar .combo .label-IEfix {
+	WIDTH: 4em
+}
+.calendar .combo .active {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #000 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #c8d0d4; BORDER-TOP: #000 1px solid; BORDER-RIGHT: #fff 1px solid; PADDING-TOP: 0px
+}
+.calendar .combo .hilite {
+	BACKGROUND: #048; COLOR: #aef
+}
+.calendar TD.time {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 1px; BACKGROUND-COLOR: #e8f0f4; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #000 1px solid; PADDING-TOP: 1px
+}
+.calendar TD.time .hour {
+	BORDER-BOTTOM: #889 1px solid; BORDER-LEFT: #889 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 4px; PADDING-RIGHT: 3px; BORDER-TOP: #889 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #889 1px solid; PADDING-TOP: 0px
+}
+.calendar TD.time .minute {
+	BORDER-BOTTOM: #889 1px solid; BORDER-LEFT: #889 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 4px; PADDING-RIGHT: 3px; BORDER-TOP: #889 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #889 1px solid; PADDING-TOP: 0px
+}
+.calendar TD.time .ampm {
+	BORDER-BOTTOM: #889 1px solid; BORDER-LEFT: #889 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 4px; PADDING-RIGHT: 3px; BORDER-TOP: #889 1px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #889 1px solid; PADDING-TOP: 0px
+}
+.calendar TD.time .ampm {
+	TEXT-ALIGN: center
+}
+.calendar TD.time .colon {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 2px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.calendar TD.time SPAN.hilite {
+	BORDER-BOTTOM-COLOR: #000; BACKGROUND-COLOR: #667; BORDER-TOP-COLOR: #000; COLOR: #fff; BORDER-RIGHT-COLOR: #000; BORDER-LEFT-COLOR: #000
+}
+.calendar TD.time SPAN.active {
+	BORDER-BOTTOM-COLOR: #f00; BACKGROUND-COLOR: #000; BORDER-TOP-COLOR: #f00; COLOR: #0f0; BORDER-RIGHT-COLOR: #f00; BORDER-LEFT-COLOR: #f00
+}
+.control_panel{
+	margin-right: 5px;
+}
+.control_panel td{
+	padding-left: 5px;
+	padding-right:5px;
+}
