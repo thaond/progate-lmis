@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 5.0.0//EN" "http://www.liferay.com/dtd/liferay-display_5_0_0.dtd">
+
+<display>
+	<category name="ProGate">		
+	    <portlet id="ProGate_DisplayStyle" />
+		<portlet id="ProGate_SlideShowProduct" />
+		<portlet id="ProGate_ProductService" />
+		<portlet id="ProGate_MenuOrgProfile" />
+		<portlet id="ProGate_Menu" />
+		<portlet id="ProGate_Journal" />
+		<portlet id="Progate_ManageOrg"></portlet>		
+		<portlet id="Video_Profile" />
+		<portlet id="InformationOrg" />
+		<portlet id="Certification_Mgmt" />
+		<portlet id="Achievement_Mgmt" />
+		<portlet id="Customer_Talk" />
+		<portlet id="Partner_View" />
+		<portlet id="NewsOrgProfile" />
+		<portlet id="ProGate_Overview" />
+		<portlet id="Product_Service_ProGate" />
+		<portlet id="Product_Service_Org" />
+		<portlet id="Logo_Banner-portlet" />
+		<portlet id="Develop_History" />
+		<portlet id="Org_Map" />
+		<portlet id="SupportOrgProfile" />
+		<portlet id="Customer_Org" />
+		<portlet id="Left_Menu" />
+		<portlet id="NewManageOrg" />
+		<portlet id="ProGate_News" />
+		<portlet id="ProGate_ProductOverview" />
+		<portlet id="MyBlog" />
+		<portlet id="OrgList" />
+		<portlet id="SignUp" />
+	    <portlet id="Sub_Org" />
+		<portlet id="Sub_Org_Path" />
+		<portlet id="HierarchyOrg" />
+		<portlet id="ForgetPassword" />
+		<portlet id="BuildingPage" />
+		<portlet id="ResetPassword" />
+		<portlet id="ChangePassword" />
+	</category>
+</display>
