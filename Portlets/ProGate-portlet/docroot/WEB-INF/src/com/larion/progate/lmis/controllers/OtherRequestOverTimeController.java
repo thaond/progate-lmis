@@ -22,9 +22,11 @@ import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
 import larion.progate.lmis.model.LmisViewRegistrationOvertime;
+import larion.progate.lmis.service.LmisOvertimeRequestsLocalServiceUtil;
 import larion.progate.lmis.service.LmisViewRegistrationOvertimeLocalServiceUtil;
 import larion.progate.lmis.service.utils.LmisConst;
 import larion.progate.lmis.service.utils.LmisUtils;
+import larion.progate.model.Organization;
 
 import org.springframework.web.portlet.ModelAndView;
 import org.springframework.web.portlet.mvc.ParameterizableViewController;
@@ -70,10 +72,22 @@ public class OtherRequestOverTimeController extends ParameterizableViewControlle
 		bean.put("typeUser", typeUser);
 		bean.put("cmd", cmd);
 		bean.put("rootId", rootId);
-
+		int selectedOrg = ParamUtil.getInteger(request, "selectedOrg", -1);
+		int selectedStatus = ParamUtil.getInteger(request, "selectedStatus", -1);
+		bean.put("selectedStatus", selectedStatus);
+		bean.put("selectedOrg", selectedOrg);
 		
 		if (cmd.equals(Constants.MANAGE)){
-			List<LmisViewRegistrationOvertime> lsOther = LmisViewRegistrationOvertimeLocalServiceUtil.getListOverTimeReqRoleSpec(rootId);
+			List<Organization> listSubOrg= LmisUtils.getOrganizationByRootId(rootId);
+			bean.put("listSubOrg", listSubOrg);
+			
+			List<LmisViewRegistrationOvertime> lsOther = new ArrayList<LmisViewRegistrationOvertime>();
+			if(selectedOrg==-1 && selectedStatus==-1){
+				lsOther = LmisViewRegistrationOvertimeLocalServiceUtil.getListOverTimeReqRoleSpec(rootId);
+			}else{
+				lsOther = LmisOvertimeRequestsLocalServiceUtil.filterTabOther(rootId, selectedOrg, selectedStatus);
+			}
+			
 			/*DynamicQuery Q= DynamicQueryFactoryUtil.forClass(LmisViewRegistrationOvertime.class,PortletClassLoaderUtil.getClassLoader());
 			Q.add(PropertyFactoryUtil.forName("rootId").eq(rootId));
 			Q.addOrder(OrderFactoryUtil.asc("requestedStatus"));

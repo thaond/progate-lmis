@@ -124,6 +124,7 @@ public class OvertimeReportAction extends ParameterizableViewAction {
 			bean.put("currDate", currDate);
 			
 			int selectedOrg = ParamUtil.getInteger(request, "selectedOrg", -1);
+			
 			bean.put("selectedOrg", selectedOrg);
 			int selectedStatus = ParamUtil.getInteger(request, "selectedStatus", -1);
 			bean.put("selectedStatus", selectedStatus);

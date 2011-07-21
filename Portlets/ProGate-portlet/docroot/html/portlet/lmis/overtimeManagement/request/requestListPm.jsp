@@ -123,11 +123,12 @@
 				<thead style="color:#ffffff">
 					<tr>
 						<th width="40px" scope="col"><fmt:message key="lmis.common.number" /> </th>
-						<th width="10%" scope="col"><fmt:message key="lmis.ot.date" /> </th>
-						<th width="27%" scope="col"><fmt:message key="lmis.ot.nameorg.list" /></th>
-						<th width="30%" scope="col"><fmt:message key="lmis.ot.regby" /></th>
-						<th width="15%" scope="col"><fmt:message key="title.organization.status" /></th>
-						<th width="110px" scope="col"></th>
+						<th width="25%" scope="col"><fmt:message key="lmis.ot.nameorg.list" /></th>
+						<th width="90px" scope="col">Ngày tạo</th>
+						<th width="90px" scope="col">Ngày tăng ca</th>
+						<th width="25%" scope="col"><fmt:message key="lmis.ot.regby" /></th>
+						<th width="12%" scope="col"><fmt:message key="title.organization.status" /></th>
+						<th width="100px" scope="col"></th>
 					</tr>
 				</thead>
 
@@ -143,11 +144,14 @@
 							</c:otherwise>
 						</c:choose>
 									<td class="cls-center">${i.count }</td>
-									<td class="cls-center">
-										<fmt:formatDate pattern="dd/MM/yyyy" value="${item.requestedAt}" />
-									</td>
 									<td class="cls-left">
 										${item.orgName }
+									</td>
+									<td class="cls-center">
+										<fmt:formatDate pattern="dd/MM/yyyy" value="${item.createdAt}" />
+									</td>
+									<td class="cls-center">
+										<fmt:formatDate pattern="dd/MM/yyyy" value="${item.requestedAt}" />
 									</td>
 									<td class="cls-left">
 										${item.reqFirstName} ${item.reqMiddleName} ${item.reqLastName}

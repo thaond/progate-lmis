@@ -101,7 +101,8 @@
 				},
 				success: function(data){
 					jQuery("#backgroundLoading").hide();
-					alert("Phê duyệt đơn thành công");
+					jQuery("#approveSuccess").css("display", "block");
+					jQuery("#approveSuccess").data('url',href).data('close',close).dialog("open");
 					jQuery('input.approved').removeAttr('disabled');
 					jQuery('input.cancel').removeAttr('disabled');
 					var url='<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">
@@ -137,6 +138,7 @@
 		}
 </script>
 </c:if>
+<jsp:include page="../../dialog/dialog-sendSuccess.jsp"></jsp:include>	
 <form action="" name="frmRequestOTDetail" method="post">
 
 	<div class="createChange">
