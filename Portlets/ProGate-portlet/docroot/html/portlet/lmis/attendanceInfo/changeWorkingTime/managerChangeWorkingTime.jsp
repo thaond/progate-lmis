@@ -14,6 +14,22 @@
 		if(${bean.selectedStatus == 3}){
 			jQuery("#status option[value='3']").attr('selected','selected');
 		}
+		
+	 	if(${bean.cmd == 'agree' || bean.cmd == "notAgree"}){
+	 		if(${bean.countPending !=0}){
+	 			var id = jQuery('.selectChangeTimeID').val();
+	 			var url = '<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">
+					<portlet:param name="action" value="managerChangeWorkingTime" />
+					<portlet:param name="<%=Request.SELECTED_ID%>" value="id_changetime" />
+					<portlet:param name="<%=Request.ORG_ID%>" value="${bean.orgId}" />
+					<portlet:param name="<%=Request.TAB_ACT%>" value="<%=Request.TAB_MANAGER%>" />
+					<portlet:param name="<%=Constants.CMD%>" value="<%=Request.REVIEW%>" />
+				</portlet:renderURL>';
+				url=url.replace('id_changetime',id);
+				submit(url);
+	 		}
+	 		
+	 	}	
 	});
 	function mySelect(){
 		var url = '<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">

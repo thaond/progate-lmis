@@ -13,6 +13,21 @@
 		if(${bean.selectedStatus == 3}){
 			jQuery("#status option[value='3']").attr('selected','selected');
 		}
+		
+		if(${bean.cmd == 'agree' || bean.cmd == "notAgree"}){
+	 		if(${bean.countPending !=0}){
+	 			var id = jQuery('.selectedId').val();
+	 			var url = '<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">
+					<portlet:param name="action" value="managerDayOffInfo" />
+					<portlet:param name="<%=Request.SELECTED_ID%>" value='id_changetime' />
+					<portlet:param name="<%=Request.ORG_ID%>" value="${bean.orgId}"/>
+					<portlet:param name="<%=Request.TAB_ACTION%>" value="<%=Request.TAB_MANAGER%>"/>
+					<portlet:param name="<%=Constants.CMD%>" value="<%=Request.REVIEW%>"/>
+				</portlet:renderURL>';
+				url = url.replace('id_changetime',id);
+				submit(url);	
+	 		}
+		}
 	});
 	jQuery(function(){
 		jQuery(".txt-search").focus(function() {
@@ -201,7 +216,7 @@
 												<input class="reviewRequest" type="image" src="/ProGate-portlet/images/lmis/overtimeManagement/Pheduyet_Disable.png" disabled="disabled"/>
 											</c:otherwise>
 										</c:choose>
-										<input type="hidden" name="absenceRequestsId" value="${items.lmisAbsenceRequestsId }">
+										<input type="hidden" class="selectedId" name="absenceRequestsId" value="${items.lmisAbsenceRequestsId }">
 									</td>
 							</tr>
     				</c:forEach>
