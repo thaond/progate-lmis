@@ -38,6 +38,21 @@
 				document.frmRequestOTList.action=url;
 				document.frmRequestOTList.submit();
 			});
+			if (${bean.selectedStatus == 1}){
+				jQuery("#status option[value='1']").attr('selected','selected');
+			}
+			if(${bean.selectedStatus == 2}){
+				jQuery("#status option[value='2']").attr('selected','selected');
+			}
+			if(${bean.selectedStatus == 3}){
+				jQuery("#status option[value='3']").attr('selected','selected');
+			}
+			if(${bean.selectedStatus == 4}){
+				jQuery("#status option[value='4']").attr('selected','selected');
+			}
+			if(${bean.selectedStatus == 5}){
+				jQuery("#status option[value='5']").attr('selected','selected');
+			}
 			jQuery(".review").click(function(e)
 			{
 				var reqId=jQuery(this).parent().find('.hid').val();
@@ -80,7 +95,7 @@
 </c:if>
 <div class="content">
 <div class="tableContainer" style="min-height: 315px;">
-	<div class="filter" style="height: 35px; padding-top: 10px;">
+	<div class="filter" style="height: 20px; padding-top: 10px;">
 			<div class="selected-org">
 				<fmt:message key="lmis.ot.nameorg"/>
 				<select name="selectedOrg" style="width: 350px;">
@@ -99,7 +114,7 @@
 			</div>
 			<div class="selected-status">
 				<fmt:message key="lmis.common.statusLower"/>
-				<select name="selectedStatus" style="width: 150px;">
+				<select id="status" name="selectedStatus" style="width: 150px;">
 						<option id="allStatus" value="-1" ><fmt:message key="lmis.common.all"/></option>
 						<option id="pending" value="<%=LmisConst.OverTimeReq_Status_Pending%>"><fmt:message key="lmis.overtimeReport.status.pending"/></option>
 						<option id="accepted" value="<%=LmisConst.OverTimeReq_Status_Accepted%>"><fmt:message key="lmis.overtimeReport.status.accepted"/></option>
