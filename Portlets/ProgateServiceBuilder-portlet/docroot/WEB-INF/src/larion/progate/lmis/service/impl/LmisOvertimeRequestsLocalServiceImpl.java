@@ -36,6 +36,7 @@ import larion.progate.lmis.model.LmisOverTimeReports;
 import larion.progate.lmis.model.LmisOvertimeApprovals;
 import larion.progate.lmis.model.LmisOvertimeRequestDetails;
 import larion.progate.lmis.model.LmisOvertimeRequests;
+import larion.progate.lmis.model.LmisViewOTApp;
 import larion.progate.lmis.model.LmisViewRegistrationOvertime;
 import larion.progate.lmis.service.LmisGeneralSettingsLocalServiceUtil;
 import larion.progate.lmis.service.LmisOverTimeReportsLocalServiceUtil;
@@ -194,12 +195,12 @@ public class LmisOvertimeRequestsLocalServiceImpl extends
 		}
 		return 0;
 	}
-	public List<LmisViewRegistrationOvertime> filterTabManager(int rootId, int orgId,int userId, int status){
+	public List<LmisViewOTApp> filterTabManager(int rootId, int orgId,int userId, int status){
 		try {
 			return LmisViewRegistrationOvertimeFinderUtil.filterTabManager(rootId, orgId, userId, status);
 		} catch (Exception e) {
 			System.out.println("Error in LmisOverTimeReportsLocalServiceImpl.filterTabManager");
-			return new ArrayList<LmisViewRegistrationOvertime>();
+			return new ArrayList<LmisViewOTApp>();
 		}
 	}
 	public List<LmisViewRegistrationOvertime> filterTabOther(int rootId, int orgId, int status){

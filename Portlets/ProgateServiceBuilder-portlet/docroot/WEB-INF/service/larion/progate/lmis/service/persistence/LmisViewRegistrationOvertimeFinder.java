@@ -40,7 +40,7 @@ public interface LmisViewRegistrationOvertimeFinder {
 	public java.util.List<larion.progate.lmis.model.LmisViewRegistrationOvertime> filterTabOther(
 		int rootId, int orgId, int status);
 
-	public java.util.List<larion.progate.lmis.model.LmisViewRegistrationOvertime> filterTabManager(
+	public java.util.List<larion.progate.lmis.model.LmisViewOTApp> filterTabManager(
 		int rootId, int orgId, int userId, int status);
 
 	public java.util.List<larion.progate.lmis.model.LmisViewRegistrationOvertime> filterByDateTabManager(

@@ -543,7 +543,7 @@ public class LmisOvertimeRequestsLocalServiceClp
 		return ((Integer)returnObj).intValue();
 	}
 
-	public java.util.List<larion.progate.lmis.model.LmisViewRegistrationOvertime> filterTabManager(
+	public java.util.List<larion.progate.lmis.model.LmisViewOTApp> filterTabManager(
 		int rootId, int orgId, int userId, int status) {
 		Object paramObj0 = new IntegerWrapper(rootId);
 
@@ -569,7 +569,7 @@ public class LmisOvertimeRequestsLocalServiceClp
 			}
 		}
 
-		return (java.util.List<larion.progate.lmis.model.LmisViewRegistrationOvertime>)ClpSerializer.translateOutput(returnObj);
+		return (java.util.List<larion.progate.lmis.model.LmisViewOTApp>)ClpSerializer.translateOutput(returnObj);
 	}
 
 	public java.util.List<larion.progate.lmis.model.LmisViewRegistrationOvertime> filterTabOther(
