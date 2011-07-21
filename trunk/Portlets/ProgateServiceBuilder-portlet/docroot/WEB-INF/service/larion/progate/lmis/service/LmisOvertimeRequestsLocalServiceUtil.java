@@ -116,7 +116,7 @@ public class LmisOvertimeRequestsLocalServiceUtil {
 			arrReason, arrTotal, arrHM, arrEndTime);
 	}
 
-	public static java.util.List<larion.progate.lmis.model.LmisViewRegistrationOvertime> filterTabManager(
+	public static java.util.List<larion.progate.lmis.model.LmisViewOTApp> filterTabManager(
 		int rootId, int orgId, int userId, int status) {
 		return getService().filterTabManager(rootId, orgId, userId, status);
 	}

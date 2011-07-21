@@ -48,7 +48,7 @@ public class LmisViewRegistrationOvertimeFinderUtil {
 		return getFinder().filterTabOther(rootId, orgId, status);
 	}
 
-	public static java.util.List<larion.progate.lmis.model.LmisViewRegistrationOvertime> filterTabManager(
+	public static java.util.List<larion.progate.lmis.model.LmisViewOTApp> filterTabManager(
 		int rootId, int orgId, int userId, int status) {
 		return getFinder().filterTabManager(rootId, orgId, userId, status);
 	}

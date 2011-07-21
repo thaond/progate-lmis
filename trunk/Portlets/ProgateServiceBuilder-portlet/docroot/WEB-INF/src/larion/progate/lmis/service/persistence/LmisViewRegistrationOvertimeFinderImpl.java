@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import larion.progate.lmis.model.LmisViewOTApp;
 import larion.progate.lmis.model.LmisViewRegistrationOvertime;
+import larion.progate.lmis.model.impl.LmisViewOTAppImpl;
 import larion.progate.lmis.model.impl.LmisViewRegistrationOvertimeImpl;
 import larion.progate.lmis.service.persistence.LmisViewRegistrationOvertimeFinderImpl;
 
@@ -100,19 +102,28 @@ public class LmisViewRegistrationOvertimeFinderImpl extends BasePersistenceImpl
 		}
 	}
 	//tab Manager
-	public List<LmisViewRegistrationOvertime> filterTabManager(int rootId, int orgId,int userId, int status){
+	public List<LmisViewOTApp> filterTabManager(int rootId, int orgId,int userId, int status){
 		Session session = null;
 		try {
 			session = openSession();
-			String sql ="SELECT * FROM vw_registration_overtime WHERE root_id="+rootId+" AND approved_by="+ userId+" AND org_id="+orgId+" AND requested_status="+status+ " ODER BY requested_status ASC;";
+			
+			StringBuilder sql = new StringBuilder();
+			sql.append("SELECT * FROM vw_ot_app WHERE root_id="+rootId+" AND approved_by="+ userId+" ");
+			if(orgId!=-1){
+				sql.append(" AND org_id="+orgId+" ");
+			}
+			if(status != -1){
+				sql.append(" AND requested_status="+status+  " ");
+			}
+			sql.append(" OrDER BY requested_status ASC,requested_at DESC;");
 			System.out.println("SQL content LmisViewRegistrationOvertimeFinderImpl.filterTabManager: "+sql);
-			SQLQuery q = session.createSQLQuery(sql);
-			q.addEntity("LmisViewRegistrationOvertime", LmisViewRegistrationOvertimeImpl.class);
+			SQLQuery q = session.createSQLQuery(sql.toString());
+			q.addEntity("LmisViewOTApp", LmisViewOTAppImpl.class);
 			return q.list();
 
 		} catch (Exception e) {
 			System.out.println("Error in LmisViewRegistrationOvertimeFinderImpl.filterTabManager");
-			return new ArrayList<LmisViewRegistrationOvertime>();
+			return new ArrayList<LmisViewOTApp>();
 		}
 	}
 	//New userId = -1 :filterTabOther

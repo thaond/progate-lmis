@@ -92,7 +92,7 @@ public interface LmisOvertimeRequestsLocalService {
 		java.util.Date reqDate, int[] arrUID, java.util.List arrReason,
 		double[] arrTotal, java.util.List arrHM, java.util.List arrEndTime);
 
-	public java.util.List<larion.progate.lmis.model.LmisViewRegistrationOvertime> filterTabManager(
+	public java.util.List<larion.progate.lmis.model.LmisViewOTApp> filterTabManager(
 		int rootId, int orgId, int userId, int status);
 
 	public java.util.List<larion.progate.lmis.model.LmisViewRegistrationOvertime> filterTabOther(
