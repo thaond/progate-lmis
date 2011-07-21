@@ -156,62 +156,51 @@
 		<div class="title-center"><fmt:message key="title.product.detail" /></div>
 		<div class="req-field" style="display:none;"><fmt:message key="title.required.field" /></div>
 		<div style="height:20px;width:100%"></div>
-		<div class="content-left">
+		<div class="content-left" style="height: 120px !important;">
 			<table id="tbl-field">
 				<thead>
 					<tr>
-						<th width="100px" scope="col"></th>
-						<th></th>
+						<th width="150px" scope="col" style="border: none;"></th>
+						<th style="border:none;"></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td>
-							<fmt:message key="lmis.ot.reg.create" />
+							<fmt:message key="lmis.ot.reg.regday" />
 						</td>
 						<td>
-							<input class="date-req" type="text" name="today" value='<fmt:formatDate pattern="dd/MM/yyyy" value="${bean.ls.createdAt }"  />' readonly="readonly" />
+							<input class="date-req" type="text" name="today" value="<fmt:formatDate  value='${bean.ls.createdAt }' pattern="dd/MM/yyyy"/>" readonly="readonly" disabled="disabled" />
 						</td>
 					</tr>
-					<tr>
-						<td class="cls-org">
+					<tr style="height:36px">
+						<td class="cls-org" style="vertical-align: middle !important;">
 							<fmt:message key="lmis.ot.nameorg" />
 						</td>
-						<td>
-							<select name="slt-org" class="slt" disabled="disabled">
-								<option value="${bean.ls.orgId }" selected="selected">${bean.ls.orgName }</option>
-							</select>
+						<td style="vertical-align: middle">
+							<input class="subOrg" type="text" name="slt-org" value="${bean.ls.orgName }" disabled="disabled" />
 						</td>
 					</tr>
-					<tr class="cls-reason">
+					<tr >
 						<td>
-							<fmt:message key="lmis.ot.reg.reason" />
+							<fmt:message key="lmis.overtimeReport.reportDayLower" />
 						</td>
 						<td>
-							<textarea id="txt-reason" name="txt-reason" style="width: 320px;height: 112px" rows="5" disabled="disabled">${bean.ls.requestedReason }</textarea>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<label class="cls-error"><fmt:message key="lmis.ot.reg.errreason" /></label>
+							<input style="width: 350px; height: 20px" class="date-input-ot" type="text" name="date-ot" value="<fmt:formatDate  value='${bean.ls.requestedAt }' pattern="dd/MM/yyyy"/>" disabled="disabled" />
 						</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
-		<div class="content-right">
-			<div class="total-ot"> <fmt:message key="lmis.ot.reg.totalhour" /> <span style="font-weight: bold; color: red;">${bean.totalHour }</span></div>
-			<div class="date-ot">
-				<fmt:message key="lmis.ot.reg.regday" /> <input class="date-input-ot" type="text" name="date-ot" value=" <fmt:formatDate pattern="dd/MM/yyyy" value="${bean.ls.requestedAt }"  />" />
-			</div>
-			
-			<div class="clear-right"></div>
-			<div class="feedback">
-				<fieldset class="fbk-field">
-					<legend><fmt:message key="lmis.ot.reg.feedback" /> (<span style="color:red">*</span>) </legend>
-					<textarea id="txt-fbk" class="txt-fbk" name="txt-fbk" style="height: 80px;width: 400px">${bean.ls.reaSon }</textarea>
+		<div class="content-right" style="height: 120px !important;">
+			<div>
+				<div class="total-ot"> <fmt:message key="lmis.ot.reg.totalhour" /> <span style="font-weight: bold; color: red;">${bean.totalHour }</span></div>
+				<fieldset style="-moz-border-radius:5px">
+					<legend><fmt:message key="lmis.ot.reg.reason" /></legend>
+					<textarea id="txt-reason" name="txt-reason" style="height:54px; width: 412px" disabled="disabled">
+						${bean.ls.reaSon }
+					</textarea>
 				</fieldset>
-				<label id="err-fbk" class="cls-error"><fmt:message key="lmis.ot.reg.errNook" /></label>
 			</div>
 		</div>
 		<div class="clear"></div>
@@ -253,10 +242,16 @@
 			</table>
 		</div>
 	</div>
-	<div id="btnApp" class="button" style="display:none">
-		<input class="cancel" type="button" value="<fmt:message key="button.notagree" />"  style="width: 110px; background-image: url('/ProGate-portlet/images/lmis/Khong_Dong_Y.png')" />
-		&nbsp
+		<div class="feedback" style="padding-left: 5px">
+		<fieldset class="fbk-field" style="width: 900px">
+			<legend><fmt:message key="lmis.ot.reg.feedback" /></legend>
+			<textarea name="feedback" style="width: 899px; height: 94px" disabled="disabled">${bean.feedback}</textarea>
+		</fieldset>
+	</div>
+	<div id="btnApp" class="button" style="display:none;margin-top: 10px; margin-bottom: 5px;">
 		<input class="approved" type="button" value="<fmt:message key="button.agree" />"  />
+				&nbsp
+		<input class="cancel" type="button" value="<fmt:message key="button.notagree" />"  style="width: 110px; background-image: url('/ProGate-portlet/images/lmis/Khong_Dong_Y.png')" />
 	</div>
 	<input class="reqId" type="hidden" name="reqId" value="${bean.reqId }">
 </form>
