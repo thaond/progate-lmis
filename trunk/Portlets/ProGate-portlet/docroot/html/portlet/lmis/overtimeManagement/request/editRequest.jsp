@@ -187,7 +187,8 @@
 						},
 						success: function(data){
 							jQuery("#backgroundLoading").hide();
-							alert("Bạn đã gửi đơn thành công");
+							jQuery("#editSuccess").css("display", "block");
+							jQuery("#editSuccess").data('url',href).data('close',close).dialog("open");
 							jQuery(this).removeAttr('disabled');
 							var url='<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">
 				    			<portlet:param name="action" value="requestOverTime" />
@@ -233,7 +234,7 @@
 		}
 		
 </script>
-
+<<jsp:include page="../../dialog/dialog-editRequestOt.jsp"></jsp:include>
 <form action="" name="frmRequestOTDetail" method="post">
 	<div class="createChange" >
 	    <input id="ctl-back" type="image" src="/ProGate-portlet/images/lmis/undo.png" width="24" height="24">

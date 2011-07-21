@@ -36,11 +36,13 @@ import larion.progate.lmis.model.LmisViewOTApp;
 import larion.progate.lmis.model.LmisViewRegistrationOvertime;
 import larion.progate.lmis.model.LmisViewRegistrationOvertimeaApproval;
 import larion.progate.lmis.service.LmisOvertimeMonthlyLocalServiceUtil;
+import larion.progate.lmis.service.LmisOvertimeRequestsLocalServiceUtil;
 import larion.progate.lmis.service.LmisViewOTAppLocalServiceUtil;
 import larion.progate.lmis.service.LmisViewRegistrationOvertimeLocalServiceUtil;
 import larion.progate.lmis.service.LmisViewRegistrationOvertimeaApprovalLocalServiceUtil;
 import larion.progate.lmis.service.utils.LmisConst;
 import larion.progate.lmis.service.utils.LmisUtils;
+import larion.progate.model.Organization;
 
 import org.springframework.web.portlet.ModelAndView;
 import org.springframework.web.portlet.mvc.ParameterizableViewController;
@@ -72,7 +74,7 @@ public class ManageRequestOverTimeController extends
 		bean.put("otPending", LmisConst.OverTimeReq_Status_Pending);
 		bean.put("otAccepted", LmisConst.OverTimeReq_Status_Accepted);
 		bean.put("otNotAccepted", LmisConst.OverTimeReq_Status_NotAccept);
-		bean.put("otReported", LmisConst.OverTimeReq_Status_Create_Report);
+		bean.put("otReported", LmisConst.OverTimeReq_Status_Created_Report);
 		bean.put("otBaned", LmisConst.OverTimeReq_Status_Ban);
 		bean.put("view", Constants.VIEW);// View list
 		bean.put("approve", Constants.APPROVE);// View list
@@ -87,6 +89,10 @@ public class ManageRequestOverTimeController extends
 		bean.put("typeUser", typeUser);
 		bean.put("rootId", rootId);
 		bean.put("cmd", cmd);
+		int selectedOrg = ParamUtil.getInteger(request, "selectedOrg", -1);
+		int selectedStatus = ParamUtil.getInteger(request, "selectedStatus", -1);
+		bean.put("selectedStatus", selectedStatus);
+		bean.put("selectedOrg", selectedOrg);
 		if (typeUser.equals(LmisConst.IS_BOD)) {
 			if (cmd.equals(Constants.APPROVE)) {
 				List<LmisViewRegistrationOvertime> lsDetail = LmisViewRegistrationOvertimeLocalServiceUtil
@@ -114,7 +120,20 @@ public class ManageRequestOverTimeController extends
 			}
 			if (cmd.equals(Constants.MANAGE)) {
 				try {
-					List<LmisViewOTApp> lsApp = LmisViewOTAppLocalServiceUtil.getListOtApprovedByBod(rootId, userId);
+					List<Organization> listSubOrg= LmisUtils.getOrganizationByRootId(rootId);
+					bean.put("listSubOrg", listSubOrg);
+					
+					List<LmisViewOTApp> lsApp =new ArrayList<LmisViewOTApp>();
+					if(selectedOrg==-1 && selectedStatus==-1){
+						//System.out.println("selectedOrg==-1 && selectedStatus==-1:"+selectedOrg);
+						lsApp =LmisViewOTAppLocalServiceUtil.getListOtApprovedByBod(rootId, userId);
+						//System.out.println("LsAPP: "+lsApp );
+					}else{
+						System.out.println("selectedOrg !=-1 :"+selectedOrg);
+						lsApp = LmisOvertimeRequestsLocalServiceUtil.filterTabManager(rootId, selectedOrg, userId, selectedStatus);
+						System.out.println("LsAPP: "+lsApp );
+					}
+					
 					
 					int countPending = LmisViewRegistrationOvertimeLocalServiceUtil.countRequestPending(rootId,userId);
 					System.out.println(cmd + " " + typeUser + " " + tabAction);
