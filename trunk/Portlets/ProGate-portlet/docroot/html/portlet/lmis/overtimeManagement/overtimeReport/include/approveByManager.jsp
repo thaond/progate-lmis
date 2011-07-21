@@ -74,6 +74,7 @@
 					var href='<portlet:renderURL>
 						<portlet:param name="action" value="commonController" />
 					<portlet:param name="<%=Request.TAB_ACTION%>" value="<%=Request.TAB_MANAGER%>" />
+					<portlet:param name="<%=Constants.CMD%>" value="<%=LmisRequest.GO_BACK%>" />
 					<portlet:param name="orgId" value="${bean.orgId}" />
 					</portlet:renderURL>';
 					
@@ -84,6 +85,7 @@
 					var href='<portlet:renderURL>
 						<portlet:param name="action" value="commonController" />
 					<portlet:param name="<%=Request.TAB_ACTION%>" value="<%=Request.TAB_MANAGER%>" />
+					<portlet:param name="<%=Constants.CMD%>" value="<%=LmisRequest.GO_BACK%>" />
 					<portlet:param name="orgId" value="${bean.orgId}" />
 					</portlet:renderURL>';
 					
@@ -208,7 +210,7 @@
 		</fieldset>
 	</div>
 	<div class="align-right" style="padding-right: 2px; padding-top: 10px;">
-		<input class="default-button-disable" id="agreeReport" type="submit" value="<fmt:message key="lmis.overtimeReport.agree" />" disabled="disabled"  />
-		<input class="not-agree-disable" id="notAgreeReport" type="submit" value="<fmt:message key="lmis.overtimeReport.notAgree" />" disabled="disabled" />
+		<input class="default-button-disable" id="agreeReport" type="button" value="<fmt:message key="lmis.overtimeReport.agree" />" disabled="disabled"  />
+		<input class="not-agree-disable" id="notAgreeReport" type="button" value="<fmt:message key="lmis.overtimeReport.notAgree" />" disabled="disabled" />
 	</div>
 </form>
