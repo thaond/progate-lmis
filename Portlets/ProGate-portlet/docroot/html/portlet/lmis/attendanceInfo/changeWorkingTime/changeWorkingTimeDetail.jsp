@@ -69,6 +69,9 @@
 	</c:otherwise>
 </c:choose>
 <script type="text/javascript">
+
+	
+
 	jQuery(function(){
 		jQuery("#datepickerBegin, #datepickerEnd").keydown(function(e) {
 			if (e.keyCode > 0 ) {
@@ -496,13 +499,16 @@
 				<fieldset class="fieldset">
 					<legend class="legend"><fmt:message key="lmis.common.review" /></legend>
 						<textarea id="review" name="review" style="width:390px;height:75px">
-							<c:out value="${bean.contentApproval}"></c:out>
+							 <c:out value="${bean.contentApproval}"></c:out>
 						</textarea>
-						<!-- <script type="text/javascript">
-							jQuery(document).ready(function(){
-								jQuery('#review').html('${bean.contentApproval}');
-							});
-						</script> -->
+					<script type="text/javascript">
+						jQuery(document).ready(function(){
+							var data = jQuery('#review').val();
+							data = jQuery.trim(data);
+							alert(data);
+							jQuery('#review').html(data);
+						});
+					</script>
 				</fieldset>
 				</div>
 			</div>
