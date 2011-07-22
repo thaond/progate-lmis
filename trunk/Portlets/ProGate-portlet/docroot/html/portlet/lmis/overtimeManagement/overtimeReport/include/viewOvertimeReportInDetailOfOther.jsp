@@ -1,7 +1,6 @@
 <%@page import="com.larion.progate.lmis.constants.LmisRequest"%>
 <%@ include file="../../../../common/init.jsp"%>
 <%@ include file="../../../../lmis/init-ttn.jsp" %>
-<%-- <%@ include file="../../../../lmis/dialog/dialog-message.jsp" %> --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <script type="text/javascript">
 jQuery(document).ready(function() {
