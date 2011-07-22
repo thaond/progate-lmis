@@ -38,7 +38,7 @@ public class LmisViewReportOvertimeFinderImpl extends BasePersistenceImpl
 					+"FULL JOIN lmis_overtime_approvals ap ON a.id = ap.report_id "
 					+  "JOIN lmis_overtime_request_details s ON o.id = s.request_id "
 					+ "GROUP BY ot_rep_id,a.root_id "
-					+ "HAVING (a.root_id ="+ rootId + ") ORDER BY max(b.id) ";
+					+ "HAVING (a.root_id ="+ rootId + ") ORDER BY max(reported_status) ";
 			SQLQuery query = session.createSQLQuery(sql);
 			System.out.println("============1");
 			System.out.println(sql);

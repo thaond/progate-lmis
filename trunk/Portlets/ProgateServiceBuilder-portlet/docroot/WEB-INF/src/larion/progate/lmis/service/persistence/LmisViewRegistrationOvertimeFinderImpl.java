@@ -90,9 +90,18 @@ public class LmisViewRegistrationOvertimeFinderImpl extends BasePersistenceImpl
 		Session session = null;
 		try {
 			session = openSession();
-			String sql ="SELECT * FROM vw_registration_overtime WHERE root_id="+rootId+" AND org_id="+orgId+" AND requested_status="+status+ " ODER BY requested_status ASC;";
+			
+			StringBuilder sql = new StringBuilder();
+			sql.append("SELECT * FROM vw_registration_overtime WHERE root_id="+rootId+" ");
+			if(orgId!=-1){
+				sql.append(" AND org_id="+orgId+" ");
+			}
+			if(status !=-1){
+				sql.append(" AND requested_status="+status+ " ");
+			}
+			sql.append(" ORDER BY requested_status ASC;");
 			System.out.println("SQL content LmisViewRegistrationOvertimeFinderImpl.filterTabManager: "+sql);
-			SQLQuery q = session.createSQLQuery(sql);
+			SQLQuery q = session.createSQLQuery(sql.toString());
 			q.addEntity("LmisViewRegistrationOvertime", LmisViewRegistrationOvertimeImpl.class);
 			return q.list();
 			
