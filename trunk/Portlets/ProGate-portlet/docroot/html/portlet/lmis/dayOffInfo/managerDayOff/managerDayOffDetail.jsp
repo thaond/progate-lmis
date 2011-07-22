@@ -284,10 +284,10 @@
 						},
 						success:function(){
 							undoMa();
-							alert("Bạn đã đồng ý ");
+							
 						},
 						error:function(){
-							alert("co loi xay ra o ajax");
+							alert("Có lỗi xảy ra, cần liên hệ đến Quản trị viên của ProGate");
 						}
 					});
 				});
@@ -310,10 +310,10 @@
 						},
 						success:function(){
 							undoMa();
-							alert("Bạn không đồng ý ");
+							
 						},
 						error:function(){
-							alert("co loi xay ra o ajax");
+							alert("Có lỗi xảy ra, cần liên hệ đến Quản trị viên của ProGate");
 						}
 					});
 				});
