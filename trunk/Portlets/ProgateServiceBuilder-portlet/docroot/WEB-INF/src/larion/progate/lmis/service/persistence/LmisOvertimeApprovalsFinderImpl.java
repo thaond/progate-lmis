@@ -23,7 +23,10 @@ public class LmisOvertimeApprovalsFinderImpl extends BasePersistenceImpl
             String sql = "select report_id " 
 				+" from lmis_overtime_approvals "			 				
 				+ "where report_id> 0 and root_id =" + rootId + " AND approved_by=" + approvedBy ;
-            System.out.println("sql: " + sql);        
+            
+        	System.out
+			.println("SQL content LmisOvertimeApprovalsFinderImpl.getListOverTimeApproval: "
+					+ sql.toString());     
             SQLQuery query = session.createSQLQuery(sql); 	    
           
             ArrayList<Integer> lsInt = new ArrayList<Integer>();

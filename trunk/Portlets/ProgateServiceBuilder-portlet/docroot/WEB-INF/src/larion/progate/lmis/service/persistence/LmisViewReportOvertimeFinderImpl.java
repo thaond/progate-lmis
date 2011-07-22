@@ -3,7 +3,9 @@ package larion.progate.lmis.service.persistence;
 import java.util.ArrayList;
 import java.util.List;
 
+import larion.progate.lmis.model.LmisViewAttDaily;
 import larion.progate.lmis.model.LmisViewReportOvertime;
+import larion.progate.lmis.model.impl.LmisViewAttDailyImpl;
 import larion.progate.lmis.model.impl.LmisViewReportOvertimeImpl;
 import larion.progate.lmis.service.persistence.LmisViewReportOvertimeFinderImpl;
 import com.liferay.portal.SystemException;
@@ -16,7 +18,7 @@ import com.liferay.portal.service.persistence.impl.BasePersistenceImpl;
 public class LmisViewReportOvertimeFinderImpl extends BasePersistenceImpl
 		implements LmisViewReportOvertimeFinder {
 
-	@Override
+
 	public List<LmisViewReportOvertime> getListOtRepRoleSpecs(int rootId)
 			throws SystemException {
 		Session session = null;
@@ -39,46 +41,47 @@ public class LmisViewReportOvertimeFinderImpl extends BasePersistenceImpl
 					+  "JOIN lmis_overtime_request_details s ON o.id = s.request_id "
 					+ "GROUP BY ot_rep_id,a.root_id "
 					+ "HAVING (a.root_id ="+ rootId + ") ORDER BY max(reported_status) ";
-			SQLQuery query = session.createSQLQuery(sql);
-			System.out.println("============1");
-			System.out.println(sql);
+			SQLQuery query = session.createSQLQuery(sql);			
+			System.out.println("Success in LmisViewReportOvertimeFinderImpl.getListOtRepRoleSpecs "+  sql.toString());
 			query.addEntity("LmisViewRegistrationOvertime",
 					LmisViewReportOvertimeImpl.class);
 			List<LmisViewReportOvertime> result = query.list();
 			System.out.println(result);
-			System.out.println("============2");
+	
 			return result;
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("Error in LmisViewReportOvertimeFinderImpl.getListOtRepRoleSpecs: "
+					+ e.toString());
 		}
 
 		return null;
 	}
 	
-	/*public List<LmisViewReportOvertime> getListOtRepRoleSpecsFilter(int rootId,int orgId)
-	throws SystemException {
+	public List<LmisViewReportOvertime> getListOverTimeRepByRole(int rootId,
+			int reportBy) throws SystemException {
 		Session session = null;
 		try {
-	
 			session = openSession();
-			StringBuilder sql = new StringBuilder();		
-			sql.append("select * from LmisViewReportOvertime where root_id= "
-					+ rootId + " AND org_id=" + orgId + " ");
-				  sql.append(" order by reported_status asc ");
-			
+			StringBuilder sql = new StringBuilder();
+
+			sql.append("select * from vw_report_overtime where root_id = "
+					+ rootId + " AND reported_by =  " + reportBy + " ");
+			sql.append(" order by reported_status");
 			System.out
-					.println("SQL content LmisViewReportOvertimeFinderImpl.getListOtRepRoleSpecsFilter "
+					.println("SQL content LmisViewReportOvertimeFinderImpl.getListOverTimeRepByRole: "
 							+ sql.toString());
 			SQLQuery q = session.createSQLQuery(sql.toString());
-			q.addEntity("LmisViewReportOvertime", LmisViewReportOvertimeImpl.class);
+			q.addEntity("LmisViewReportOvertime",
+					LmisViewReportOvertimeImpl.class);
 			return q.list();
 
 		} catch (Exception e) {
 			System.out
-					.println("Error in LmisViewReportOvertimeFinderImpl.getListOtRepRoleSpecsFilter: "
+					.println("Error in LmisViewReportOvertimeFinderImpl.getListOverTimeRepRolePM : "
 							+ e.toString());
 			return new ArrayList<LmisViewReportOvertime>();
 		}
-	}*/
+
+	}
 
 }

@@ -87,7 +87,7 @@ public class LmisViewReportOvertimeApprovalLocalServiceImpl extends
 			return ls;
 		} catch (SystemException e) {
 			System.out
-					.println("Error in LmisViewReportOvertimeApproval  approvedBy has id ="
+					.println("Error in LmisViewReportOvertimeApproval.getListApproval  approvedBy has id ="
 							+ approvedBy);
 			e.printStackTrace();
 		}
