@@ -105,6 +105,12 @@
 		document.frmRequestOTDetail.action=url;
 		document.frmRequestOTDetail.submit(); 
 	}
+	
+	jQuery(document).ready(function(){
+		var data = "${bean.lmisViewReportOvertimeDetail.reportedReason}" ;
+		data = jQuery.trim(data);
+		jQuery('#txt-reason').val(data);
+	});
 </script>
 
 <form action="" name="frmRequestOTDetail" method="post">
@@ -160,7 +166,7 @@
 				<fieldset style="-moz-border-radius:5px">
 					<legend><fmt:message key="lmis.ot.reg.reason" /></legend>
 					<textarea id="txt-reason" name="txt-reason" style="height:54px; width: 412px" disabled="disabled">
-						${bean.lmisViewReportOvertimeDetail.reportedReason}
+<%-- 						${bean.lmisViewReportOvertimeDetail.reportedReason} --%>
 					</textarea>
 				</fieldset>
 			</div>
