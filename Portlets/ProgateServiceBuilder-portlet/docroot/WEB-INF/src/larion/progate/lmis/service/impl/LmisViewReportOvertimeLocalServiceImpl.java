@@ -65,7 +65,7 @@ public class LmisViewReportOvertimeLocalServiceImpl
 			int rootId) throws com.liferay.portal.SystemException {
 		try {		
 		List<LmisViewReportOvertime> result = LmisViewReportOvertimeFinderUtil.getListOtRepRoleSpecs(rootId);
-		System.out.println("success"+ result.toString());
+		System.out.println("success LmisViewReportOvertime.getListOverTimeRepRoleSpec "+ result.toString());
 		return result;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -75,15 +75,18 @@ public class LmisViewReportOvertimeLocalServiceImpl
 	
 	public List<LmisViewReportOvertime> getListOverTimeRepRoleSpec(
 			int rootId,int orgId) throws com.liferay.portal.SystemException {
-		try {		
+		try {
+		System.out.println("rootId "+ rootId);
 		List<LmisViewReportOvertime> ls= LmisViewReportOvertimeFinderUtil.getListOtRepRoleSpecs(rootId);
+		System.out.println("orgId "+ orgId);
 		List<LmisViewReportOvertime> lsOrg = LmisViewReportOvertimeUtil.findByOrgID(orgId);
+		System.out.println("lsOrg "+lsOrg.toString());
 		
 		List<LmisViewReportOvertime> result = ListUtils.intersection(ls, lsOrg);
-		System.out.println("success"+ result.toString());
+		System.out.println("success LmisViewReportOvertime.getListOverTimeRepRoleSpecFilter "+ result.toString());
 		return result;
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("Error in LmisViewReportOvertime.getListOverTimeRepRoleSpecFilter "+ e.toString());
 		}
 		return null;
 	}
@@ -94,9 +97,8 @@ public class LmisViewReportOvertimeLocalServiceImpl
 		try {
 			
 
-			List<larion.progate.lmis.model.LmisViewReportOvertime> lsRoot = LmisViewReportOvertimeUtil.findByRootID(rootId);
-			List<larion.progate.lmis.model.LmisViewReportOvertime> lsRep = LmisViewReportOvertimeUtil.findByReportedBy(reportBy);
-			List<larion.progate.lmis.model.LmisViewReportOvertime> lsResult = ListUtils.intersection(lsRoot, lsRep);	
+			List<larion.progate.lmis.model.LmisViewReportOvertime> lsResult  = LmisViewReportOvertimeFinderUtil.getListOverTimeRepByRole(rootId, reportBy);
+			
 			System.out.println("Success:LmisViewReportOvertime.getListOverTimeRepRolePM");
 			return lsResult;
 		} catch (SystemException e) {
@@ -112,11 +114,9 @@ public class LmisViewReportOvertimeLocalServiceImpl
 
 	public List<LmisViewReportOvertime> getListOverTimeRepRoleBOD(int rootId,int reportBy) throws com.liferay.portal.SystemException {
 		try {
+					
+			List<larion.progate.lmis.model.LmisViewReportOvertime> lsResult = LmisViewReportOvertimeFinderUtil.getListOverTimeRepByRole(rootId, reportBy);
 			
-
-			List<larion.progate.lmis.model.LmisViewReportOvertime> lsRoot = LmisViewReportOvertimeUtil.findByRootID(rootId);
-			List<larion.progate.lmis.model.LmisViewReportOvertime> lsRep = LmisViewReportOvertimeUtil.findByReportedBy(reportBy);
-			List<larion.progate.lmis.model.LmisViewReportOvertime> lsResult = ListUtils.intersection(lsRoot, lsRep);	
 			System.out.println("Success:LmisViewReportOvertime.getListOverTimeRepRoleBOD");
 			return lsResult;
 		} catch (SystemException e) {

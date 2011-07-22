@@ -31,4 +31,7 @@ package larion.progate.lmis.service.persistence;
 public interface LmisViewReportOvertimeFinder {
 	public java.util.List<larion.progate.lmis.model.LmisViewReportOvertime> getListOtRepRoleSpecs(
 		int rootId) throws com.liferay.portal.SystemException;
+
+	public java.util.List<larion.progate.lmis.model.LmisViewReportOvertime> getListOverTimeRepByRole(
+		int rootId, int reportBy) throws com.liferay.portal.SystemException;
 }

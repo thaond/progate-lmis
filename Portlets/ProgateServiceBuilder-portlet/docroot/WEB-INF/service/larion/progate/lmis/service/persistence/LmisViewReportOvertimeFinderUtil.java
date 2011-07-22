@@ -34,6 +34,11 @@ public class LmisViewReportOvertimeFinderUtil {
 		return getFinder().getListOtRepRoleSpecs(rootId);
 	}
 
+	public static java.util.List<larion.progate.lmis.model.LmisViewReportOvertime> getListOverTimeRepByRole(
+		int rootId, int reportBy) throws com.liferay.portal.SystemException {
+		return getFinder().getListOverTimeRepByRole(rootId, reportBy);
+	}
+
 	public static LmisViewReportOvertimeFinder getFinder() {
 		return _finder;
 	}
