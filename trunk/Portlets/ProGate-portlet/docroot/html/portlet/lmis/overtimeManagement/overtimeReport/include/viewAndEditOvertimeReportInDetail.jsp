@@ -67,7 +67,8 @@
 			<div class="feedback">
 				<fieldset class="fbk-field">
 					<legend><fmt:message key="lmis.ot.reg.feedback"/></legend>
-					<textarea name="txt-fbk" style="width: 410px; height: 94px;" disabled="disabled" >${bean.feedback}</textarea>
+					<textarea id="txt-fbk" name="txt-fbk" style="width: 410px; height: 94px;" disabled="disabled" >
+					</textarea>
 				</fieldset>
 				<label class="cls-error"><fmt:message key="lmis.ot.reg.errNook" /></label>
 			</div>
@@ -182,6 +183,14 @@
 </div>
 
 <script type="text/javascript">
+
+jQuery(document).ready(function(){
+	if(${bean.cmd==bean.createReport}){
+		jQuery('#txt-fbk').val("Phản hồi phê duyệt của cấp trên ở đây");
+	}else{
+		jQuery('#txt-fbk').val("${bean.feedback}");
+	}
+});
 
 jQuery(document).ready(function() {
 	//process showing data of users who worked overtime
