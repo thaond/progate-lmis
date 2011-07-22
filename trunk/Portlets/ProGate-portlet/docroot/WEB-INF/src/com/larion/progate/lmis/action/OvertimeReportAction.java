@@ -133,8 +133,13 @@ public class OvertimeReportAction extends ParameterizableViewAction {
 			System.out.println("selectedstatus: " + selectedStatus);
 			System.out.println("-------------------DEBUG SELECTED ORG AND STATUS-----------------------");
 			//get list all suborg of root
-			List<Organization> listSubOrg= LmisUtils.getOrganizationByRootId(orgId);
-			bean.put("listSubOrg", listSubOrg);
+			try {
+				List<Organization> listSubOrg= LmisUtils.getOrganizationByRootId(orgId);
+				bean.put("listSubOrg", listSubOrg);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			
 			//Organization listSubOr = listSubOrg.get(0);listSubOr.getn
 
 			try{

@@ -46,6 +46,7 @@
 		jQuery('div#btnApp').css('display','inline');
 		jQuery('div#btnApp').css('float','right');
 		jQuery('div#btnApp input').removeAttr('disabled');
+		jQuery("textarea[name='feedback']").removeAttr('disabled');
 		jQuery('div.total-ot').css('display','inline');
 		jQuery('div.date-ot').css('margin-top', '11px');
 		jQuery('div.date-ot').append('<div style="float:right;padding-right:6px;margin-top: 2px;"> <img src="/ProGate-portlet/images/lmis/viewAttendanceInfo/disable_datepicker.png"></div>');
@@ -165,23 +166,23 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<tr style="height: 45px;">
 						<td>
 							<fmt:message key="lmis.ot.reg.regday" />
 						</td>
 						<td>
-							<input class="date-req" type="text" name="today" value="<fmt:formatDate  value='${bean.ls.createdAt }' pattern="dd/MM/yyyy"/>" readonly="readonly" disabled="disabled" />
+							<input style="width: 350px;'" class="date-req" type="text" name="today" value="<fmt:formatDate  value='${bean.ls.createdAt }' pattern="dd/MM/yyyy"/>" readonly="readonly" disabled="disabled" />
 						</td>
 					</tr>
-					<tr style="height:36px">
+					<tr style="height:45px">
 						<td class="cls-org" style="vertical-align: middle !important;">
 							<fmt:message key="lmis.ot.nameorg" />
 						</td>
 						<td style="vertical-align: middle">
-							<input class="subOrg" type="text" name="slt-org" value="${bean.ls.orgName }" disabled="disabled" />
+							<input style="width: 350px;" class="subOrg" type="text" name="slt-org" value="${bean.ls.orgName }" disabled="disabled" />
 						</td>
 					</tr>
-					<tr >
+					<tr style="height: 45px;">
 						<td>
 							<fmt:message key="lmis.overtimeReport.reportDayLower" />
 						</td>
