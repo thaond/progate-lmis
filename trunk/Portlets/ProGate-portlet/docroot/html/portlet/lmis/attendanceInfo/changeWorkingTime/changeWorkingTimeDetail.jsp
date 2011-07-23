@@ -505,8 +505,7 @@
 						jQuery(document).ready(function(){
 							var data = jQuery('#review').val();
 							data = jQuery.trim(data);
-							alert(data);
-							jQuery('#review').html(data);
+							jQuery('#review').val(data);
 						});
 					</script>
 				</fieldset>
