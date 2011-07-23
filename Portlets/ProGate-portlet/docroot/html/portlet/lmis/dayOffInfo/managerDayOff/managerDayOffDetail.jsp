@@ -283,7 +283,7 @@
 							'selectedId':selectedId,
 						},
 						success:function(){
-							undoMa();
+							undoRe();
 							
 						},
 						error:function(){
@@ -309,8 +309,7 @@
 							'selectedId':selectedId,
 						},
 						success:function(){
-							undoMa();
-							
+							undoRe();
 						},
 						error:function(){
 							alert("Có lỗi xảy ra, cần liên hệ đến Quản trị viên của ProGate");
@@ -331,6 +330,16 @@
 				var url = '<portlet:renderURL windowState="<%=WindowState.NORMAL.toString() %>">
 								<portlet:param name="action" value="managerDayOffBy"/>
 								<portlet:param name="<%=Constants.CMD%>" value="<%=Request.UNDO_HANDER%>"/>
+								<portlet:param name="<%=Request.TAB_ACTION%>" value="<%=Request.TAB_MANAGER%>"/>
+								<portlet:param name="<%=Request.ORG_ID%>" value="${bean.orgId}"/>
+							</portlet:renderURL>';
+				submit(url);
+			}
+			function undoRe(){
+				var url = '<portlet:renderURL windowState="<%=WindowState.NORMAL.toString() %>">
+								<portlet:param name="action" value="managerDayOffBy"/>
+								<portlet:param name="<%=Constants.CMD%>" value="<%=Request.UNDO_HANDER%>"/>
+								<portlet:param name="unReview" value="unReview"/>
 								<portlet:param name="<%=Request.TAB_ACTION%>" value="<%=Request.TAB_MANAGER%>"/>
 								<portlet:param name="<%=Request.ORG_ID%>" value="${bean.orgId}"/>
 							</portlet:renderURL>';
