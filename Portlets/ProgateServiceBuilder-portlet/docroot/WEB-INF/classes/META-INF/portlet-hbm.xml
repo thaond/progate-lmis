@@ -564,7 +564,7 @@
 		<property name="perId" column="per_id" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
-	<class name="larion.progate.cds.model.impl.CompetencyImpl" table="cds_competencies">
+<class name="larion.progate.cds.model.impl.CompetencyImpl" table="cds_competencies">
 		<id name="competencyId" column="id" type="java.lang.Integer">
 			<generator class="sequence">
 				<param name="sequence">cds_competencies_id_seq</param>
@@ -1117,7 +1117,7 @@
 		<property name="userId" column="user_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
 		<property name="cdsTitleId" column="title_id" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
 	</class>
-	<class name="larion.progate.lmis.model.impl.LmisEmailSettingsImpl" table="lmis_email_settings">
+<class name="larion.progate.lmis.model.impl.LmisEmailSettingsImpl" table="lmis_email_settings">
 		<id name="lmisEmailSettingId" column="id" type="java.lang.Integer">
 			<generator class="sequence">
 				<param name="sequence">lmis_email_settings_id_seq</param>

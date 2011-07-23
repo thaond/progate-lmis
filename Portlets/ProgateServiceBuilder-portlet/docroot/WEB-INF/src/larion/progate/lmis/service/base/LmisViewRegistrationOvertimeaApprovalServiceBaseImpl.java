@@ -175,6 +175,7 @@ import larion.progate.lmis.service.persistence.LmisViewOvertimeReportPersistence
 import larion.progate.lmis.service.persistence.LmisViewRegistrationOvertimeFinder;
 import larion.progate.lmis.service.persistence.LmisViewRegistrationOvertimePersistence;
 import larion.progate.lmis.service.persistence.LmisViewRegistrationOvertimeaApprovalPersistence;
+import larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinder;
 import larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalPersistence;
 import larion.progate.lmis.service.persistence.LmisViewReportOvertimeFinder;
 import larion.progate.lmis.service.persistence.LmisViewReportOvertimePersistence;
@@ -1451,6 +1452,15 @@ public abstract class LmisViewRegistrationOvertimeaApprovalServiceBaseImpl
 		this.lmisViewReportOvertimeApprovalPersistence = lmisViewReportOvertimeApprovalPersistence;
 	}
 
+	public LmisViewReportOvertimeApprovalFinder getLmisViewReportOvertimeApprovalFinder() {
+		return lmisViewReportOvertimeApprovalFinder;
+	}
+
+	public void setLmisViewReportOvertimeApprovalFinder(
+		LmisViewReportOvertimeApprovalFinder lmisViewReportOvertimeApprovalFinder) {
+		this.lmisViewReportOvertimeApprovalFinder = lmisViewReportOvertimeApprovalFinder;
+	}
+
 	public LmisViewDayValueMaxLocalService getLmisViewDayValueMaxLocalService() {
 		return lmisViewDayValueMaxLocalService;
 	}
@@ -1963,6 +1973,8 @@ public abstract class LmisViewRegistrationOvertimeaApprovalServiceBaseImpl
 	protected LmisViewReportOvertimeApprovalService lmisViewReportOvertimeApprovalService;
 	@BeanReference(name = "larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalPersistence.impl")
 	protected LmisViewReportOvertimeApprovalPersistence lmisViewReportOvertimeApprovalPersistence;
+	@BeanReference(name = "larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinder.impl")
+	protected LmisViewReportOvertimeApprovalFinder lmisViewReportOvertimeApprovalFinder;
 	@BeanReference(name = "larion.progate.lmis.service.LmisViewDayValueMaxLocalService.impl")
 	protected LmisViewDayValueMaxLocalService lmisViewDayValueMaxLocalService;
 	@BeanReference(name = "larion.progate.lmis.service.LmisViewDayValueMaxService.impl")

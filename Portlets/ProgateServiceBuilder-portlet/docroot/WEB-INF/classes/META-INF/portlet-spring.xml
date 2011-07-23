@@ -688,7 +688,7 @@
 	<bean id="larion.progate.service.persistence.ViewProGatePermissionsRolesFinderUtil" class="larion.progate.service.persistence.ViewProGatePermissionsRolesFinderUtil">
 		<property name="finder" ref="larion.progate.service.persistence.ViewProGatePermissionsRolesFinder.impl" />
 	</bean>
-	<bean id="larion.progate.cds.service.CompetencyLocalService.impl" class="larion.progate.cds.service.impl.CompetencyLocalServiceImpl" />
+<bean id="larion.progate.cds.service.CompetencyLocalService.impl" class="larion.progate.cds.service.impl.CompetencyLocalServiceImpl" />
 	<bean id="larion.progate.cds.service.CompetencyLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
 		<property name="target" ref="larion.progate.cds.service.CompetencyLocalService.impl" />
 	</bean>
@@ -785,6 +785,10 @@
 	<bean id="larion.progate.cds.service.persistence.CdsEvaluationPeriodsPersistence.impl" class="larion.progate.cds.service.persistence.CdsEvaluationPeriodsPersistenceImpl" parent="basePersistence" />
 	<bean id="larion.progate.cds.service.persistence.CdsEvaluationPeriodsUtil" class="larion.progate.cds.service.persistence.CdsEvaluationPeriodsUtil">
 		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsEvaluationPeriodsPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.cds.service.persistence.CdsEvaluationPeriodsFinder.impl" class="larion.progate.cds.service.persistence.CdsEvaluationPeriodsFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.cds.service.persistence.CdsEvaluationPeriodsFinderUtil" class="larion.progate.cds.service.persistence.CdsEvaluationPeriodsFinderUtil">
+		<property name="finder" ref="larion.progate.cds.service.persistence.CdsEvaluationPeriodsFinder.impl" />
 	</bean>
 	<bean id="larion.progate.cds.service.CdsTitlesLocalService.impl" class="larion.progate.cds.service.impl.CdsTitlesLocalServiceImpl" />
 	<bean id="larion.progate.cds.service.CdsTitlesLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
@@ -1402,7 +1406,7 @@
 	<bean id="larion.progate.cds.service.persistence.CdsPAFinalUtil" class="larion.progate.cds.service.persistence.CdsPAFinalUtil">
 		<property name="persistence" ref="larion.progate.cds.service.persistence.CdsPAFinalPersistence.impl" />
 	</bean>
-	<bean id="larion.progate.lmis.service.LmisEmailSettingsLocalService.impl" class="larion.progate.lmis.service.impl.LmisEmailSettingsLocalServiceImpl" />
+<bean id="larion.progate.lmis.service.LmisEmailSettingsLocalService.impl" class="larion.progate.lmis.service.impl.LmisEmailSettingsLocalServiceImpl" />
 	<bean id="larion.progate.lmis.service.LmisEmailSettingsLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
 		<property name="target" ref="larion.progate.lmis.service.LmisEmailSettingsLocalService.impl" />
 	</bean>
@@ -2212,6 +2216,10 @@
 	<bean id="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalPersistence.impl" class="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalPersistenceImpl" parent="basePersistence" />
 	<bean id="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalUtil" class="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalUtil">
 		<property name="persistence" ref="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalPersistence.impl" />
+	</bean>
+	<bean id="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinder.impl" class="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinderUtil" class="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinderUtil">
+		<property name="finder" ref="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinder.impl" />
 	</bean>
 	<bean id="larion.progate.lmis.service.LmisViewDayValueMaxLocalService.impl" class="larion.progate.lmis.service.impl.LmisViewDayValueMaxLocalServiceImpl" />
 	<bean id="larion.progate.lmis.service.LmisViewDayValueMaxLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
