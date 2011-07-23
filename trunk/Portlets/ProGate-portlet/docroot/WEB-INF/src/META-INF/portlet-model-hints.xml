@@ -460,7 +460,7 @@
 		<field name="perId" type="String" />
 		<field name="description" type="String" />
 	</model>
-	<model name="larion.progate.cds.model.Competency">
+<model name="larion.progate.cds.model.Competency">
 		<field name="competencyId" type="Integer" />
 		<field name="rootId" type="int" />
 		<field name="name" type="String" />
@@ -895,7 +895,7 @@
 		<field name="userId" type="int" />
 		<field name="cdsTitleId" type="int" />
 	</model>
-	<model name="larion.progate.lmis.model.LmisEmailSettings">
+<model name="larion.progate.lmis.model.LmisEmailSettings">
 		<field name="lmisEmailSettingId" type="Integer" />
 		<field name="rootId" type="int" />
 		<field name="emailName" type="String" />
