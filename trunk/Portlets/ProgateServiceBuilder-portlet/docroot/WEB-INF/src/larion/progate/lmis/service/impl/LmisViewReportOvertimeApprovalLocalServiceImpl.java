@@ -33,6 +33,7 @@ import larion.progate.lmis.model.LmisViewReportOvertimeApproval;
 import larion.progate.lmis.service.LmisViewReportOvertimeApprovalLocalServiceUtil;
 import larion.progate.lmis.service.base.LmisViewReportOvertimeApprovalLocalServiceBaseImpl;
 import larion.progate.lmis.service.persistence.LmisOvertimeApprovalsFinderUtil;
+import larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinderUtil;
 import larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalUtil;
 import larion.progate.lmis.service.utils.LmisConst;
 
@@ -68,7 +69,7 @@ public class LmisViewReportOvertimeApprovalLocalServiceImpl extends
 		return null;
 	}
 
-	public List<LmisViewReportOvertimeApproval> getListApproval(
+	/*public List<LmisViewReportOvertimeApproval> getListApproval(
 			int rootId, int approvedBy)
 			throws com.liferay.portal.SystemException {
 		try {
@@ -82,9 +83,32 @@ public class LmisViewReportOvertimeApprovalLocalServiceImpl extends
 				ls.add(obj);
 				}
 			}			
-			System.out
-					.println("Success: LmisViewReportOvertimeApproval.getListApproval");
+			System.out.println("Success: LmisViewReportOvertimeApproval.getListApproval");
 			return ls;
+		} catch (SystemException e) {
+			System.out
+					.println("Error in LmisViewReportOvertimeApproval.getListApproval  approvedBy has id ="
+							+ approvedBy);
+			e.printStackTrace();
+		}
+		return null;
+	}*/
+	
+	public List<LmisViewReportOvertimeApproval> getListApproval(
+			int rootId, int approvedBy)
+			throws com.liferay.portal.SystemException {
+		try {
+			List<LmisViewReportOvertimeApproval> lsFinal = new ArrayList<LmisViewReportOvertimeApproval>();
+			List<LmisViewReportOvertimeApproval> ls = LmisViewReportOvertimeApprovalFinderUtil.getListApprovals(rootId, approvedBy);
+			
+			for (LmisViewReportOvertimeApproval lmisViewReportOvertimeApproval : ls) {
+				if(lmisViewReportOvertimeApproval.getReportedStatus() != 4)
+				{
+					lsFinal.add(lmisViewReportOvertimeApproval);
+					}
+			}						
+			System.out.println("Success: LmisViewReportOvertimeApproval.getListApproval");
+			return lsFinal;
 		} catch (SystemException e) {
 			System.out
 					.println("Error in LmisViewReportOvertimeApproval.getListApproval  approvedBy has id ="

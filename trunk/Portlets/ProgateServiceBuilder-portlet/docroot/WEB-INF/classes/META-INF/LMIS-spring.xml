@@ -812,6 +812,10 @@
 	<bean id="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalUtil" class="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalUtil">
 		<property name="persistence" ref="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalPersistence.impl" />
 	</bean>
+	<bean id="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinder.impl" class="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinderImpl" parent="basePersistence" />
+	<bean id="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinderUtil" class="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinderUtil">
+		<property name="finder" ref="larion.progate.lmis.service.persistence.LmisViewReportOvertimeApprovalFinder.impl" />
+	</bean>
 	<bean id="larion.progate.lmis.service.LmisViewDayValueMaxLocalService.impl" class="larion.progate.lmis.service.impl.LmisViewDayValueMaxLocalServiceImpl" />
 	<bean id="larion.progate.lmis.service.LmisViewDayValueMaxLocalService.velocity" class="org.springframework.aop.framework.ProxyFactoryBean" parent="baseVelocityService">
 		<property name="target" ref="larion.progate.lmis.service.LmisViewDayValueMaxLocalService.impl" />
