@@ -14,8 +14,9 @@
 			jQuery("#status option[value='3']").attr('selected','selected');
 		}
 		
-		if(${bean.cmd == 'agree' || bean.cmd == "notAgree"}){
-	 		if(${bean.countPending !=0}){
+		if(${bean.unReview == "unReview"}){
+			
+	 		if(${bean.countPending != 0}){
 	 			var id = jQuery('.selectedId').val();
 	 			var url = '<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">
 					<portlet:param name="action" value="managerDayOffInfo" />
@@ -25,7 +26,7 @@
 					<portlet:param name="<%=Constants.CMD%>" value="<%=Request.REVIEW%>"/>
 				</portlet:renderURL>';
 				url = url.replace('id_changetime',id);
-				submit(url);	
+				submit(url);
 	 		}
 		}
 	});

@@ -59,6 +59,8 @@ public class ManagerDayOffByController extends ParameterizableViewController {
 			System.out.println("hander---- "+cmd);
 			bean.put("cmd", cmd);
 			
+			String unReview = ParamUtil.getString(request,"unReview","null");
+			bean.put("unReview", unReview);
 			Date date = new Date();
 			String dateStr = df.format(date);
 			String dateValue = ParamUtil.getString(request, "dateDayOff",dateStr);
