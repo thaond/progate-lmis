@@ -50,7 +50,7 @@
 	<c:when test="${bean.cmd == bean.REVIEW}">
 		<script type="text/javascript">
 			jQuery(document).ready(function() {
-				jQuery(".btnSend, .btnCancel,").hide();
+				jQuery(".btnSend, .btnCancel, #btnReview").hide();
 				jQuery("#datepickerBegin, #datepickerEnd,#reason").attr("disabled","disabled");		
 				jQuery('#tableDaily :input').attr("disabled","disabled");
 		});
@@ -63,7 +63,10 @@
 				jQuery("#datepickerBegin, #datepickerEnd").attr("disabled","disabled");
 				jQuery('#tableDaily :input').attr("disabled","disabled");
 				jQuery("textarea").attr("disabled","disabled");
-				
+				if(${bean.timeChangeDetail.requestedStatus != 1}){
+					jQuery("#btnReview").hide();
+					
+				}
 			});
 		</script>
 	</c:otherwise>
@@ -168,6 +171,12 @@
 				e.preventDefault();
 			}
 		});
+		
+		jQuery("#btnReview").click(function(e){
+			jQuery("#review").removeAttr("disabled","disabled");
+			jQuery(".btnAgree, .btnNotAgree").css('display','inline');
+			jQuery("#btnReview").hide();
+		});
 		jQuery("#undoPer").one('click',function(e){
 			var url='<portlet:renderURL windowState="<%=WindowState.NORMAL.toString() %>">
 						<portlet:param name="action" value="commonController" />
@@ -259,6 +268,10 @@
 	    	<input id="undo" type="image" src="/ProGate-portlet/images/lmis/undo.png">
 	    	<a id="_undo" href="#"><fmt:message key="lmis.common.back" /></a>
 	    </div>
+	    <div id="btnReview" class="cls-rightAngle" style="margin-right:8em">
+    		<input name="review" type="image" src="/ProGate-portlet/images/lmis/review.png">
+    		<a id="id-rightAngle" href="#"><fmt:message key="lmis.review"/></a>
+    	</div>
 	</c:when>
     </c:choose>
 	<div class="content">
