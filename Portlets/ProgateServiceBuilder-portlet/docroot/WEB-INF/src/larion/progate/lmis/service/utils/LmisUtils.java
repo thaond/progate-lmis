@@ -76,9 +76,7 @@ public class LmisUtils {
 			return null;
 		} catch (SystemException e) {
 			System.out
-					.println("Error in LmisUtils.getFullNameByUID with param:"
-							+ userId);
-			e.printStackTrace();
+					.println("Error in LmisUtils.getFullNameByUID with param: "+ userId +" ");
 			return null;
 		}
 	}

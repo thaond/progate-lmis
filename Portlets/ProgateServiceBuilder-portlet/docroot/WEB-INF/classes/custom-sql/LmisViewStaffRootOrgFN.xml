@@ -13,7 +13,7 @@
         <![CDATA[
 		select max(id) as id,user_id,max(root_id)as root_id,max(org_id) as org_id ,max(bod_id) as bod_id, max(staff_code) as staff_code, scanner_code,max(screenname) as screenname,max(fullname) as fullname,max(firstname) as firstname, max(lastname) as lastname,max(emailaddress) as emailaddress
 		from vw_staff_root_org_fn_ordered
-		WHERE (vw_staff_root_org_fn_ordered.root_id = 96)
+		WHERE (vw_staff_root_org_fn_ordered.root_id = ?)
 		group by user_id, scanner_code
         ]]>
     </sql>

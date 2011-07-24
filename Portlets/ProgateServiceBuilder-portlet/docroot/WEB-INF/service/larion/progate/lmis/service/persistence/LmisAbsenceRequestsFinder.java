@@ -41,6 +41,9 @@ public interface LmisAbsenceRequestsFinder {
 	public java.util.List<larion.progate.lmis.model.LmisViewTimeChangeReqs> filterByStatusTabOther(
 		int rootId, int status);
 
+	public java.util.List<larion.progate.lmis.model.LmisViewTimeChangeReqs> getListOtReqApproveBy(
+		int rootId, int status);
+
 	public java.util.List<larion.progate.lmis.model.LmisViewTimeChangeReqs> filterByStatusAndUserTabManager(
 		int rootId, int userId, int status, java.util.ArrayList<Integer> lsArr,
 		java.util.ArrayList<Integer> lsUser);

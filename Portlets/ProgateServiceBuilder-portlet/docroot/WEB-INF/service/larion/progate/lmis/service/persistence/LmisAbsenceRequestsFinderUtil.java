@@ -50,6 +50,11 @@ public class LmisAbsenceRequestsFinderUtil {
 		return getFinder().filterByStatusTabOther(rootId, status);
 	}
 
+	public static java.util.List<larion.progate.lmis.model.LmisViewTimeChangeReqs> getListOtReqApproveBy(
+		int rootId, int status) {
+		return getFinder().getListOtReqApproveBy(rootId, status);
+	}
+
 	public static java.util.List<larion.progate.lmis.model.LmisViewTimeChangeReqs> filterByStatusAndUserTabManager(
 		int rootId, int userId, int status, java.util.ArrayList<Integer> lsArr,
 		java.util.ArrayList<Integer> lsUser) {
