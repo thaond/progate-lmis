@@ -10,9 +10,10 @@ jQuery(function(){
 		    modal: true,
 		    closeOnEscape: false,
 		    close:function dong() {
-		    	var url = jQuery("#editSuccess").data('url');
-	    		jQuery("#frmRequestOTDetail").attr("action", url);
-	    		jQuery("#frmRequestOTDetail").sumbit();
+		    	var url = jQuery("#sendSuccess").data('url');
+		    
+				jQuery("#frmRequestOTDetail").attr("action", url);			
+				jQuery("#frmRequestOTDetail").submit();
 		    },
 		    overlay:{
 		    	background:'#000000',
@@ -20,22 +21,23 @@ jQuery(function(){
 		    },
 		    buttons:{
 		    	'<fmt:message key="button.close" />': function(){
-		    		var url = jQuery("#editSuccess").data('url');
-		    		jQuery("#frmRequestOTDetail").attr("action", url);
-		    		jQuery("#frmRequestOTDetail").sumbit();
+		    		var url = jQuery("#sendSuccess").data('url');
+		    
+					jQuery("#frmRequestOTDetail").attr("action", url);			
+					jQuery("#frmRequestOTDetail").submit();
 		    	}
 		    },
 		    resizable: false,
-		    width: 380,
+		    width: 300,
 		    height: 150
 	    };
-	jQuery("#editSuccess").dialog(dialogOpts);
+	jQuery("#sendSuccess").dialog(dialogOpts);
 });
 </script>
 
-<div id="editSuccess">
+<div id="sendSuccess">
 	<div style="padding:10px 0 0 17px"><img height="40" width="40" src="/ProGate-portlet/images/lmis/success.png">
-		<div style="font-weight: bold;margin:-23px 0 0 50px">Bạn đã cập nhật đơn tăng ca thành công.</div>
+		<div style="font-weight: bold;margin:-23px 0 0 50px">Bạn đã phê duyệt báo cáo tăng ca thành công!</div>
 	</div>
 </div>
 

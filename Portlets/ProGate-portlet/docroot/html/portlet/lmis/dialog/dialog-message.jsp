@@ -7,9 +7,10 @@ jQuery(function(){
 				<portlet:param name="<%=Request.TAB_ACT%>" value="<%=Request.TAB_PERSONAL%>" />
 				<portlet:param name="<%=Request.ORG_ID%>" value="${bean.orgId}"/>
 				</portlet:renderURL>';
+	
 	var close = function(){			
-		document.frmChangeWorkingTimeList.action=href;
-		document.frmChangeWorkingTimeList.submit();
+		jQuery("#frmChangeWorkingTimeDetail").attr("action", href);			
+		jQuery("#frmChangeWorkingTimeDetail").submit();
 
 	}
 	var dialogOpts = {
@@ -19,8 +20,8 @@ jQuery(function(){
 		    closeOnEscape: false,
 		    close:function() {
 		    	//location.load = href;
-				document.frmChangeWorkingTimeList.action=href;
-				document.frmChangeWorkingTimeList.submit(); 
+		    	jQuery("#frmChangeWorkingTimeDetail").attr("action", href);			
+				jQuery("#frmChangeWorkingTimeDetail").submit(); 
 		    },
 		    overlay:{
 		    	background:'#000000',

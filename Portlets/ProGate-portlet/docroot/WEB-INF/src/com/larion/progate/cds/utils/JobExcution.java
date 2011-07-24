@@ -6,17 +6,26 @@ import java.util.List;
 
 import larion.progate.cds.model.CdsEvaluationPeriods;
 import larion.progate.cds.service.CdsEvaluationPeriodsLocalServiceUtil;
+import larion.progate.lmis.model.LmisWorkingCalendars;
+import larion.progate.lmis.service.LmisWorkingCalendarsLocalServiceUtil;
+import larion.progate.lmis.service.utils.LmisUtils;
 import larion.progate.service.OrganizationLocalServiceUtil;
 import larion.progate.service.ProgateOrganizationsStaffsLocalServiceUtil;
 
 import org.apache.commons.lang.time.DateUtils;
 
 import com.larion.progate.cds.constant.RequestConst;
+import com.liferay.ibm.icu.util.Calendar;
 import com.liferay.portal.PortalException;
 import com.liferay.portal.SystemException;
+import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil;
+import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
 import com.liferay.portal.kernel.job.IntervalJob;
 import com.liferay.portal.kernel.job.JobExecutionContext;
 import com.liferay.portal.kernel.job.JobExecutionException;
+import com.liferay.portal.kernel.portlet.PortletClassLoaderUtil;
+import com.liferay.portal.kernel.util.CalendarUtil;
 import com.liferay.portal.kernel.util.Time;
 
 public class JobExcution implements IntervalJob {
@@ -32,13 +41,44 @@ public class JobExcution implements IntervalJob {
 			throws JobExecutionException {
 		try {
 			System.out.println("THIS IS THE ACTUAL TASK!");
+			
 			Date currentDate = new Date();
 			currentDate = DateUtils.addHours(currentDate, 7);
 
 			List<Integer> listOfRootIds = OrganizationLocalServiceUtil
 					.getCompany();
+			//System.out.println("getList roodit"+listOfRootIds);
+			//Lmis
+			Calendar cal = Calendar.getInstance();
 
+			int next3month = cal.get(Calendar.MONTH) + 4;
+			int year = cal.get(Calendar.YEAR);
+			if(next3month>12){
+				next3month-=12;
+				year++;
+			}
+			//cal.set(year, cal.get(Calendar.MONTH)+1 );
+			//System.out.println("getActualMaximum");
+			//int lastday = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+			System.out.println("LmisScheduler Started!");
+			//System.out.println("next4firstday "+year+"/"+next3month+"/"+"01");
+			//System.out.println("next4lastday " +year+"/"+next3month+"/"+"30");
+			Date next3firstday = LmisUtils.convertStrtoDate(year+"/"+next3month+"/"+"01","yyyy/MM/dd");
+			Date next3lastday = LmisUtils.convertStrtoDate(year+"/"+next3month+"/"+"30","yyyy/MM/dd");
+			
 			for (int rootId : listOfRootIds) {
+				// LMIS
+				DynamicQuery Q = DynamicQueryFactoryUtil.forClass(LmisWorkingCalendars.class,PortletClassLoaderUtil.getClassLoader());
+				Q.add(PropertyFactoryUtil.forName("rootId").eq(rootId));
+				Q.add(PropertyFactoryUtil.forName("dayValue").ge(next3firstday));
+				Q.add(PropertyFactoryUtil.forName("dayValue").le(next3lastday));
+				
+				
+				List<Object> lsO = LmisWorkingCalendarsLocalServiceUtil.dynamicQuery(Q);
+				if(lsO.size() ==0 || lsO ==null){
+					LmisWorkingCalendarsLocalServiceUtil.workingcalendar(rootId, year, next3month);
+				}
+				//CDS
 				List<CdsEvaluationPeriods> periods = CdsEvaluationPeriodsLocalServiceUtil
 						.getPeriodByRootId(rootId);
 
@@ -71,6 +111,7 @@ public class JobExcution implements IntervalJob {
 			}
 
 		} catch (Exception e) {
+			System.out.println("Error in JobExcution: "+e.toString());
 		}
 	}
 
