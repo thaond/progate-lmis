@@ -49,7 +49,7 @@
 						</td>
 						<td>
 							<textarea id="txt-reason" style="margin-top: 15px; height:90px; width: 350px" name="txt-reason"  disabled="disabled">
-										${bean.ls.requestedReason}
+										
 							</textarea>
 							<br>
 							<label class="cls-error"><fmt:message key="lmis.ot.reg.errreason" /></label>
@@ -190,6 +190,11 @@ jQuery(document).ready(function(){
 	}else{
 		jQuery('#txt-fbk').val("${bean.feedback}");
 	}
+	
+	
+	var data = "${bean.ls.requestedReason}";
+	data =jQuery.trim(data);
+	jQuery('#txt-reason').val(data);
 });
 
 jQuery(document).ready(function() {

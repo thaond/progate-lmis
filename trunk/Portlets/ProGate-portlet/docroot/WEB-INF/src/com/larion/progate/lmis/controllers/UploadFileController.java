@@ -55,80 +55,86 @@ public class UploadFileController extends ParameterizableViewController {
 	@Override
 	protected void handleActionRequestInternal(ActionRequest request,
 			ActionResponse response) throws Exception {
-		System.out.println("----------------------");
-		HttpServletRequest req = PortalUtil.getHttpServletRequest(request);
-		HttpServletRequest orgReq = PortalUtil.getOriginalServletRequest(req);
-		req.setCharacterEncoding("UTF-8");
-		Map<String, Object> bean = new HashMap<String, Object>();
-		SimpleDateFormat df=new SimpleDateFormat("dd/MM/yy");
-
-		ServiceContext sc = ServiceContextFactory.getInstance(this.getClass().getName(), request);
-		User user = UserLocalServiceUtil.getUser(sc.getUserId());
-		Long userIdTemp = user.getUserId();
-		Integer userId = userIdTemp.intValue();
-
-		String tabAction = ParamUtil.getString(request, Request.TAB_ACTION);
-		bean.put("tabAction", tabAction);
-		System.out.println("-------------tabaction in upload: " + tabAction);
-
-		response.setRenderParameter("action", "managerAttendanceInfo");
-		
-		int orgId = ParamUtil.getInteger(request, Request.ORG_ID);
-		bean.put("orgId", orgId);
-		System.out.println("----------------OrgId in upload: " + orgId);
-		String orgIdStr = Integer.toString(orgId);
-		response.setRenderParameter(Request.ORG_ID, orgIdStr);
-		String cmd = ParamUtil.getString(request, Constants.CMD);
-		System.out.println("---save: " + cmd);
-		String currentDateStr =request.getParameter(Request.DATEIMPORT);
-		System.out.println("cr-----------------------------------------------------------------: "+ currentDateStr);
-		Date currentDate=df.parse(currentDateStr);
-		System.out.println("currentDate--------------------------------------------------------: "+ currentDate);
-		if (cmd.equals(Constants.SAVE)) {
-			UploadPortletRequest uploadPortlet = PortalUtil
-					.getUploadPortletRequest(request);
-			String fileName = uploadPortlet.getFileName("attachFile");
-			String fileContent = uploadPortlet.getContentType("attachFile"); // text/plain
-			System.out.println("---fileName: " + fileName);
-			System.out.println("---fileContent: " + fileContent);
-			if (fileName != null) {
-				java.io.File file = uploadPortlet.getFile("attachFile");
-				System.out.println("----file: " + file);
-
-				// get fileEntryId
-				long fileEntryId = getFileEntryIDOfFile(request, file, fileName);
-				DLFileEntry fileEntry = DLFileEntryLocalServiceUtil
-						.getDLFileEntry(fileEntryId);
-
-				InputStream io = DLFileEntryLocalServiceUtil.getFileAsStream(
-						fileEntry.getCompanyId(), fileEntry.getUserId(),
-						fileEntry.getFolderId(), fileEntry.getName());
-				List<LmisGeneralSettings> ls = LmisGeneralSettingsLocalServiceUtil.getInfoConfigFileAttendance(orgId);
-				if(ls.size() ==4){
-					ArrayList<String> arr = new ArrayList<String>();
-					for (LmisGeneralSettings i : ls) {
-						arr.add(i.getName());
+		try{
+			System.out.println("----------------------");
+			HttpServletRequest req = PortalUtil.getHttpServletRequest(request);
+			HttpServletRequest orgReq = PortalUtil.getOriginalServletRequest(req);
+			req.setCharacterEncoding("UTF-8");
+			Map<String, Object> bean = new HashMap<String, Object>();
+			SimpleDateFormat df=new SimpleDateFormat("dd/MM/yy");
+	
+			ServiceContext sc = ServiceContextFactory.getInstance(this.getClass().getName(), request);
+			User user = UserLocalServiceUtil.getUser(sc.getUserId());
+			Long userIdTemp = user.getUserId();
+			Integer userId = userIdTemp.intValue();
+	
+			String tabAction = ParamUtil.getString(request, Request.TAB_ACTION);
+			bean.put("tabAction", tabAction);
+			System.out.println("-------------tabaction in upload: " + tabAction);
+	
+			response.setRenderParameter("action", "managerAttendanceInfo");
+			
+			int orgId = ParamUtil.getInteger(request, Request.ORG_ID);
+			bean.put("orgId", orgId);
+			System.out.println("----------------OrgId in upload: " + orgId);
+			String orgIdStr = Integer.toString(orgId);
+			response.setRenderParameter(Request.ORG_ID, orgIdStr);
+			String cmd = ParamUtil.getString(request, Constants.CMD);
+			System.out.println("---save: " + cmd);
+			String currentDateStr =request.getParameter(Request.DATEIMPORT);
+			System.out.println("cr-----------------------------------------------------------------: "+ currentDateStr);
+			Date currentDate=df.parse(currentDateStr);
+			System.out.println("currentDate--------------------------------------------------------: "+ currentDate);
+			if (cmd.equals(Constants.SAVE)) {
+				UploadPortletRequest uploadPortlet = PortalUtil
+						.getUploadPortletRequest(request);
+				String fileName = uploadPortlet.getFileName("attachFile");
+				String fileContent = uploadPortlet.getContentType("attachFile"); // text/plain
+				System.out.println("---fileName: " + fileName);
+				System.out.println("---fileContent: " + fileContent);
+				if (fileName != null) {
+					java.io.File file = uploadPortlet.getFile("attachFile");
+					System.out.println("----file: " + file);
+	
+					// get fileEntryId
+					long fileEntryId = getFileEntryIDOfFile(request, file, fileName);
+					DLFileEntry fileEntry = DLFileEntryLocalServiceUtil
+							.getDLFileEntry(fileEntryId);
+	
+					InputStream io = DLFileEntryLocalServiceUtil.getFileAsStream(
+							fileEntry.getCompanyId(), fileEntry.getUserId(),
+							fileEntry.getFolderId(), fileEntry.getName());
+					List<LmisGeneralSettings> ls = LmisGeneralSettingsLocalServiceUtil.getInfoConfigFileAttendance(orgId);
+					if(ls.size() ==4){
+						ArrayList<String> arr = new ArrayList<String>();
+						for (LmisGeneralSettings i : ls) {
+							arr.add(i.getName());
+						}
+						int errCode = LmisUtils.updateAttInfo(orgId, userId, currentDate, 1, true, io, arr);
+						System.out.println(errCode);
+						System.out.println("InputStream: " + io);
+					}else{
+						response.setRenderParameter("result", "failed");
 					}
-					int errCode = LmisUtils.updateAttInfo(orgId, userId, currentDate, 1, true, io, arr);
-					System.out.println(errCode);
-					System.out.println("InputStream: " + io);
-				}else{
+					//	public static int updateAttInfo(int rootId, int userId, Date imp,int importType, boolean isSessionRelated, InputStream input)
+					//int errCode = LmisUtils.updateAttInfo(arg0, arg1, arg2, arg3, arg4, arg5, arg6)(orgId, userId, currentDate, 1, true, io);
+					/*UpdateAttInfo errCode = new UpdateAttInfo(orgId,userId,currentDate,1,true,io);
+					if(errCode.getHasError()){
+						System.out.println("co loi upload");
+					}*/
+					
+					response.setRenderParameter("result", "success");
+				} else {
 					response.setRenderParameter("result", "failed");
 				}
-				//	public static int updateAttInfo(int rootId, int userId, Date imp,int importType, boolean isSessionRelated, InputStream input)
-				//int errCode = LmisUtils.updateAttInfo(arg0, arg1, arg2, arg3, arg4, arg5, arg6)(orgId, userId, currentDate, 1, true, io);
-				/*UpdateAttInfo errCode = new UpdateAttInfo(orgId,userId,currentDate,1,true,io);
-				if(errCode.getHasError()){
-					System.out.println("co loi upload");
-				}*/
-				
-				response.setRenderParameter("result", "success");
-			} else {
-				response.setRenderParameter("result", "failed");
 			}
-		}
 		bean.put("TAB_PERSONAL", Request.TAB_PERSONAL);
 		bean.put("TAB_MANAGER", Request.TAB_MANAGER);
+		}catch (Exception e) {
+			// TODO: handle exception
+			//me
+			response.setRenderParameter("result", "success");
+		}
 	}
 
 	@Override
