@@ -33,7 +33,7 @@ public class LmisAbsenceRequestsFinderImpl extends  BasePersistenceImpl implemen
 				+ " FROM lmis_absence_requests JOIN lmis_absence_approvals "
 				+ " ON lmis_absence_requests.id = lmis_absence_approvals.request_id "
 				+ " WHERE (lmis_absence_requests.root_id=?) AND (approved_by=?) "
-				+ " ORDER BY lmis_absence_requests.requested_status ASC, created_at DESC ";
+				+ " ORDER BY lmis_absence_requests.requested_status ASC, start_date ASC ";
 			System.out.println("SQL Content: "+ sql);
 			SQLQuery q = session.createSQLQuery(sql);
 			q.addEntity("LmisAbsenceRequests", LmisAbsenceRequestsImpl.class); 
@@ -77,7 +77,7 @@ public class LmisAbsenceRequestsFinderImpl extends  BasePersistenceImpl implemen
 			sql.append("SELECT a.* FROM vw_timechange_request_user_ a JOIN lmis_timechange_approvals p ON a.id=p.request_id");
 			sql.append(" WHERE (a.root_id="+rootId+" AND a.requested_status="+status+" AND approved_by="+userId+") ");
 	
-			sql.append("  ORDER BY firstname, lastname;");
+			sql.append("  ORDER BY lastname, firstname;");
 			System.out.println("SQL content LmisAbsenceRequestsFinderImpl.filterByStatusTabManager: "+sql.toString());
 			SQLQuery q = session.createSQLQuery(sql.toString());
 			q.addEntity("LmisViewTimeChangeReqs", LmisViewTimeChangeReqsImpl.class);
@@ -95,7 +95,7 @@ public class LmisAbsenceRequestsFinderImpl extends  BasePersistenceImpl implemen
 			session = openSession();
 			StringBuilder	sql = new StringBuilder();
 			sql.append("SELECT * FROM vw_timechange_request_user_ WHERE root_id=" +rootId + " AND requested_status=" + status + " ");
-			sql.append("  ORDER BY firstname, lastname;");
+			sql.append("  ORDER BY lastname, firstname;");
 			System.out.println("SQL content LmisAbsenceRequestsFinderImpl.filterByStatusTabManager: "+sql.toString());
 			SQLQuery q = session.createSQLQuery(sql.toString());
 			q.addEntity("LmisViewTimeChangeReqs", LmisViewTimeChangeReqsImpl.class);
@@ -106,6 +106,29 @@ public class LmisAbsenceRequestsFinderImpl extends  BasePersistenceImpl implemen
 			return new ArrayList<LmisViewTimeChangeReqs>();
 		}
 	}
+	//getList LmisViewTimeChangeReq co order, approveby
+	public List<LmisViewTimeChangeReqs> getListOtReqApproveBy(int rootId, int status ){
+		Session s = null;
+		try {
+			s = openSession();
+			StringBuilder sql = new StringBuilder();
+			sql.append(" SELECT DISTINCT s.id, s.root_id, s.requested_by, u.firstname, u.lastname, (((u.firstname || ' ') || u.middlename) || ' ') || u.lastname AS fullname, s.start_date, s.end_date, s.mon_start_time, s.mon_end_time, s.tue_start_time, s.tue_end_time, s.wed_start_time, s.wed_end_time, s.thu_start_time, s.thu_end_time, s.fri_start_time, s.fri_end_time, s.sat_start_time, s.sat_end_time, s.requested_reason, s.requested_status, s.created_at ");
+			sql.append(" FROM lmis_timechange_requests s ");
+			sql.append("    JOIN user_ u ON u.userid = s.requested_by");
+			sql.append(" 	JOIN lmis_timechange_approvals on s.id = lmis_timechange_approvals.request_id");
+			sql.append(" WHERE lmis_timechange_approvals.approved_by="+status+" ");
+			sql.append(" ORDER BY requested_status,u.lastname, u.firstname;");
+			System.out.println("SQL content LmisAbsenceRequestsFinderImpl.getListOtReqApproveBy :"+sql.toString());
+			SQLQuery q = s.createSQLQuery(sql.toString());
+			q.addEntity("LmisViewTimeChangeReqs", LmisViewTimeChangeReqsImpl.class);
+			return q.list();
+  
+		} catch (Exception e) {
+			System.out.println("Error in LmisAbsenceRequestsFinderImpl.getListOtReqApproveBy: "+e.toString());
+			return new ArrayList<LmisViewTimeChangeReqs>();
+		}
+	}
+	
 	public List<LmisViewTimeChangeReqs> filterByStatusAndUserTabManager(int rootId,int userId, int status , ArrayList<Integer> lsArr, ArrayList<Integer> lsUser ){
 		Session session = null;
 		try {

@@ -81,7 +81,7 @@ public class LmisViewReportOvertimeApprovalLocalServiceImpl extends
 				if(obj.getReportedStatus()!= 4)
 				{
 				ls.add(obj);
-				}
+				}	
 			}			
 			System.out.println("Success: LmisViewReportOvertimeApproval.getListApproval");
 			return ls;

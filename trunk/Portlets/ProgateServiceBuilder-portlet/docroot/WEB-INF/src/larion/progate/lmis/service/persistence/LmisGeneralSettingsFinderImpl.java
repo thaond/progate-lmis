@@ -144,7 +144,7 @@ public class LmisGeneralSettingsFinderImpl extends BasePersistenceImpl
 		try {
 			s = openSession();
 			String sql = "SELECT MAX(end_date) FROM lmis_timechange_requests WHERE "
-					+ " root_id=" + rootId + " AND requested_by=" + userId + " AND end_date > current_date;";
+					+ " root_id=" + rootId + " AND requested_by=" + userId + " AND end_date > current_date AND requested_status =2;";
 			System.out.println("SQL content:" + sql);
 			SQLQuery q = s.createSQLQuery(sql);
 			List ls = q.list();

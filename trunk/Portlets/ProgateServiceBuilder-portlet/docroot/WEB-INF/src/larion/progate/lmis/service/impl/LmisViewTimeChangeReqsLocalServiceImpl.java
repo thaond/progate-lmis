@@ -27,8 +27,14 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.apache.commons.collections.ListUtils;
+import org.apache.ecs.storage.Array;
 
 import com.liferay.portal.SystemException;
+import com.liferay.portal.kernel.dao.orm.DynamicQuery;
+import com.liferay.portal.kernel.dao.orm.DynamicQueryFactoryUtil;
+import com.liferay.portal.kernel.dao.orm.OrderFactoryUtil;
+import com.liferay.portal.kernel.dao.orm.PropertyFactoryUtil;
+import com.liferay.portal.kernel.portlet.PortletClassLoaderUtil;
 
 import larion.progate.lmis.model.LmisTimeChangeApprovals;
 import larion.progate.lmis.model.LmisViewTimeChangeReqs;
@@ -52,14 +58,31 @@ public class LmisViewTimeChangeReqsLocalServiceImpl extends
 		LmisViewTimeChangeReqsLocalServiceBaseImpl {
 	public List<larion.progate.lmis.model.LmisViewTimeChangeReqs> getListReqsByRootId(
 			int rootId) throws com.liferay.portal.SystemException {
-		return LmisViewTimeChangeReqsUtil.findByRootId(rootId);
+		
+		//return LmisViewTimeChangeReqsUtil.findByRootId(rootId);
+		try {
+			DynamicQuery Q = DynamicQueryFactoryUtil.forClass(LmisViewTimeChangeReqs.class,PortletClassLoaderUtil.getClassLoader());
+			Q.add(PropertyFactoryUtil.forName("rootId").eq(rootId));
+			Q.addOrder(OrderFactoryUtil.asc("requestedStatus"));
+			Q.addOrder(OrderFactoryUtil.asc("lastName"));
+			Q.addOrder(OrderFactoryUtil.asc("firstName"));
+			List<LmisViewTimeChangeReqs> ls = new ArrayList<LmisViewTimeChangeReqs>();
+			List<Object> lsO = LmisViewTimeChangeReqsLocalServiceUtil.dynamicQuery(Q) ;
+			for (Object object : lsO) {
+				ls.add((LmisViewTimeChangeReqs)object);
+			}
+			return ls;
+		} catch (Exception e) {
+			System.out.println("Error in LmisViewTimeChangeReqsLocalServiceImpl.getListReqsByRootId");
+			return new ArrayList<LmisViewTimeChangeReqs>();
+		}
 	}
 
 	public java.util.List<larion.progate.lmis.model.LmisViewTimeChangeReqs> getListTimeChangeReqs(
 			int rootId, int approvalBy) throws SystemException {
 		List<LmisViewTimeChangeReqs> tmp = new ArrayList<LmisViewTimeChangeReqs>();
 		try {
-			List<LmisTimeChangeApprovals> lsRoot = LmisTimeChangeApprovalsUtil.findByRootId(rootId);
+			/*List<LmisTimeChangeApprovals> lsRoot = LmisTimeChangeApprovalsUtil.findByRootId(rootId);
 			List<LmisTimeChangeApprovals> lsApp = LmisTimeChangeApprovalsUtil.findByApprovedBy(approvalBy);
 			List<LmisTimeChangeApprovals> lsResult = ListUtils.intersection(lsRoot, lsApp);
 			System.out.println(lsRoot.toString());
@@ -90,15 +113,15 @@ public class LmisViewTimeChangeReqsLocalServiceImpl extends
 				{
 					System.out.println("Error in LmisViewTimeChangeReqsLocalServiceImpl.getListTimeChangeReqs, can't add LmisViewTimeChangeReqs to result ");
 				}
-			}
-			return result;
+			}*/
+			//status is approveBy
+			return LmisAbsenceRequestsFinderUtil.getListOtReqApproveBy(rootId, approvalBy);
 		} catch (Exception e) {
 			System.out
 					.println("Error in LmisViewTimeChangeReqsLocalServiceImpl.getListRequestTimeChangeOf :"
 							+ e.toString());
-			e.printStackTrace();
+			return new ArrayList<LmisViewTimeChangeReqs>();
 		}
-		return tmp;
 	}
 
 	public LmisViewTimeChangeReqs getDetailViewReqTimeChange(int rootId,
