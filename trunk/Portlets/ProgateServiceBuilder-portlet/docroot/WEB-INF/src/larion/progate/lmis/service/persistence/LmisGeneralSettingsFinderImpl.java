@@ -203,6 +203,37 @@ public class LmisGeneralSettingsFinderImpl extends BasePersistenceImpl
 			return 0;
 		}
 	}
+	
+	
+	public double getOtHourYesterday(int userId, Date requestedAt,int rootId){
+		Session s = null;
+		try {
+			System.out.println("Test:  getOtHourYesterday");
+	
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+			df.format(requestedAt);
+			s = openSession();
+			StringBuilder sql = new StringBuilder();
+			sql.append(" select sum(b.total_hour)   FROM lmis_overtime_reports a   join lmis_overtime_requests d on d.id = a.request_id  JOIN lmis_overtime_report_details b ON a.id = b.report_id     JOIN user_ u ON b.user_id = u.userid    where u.userid = "
+			+  userId +  " AND d.requested_at= '" + requestedAt + "'  And a.root_id = " + rootId  );		
+			System.out.println("SQL content: "+sql.toString());
+			SQLQuery q = s.createSQLQuery(sql.toString());
+			List<Object> ls = q.list();
+			double r = 0;
+			if(ls.size() > 0){
+				r = Double.parseDouble(ls.get(0).toString());
+				System.out.println("getOtHourYesterday: "+r);
+				
+			}
+			return r;
+		} catch (Exception e) {
+			System.out.println("Error in LmisGeneralSettingsFinderImpl.getOtHourYesterday:" +e.toString());
+			return 0;
+		}
+	}
+	
+	
+	
 	public double getTotalWorkingTimeOfUID(int rootId, int userId, int month, int year){
 		Session s= null;
 		

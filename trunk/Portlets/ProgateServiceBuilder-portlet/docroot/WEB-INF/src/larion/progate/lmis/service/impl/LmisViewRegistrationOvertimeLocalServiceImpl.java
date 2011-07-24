@@ -34,6 +34,7 @@ import org.apache.commons.collections.ListUtils;
 import com.liferay.portal.SystemException;
 
 
+import larion.progate.lmis.model.LmisGeneralSettings;
 import larion.progate.lmis.model.LmisOverTimeReports;
 import larion.progate.lmis.model.LmisOvertimeApprovals;
 import larion.progate.lmis.model.LmisOvertimeRequestDetails;
@@ -44,6 +45,7 @@ import larion.progate.lmis.service.LmisOvertimeApprovalsLocalServiceUtil;
 import larion.progate.lmis.service.LmisOvertimeRequestDetailsLocalServiceUtil;
 import larion.progate.lmis.service.LmisViewRegistrationOvertimeLocalServiceUtil;
 import larion.progate.lmis.service.base.LmisViewRegistrationOvertimeLocalServiceBaseImpl;
+import larion.progate.lmis.service.persistence.LmisGeneralSettingsFinderUtil;
 import larion.progate.lmis.service.persistence.LmisOverTimeReportsUtil;
 import larion.progate.lmis.service.persistence.LmisOvertimeApprovalsUtil;
 import larion.progate.lmis.service.persistence.LmisOvertimeRequestDetailsUtil;
@@ -74,14 +76,11 @@ public class LmisViewRegistrationOvertimeLocalServiceImpl extends
 	public double getOtHourYesterday(int userId, Date requestedAt,int rootId)
 			throws com.liferay.portal.SystemException {
 		try {
-			List<LmisViewRegistrationOvertime> lsUser = LmisViewRegistrationOvertimeUtil.findByuserID(userId);
-			List<LmisViewRegistrationOvertime> lsDate = LmisViewRegistrationOvertimeUtil.findByRequestedAt(requestedAt);
-			List<LmisViewRegistrationOvertime> lsRoot = LmisViewRegistrationOvertimeUtil.findByRootID(rootId);			
-			List<LmisViewRegistrationOvertime> lstmp = ListUtils.intersection(lsUser, lsDate);
-			List<LmisViewRegistrationOvertime> lsResult = ListUtils.intersection(lstmp, lsRoot);
-			return lsResult.get(0).getRequestedHour();
+			double result = LmisGeneralSettingsFinderUtil.getOtHourYesterday(userId, requestedAt, rootId);
+
+			return result;
 		} catch (Exception e) {
-			System.out.println("Error : " + e.toString());
+			System.out.println("Error in LmisViewRegistrationOvertime.getOtHourYesterday : " + e.toString());
 		}
 		return 0;
 	}

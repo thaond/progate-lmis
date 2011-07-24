@@ -54,6 +54,9 @@ public interface LmisGeneralSettingsFinder {
 	public int caculateDayWillOff(int rootId, java.util.Date startDate,
 		java.util.Date endDate, int startSession, int endSession);
 
+	public double getOtHourYesterday(int userId, java.util.Date requestedAt,
+		int rootId);
+
 	public double getTotalWorkingTimeOfUID(int rootId, int userId, int month,
 		int year);
 

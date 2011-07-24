@@ -78,6 +78,11 @@ public class LmisGeneralSettingsFinderUtil {
 			startSession, endSession);
 	}
 
+	public static double getOtHourYesterday(int userId,
+		java.util.Date requestedAt, int rootId) {
+		return getFinder().getOtHourYesterday(userId, requestedAt, rootId);
+	}
+
 	public static double getTotalWorkingTimeOfUID(int rootId, int userId,
 		int month, int year) {
 		return getFinder().getTotalWorkingTimeOfUID(rootId, userId, month, year);
