@@ -11,8 +11,12 @@ jQuery(function(){
 		    closeOnEscape: false,
 		    close:function dong() {
 		    	var url = jQuery("#sendSuccess").data('url');
-				document.frmChangeWorkingTimeDetail.action=url;
-				document.frmChangeWorkingTimeDetail.submit(); 
+		    	jQuery("#frmChangeWorkingTimeDetail").attr("action", url);			
+				jQuery("#frmChangeWorkingTimeDetail").submit();
+				/* document.frmChangeWorkingTimeDetail.action=url;
+				document.frmChangeWorkingTimeDetail.submit(); */ 
+				jQuery("#frmRequestOTDetail").attr("action", url);			
+				jQuery("#frmRequestOTDetail").submit();
 		    },
 		    overlay:{
 		    	background:'#000000',
@@ -21,8 +25,12 @@ jQuery(function(){
 		    buttons:{
 		    	'<fmt:message key="button.close" />': function(){
 		    		var url = jQuery("#sendSuccess").data('url');
-		    		document.frmChangeWorkingTimeDetail.action=url;
-		    		document.frmChangeWorkingTimeDetail.submit(); 
+		    		jQuery("#frmChangeWorkingTimeDetail").attr("action", url);			
+					jQuery("#frmChangeWorkingTimeDetail").submit();
+					/* document.frmChangeWorkingTimeDetail.action=url;
+					document.frmChangeWorkingTimeDetail.submit(); */ 
+					jQuery("#frmRequestOTDetail").attr("action", url);			
+					jQuery("#frmRequestOTDetail").submit();
 		    	}
 		    },
 		    resizable: false,

@@ -58,6 +58,7 @@ jQuery(document).ready(function() {
 							<fmt:message key="lmis.ot.reg.reason"/>
 						</td>
 						<td>
+							<script>alert('${bean.lmisViewReportOvertimeDetail.reportedReason}'')</script>
 							<textarea id="txt-reason" style="margin-top: 15px; height:94px; width: 350px;" name="txt-reason" disabled="disabled">${bean.lmisViewReportOvertimeDetail.reportedReason}</textarea>
 							<br>
 							<label class="cls-error"><fmt:message key="lmis.ot.reg.errreason" /></label>

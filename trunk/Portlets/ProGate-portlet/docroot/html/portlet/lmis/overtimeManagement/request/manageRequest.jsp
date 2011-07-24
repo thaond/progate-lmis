@@ -132,8 +132,8 @@
 		<tr>
 			<th width="40px" scope="col"><fmt:message key="lmis.common.number" /> </th>
 			<th width="25%" scope="col"><fmt:message key="lmis.ot.nameorg.list" /></th>
-			<th width="90px" scope="col">Ngày tạo</th>
-			<th width="90px" scope="col">Ngày tăng ca</th>
+			<th width="90px" scope="col">Ngày Tạo</th>
+			<th width="90px" scope="col">Ngày Tăng ca</th>
 			<th width="25%" scope="col"><fmt:message key="lmis.ot.regby" /></th>
 			<th width="12%" scope="col"><fmt:message key="title.organization.status" /></th>
 			<th width="100px" scope="col"></th>

@@ -101,19 +101,18 @@
 					"reason":reason
 				},
 				success: function(data){
-					jQuery("#backgroundLoading").hide();
-					jQuery("#approveSuccess").css("display", "block");
-					jQuery("#approveSuccess").data('url',href).data('close',close).dialog("open");
-					jQuery('input.approved').removeAttr('disabled');
-					jQuery('input.cancel').removeAttr('disabled');
 					var url='<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">
 						<portlet:param name="action" value="manageRequestOverTime" />
             		<portlet:param name="<%=Request.TAB_OT_ACT %>" value="<%=Request.TAB_OT_MANAGER %>" />
             		<portlet:param name="<%=Constants.CMD %>" value="<%=Constants.MANAGE %>" />
             		<portlet:param name="<%=Request.ROOT_ID %>" value="${bean.rootId}" />
 	    						</portlet:renderURL>';
-	    			document.frmRequestOTDetail.action=url;
-	    			document.frmRequestOTDetail.submit();
+					jQuery("#backgroundLoading").hide();
+					jQuery("#sendSuccess").css("display", "block");
+					jQuery("#sendSuccess").data('url',url).dialog("open");
+					jQuery('input.approved').removeAttr('disabled');
+					jQuery('input.cancel').removeAttr('disabled');
+
 				},
 				error: function(data) {
 					jQuery("#backgroundLoading").hide();
@@ -139,8 +138,8 @@
 		}
 </script>
 </c:if>
-<jsp:include page="../../dialog/dialog-sendSuccess.jsp"></jsp:include>	
-<form action="" name="frmRequestOTDetail" method="post">
+<jsp:include page="../../dialog/dialog-approveOT.jsp"></jsp:include>	
+<form action="" id="frmRequestOTDetail" name="frmRequestOTDetail" method="post">
 
 	<div class="createChange">
 		
@@ -198,9 +197,7 @@
 				<div class="total-ot"> <fmt:message key="lmis.ot.reg.totalhour" /> <span style="font-weight: bold; color: red;">${bean.totalHour }</span></div>
 				<fieldset style="-moz-border-radius:5px">
 					<legend><fmt:message key="lmis.ot.reg.reason" /></legend>
-					<textarea id="txt-reason" name="txt-reason" style="height:54px; width: 412px" disabled="disabled">
-						${bean.ls.reaSon }
-					</textarea>
+					<textarea id="txt-reason" name="txt-reason" style="height:54px; width: 412px" disabled="disabled">${bean.ls.requestedReason}</textarea>
 				</fieldset>
 			</div>
 		</div>
@@ -246,7 +243,7 @@
 		<div class="feedback" style="padding-left: 5px">
 		<fieldset class="fbk-field" style="width: 900px">
 			<legend><fmt:message key="lmis.ot.reg.feedback" /></legend>
-			<textarea name="feedback" style="width: 899px; height: 94px" disabled="disabled">${bean.feedback}</textarea>
+			<textarea name="feedback" style="width: 899px; height: 94px" disabled="disabled">${bean.ls.reaSon }</textarea>
 		</fieldset>
 	</div>
 	<div id="btnApp" class="button" style="display:none;margin-top: 10px; margin-bottom: 5px;">

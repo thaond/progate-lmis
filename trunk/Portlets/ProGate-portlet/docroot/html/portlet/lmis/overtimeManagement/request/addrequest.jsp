@@ -176,19 +176,20 @@
 							"arrEndTime":arrEndTime
 						},
 						success: function(data){
-							jQuery("#backgroundLoading").hide();
-							jQuery("#sendSuccess").css("display", "block");
-							jQuery("#sendSuccess").data('url',href).data('close',close).dialog("open");
-							jQuery(this).removeAttr('disabled');
-							
 							var url='<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">
 				    			<portlet:param name="action" value="requestOverTime" />
 				    			<portlet:param name="<%=Request.TAB_OT_ACT%>" value="<%=Request.TAB_OT_PER %>" />
 				    			<portlet:param name="<%=Constants.CMD%>" value="<%=Constants.MANAGE%>" />
 				    			<portlet:param name="<%=Request.ROOT_ID %>" value="${bean.rootId }" />
 			    						</portlet:renderURL>';
-			    			document.frmRequestOTDetail.action=url;
-			    			document.frmRequestOTDetail.submit();
+							jQuery("#backgroundLoading").hide();
+							jQuery("#sendSuccess").css("display", "block");
+							jQuery("#sendSuccess").data('url',url).dialog("open");
+							jQuery(this).removeAttr('disabled');
+							
+							
+			    			/* document.frmRequestOTDetail.action=url;
+			    			document.frmRequestOTDetail.submit(); */
 						},
 						error: function(data) {
 							jQuery("#backgroundLoading").hide();
@@ -220,7 +221,7 @@
 		
 </script>
 <jsp:include page="../../dialog/dialog-sendSuccess.jsp"></jsp:include>	
-<form action="" name="frmRequestOTDetail" method="post">
+<form action="" name="frmRequestOTDetail" method="post" id="frmRequestOTDetail">
 	<div class="createChange">
 	    <input id="ctl-back" type="image" src="/ProGate-portlet/images/lmis/undo.png" width="24" height="24">
 	   	<a id="_createChange" href="#"><fmt:message key="lmis.common.back" /></a>

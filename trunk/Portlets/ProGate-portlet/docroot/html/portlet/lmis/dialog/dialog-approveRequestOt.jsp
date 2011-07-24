@@ -11,8 +11,8 @@ jQuery(function(){
 		    closeOnEscape: false,
 		    close:function dong() {
 		    	var url = jQuery("#approveSuccess").data('url');
-				document.frmRequestOTDetail.action=url;
-				document.ffrmRequestOTDetail.submit(); 
+		    	jQuery("#frmRequestOTDetail").attr("action", url);
+	    		jQuery("#frmRequestOTDetail").submit();
 		    },
 		    overlay:{
 		    	background:'#000000',
@@ -21,8 +21,8 @@ jQuery(function(){
 		    buttons:{
 		    	'<fmt:message key="button.close" />': function(){
 		    		var url = jQuery("#approveSuccess").data('url');
-		    		document.frmRequestOTDetail.action=url;
-		    		document.frmRequestOTDetail.submit(); 
+		    		jQuery("#frmRequestOTDetail").attr("action", url);
+		    		jQuery("#frmRequestOTDetail").submit();
 		    	}
 		    },
 		    resizable: false,
