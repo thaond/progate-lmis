@@ -102,7 +102,7 @@ function pagingSubmit(){
 						<th class="styleSTT" style="height:23px" rowspan="2"><fmt:message key="lmis.common.number"/></th>
 	    				<th width="60px" rowspan="2">Mã NV</th>
 	    				<th width="170px" rowspan="2">Họ Tên Nhân Viên</th>
-	    				<th width="84px" rowspan="2" title="Tổng số ngày nghỉ">TS Ngày Nghỉ</th>
+	    				<th width="84px" rowspan="2" title="Tổng số ngày được nghỉ">TS Ngày Được Nghỉ</th>
 	    				<th width="84px" rowspan="2" title="Tổng số ngày nghỉ có phép">TS Ngày Nghỉ Có Phép</th>
 	    				<th width="84px" rowspan="2" title="Tổng số ngày nghỉ không phép">TS Ngày Nghỉ Không Phép</th>
 	    				<th width="84px"rowspan="2" title="Tổng số ngày đã nghỉ">TS Ngày Đã Nghỉ</th>

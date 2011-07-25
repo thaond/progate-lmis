@@ -75,6 +75,7 @@ public class JobExcution implements IntervalJob {
 				
 				
 				List<Object> lsO = LmisWorkingCalendarsLocalServiceUtil.dynamicQuery(Q);
+				System.out.println("LmisWorkingCalendarsLocalServiceUtil: "+lsO);
 				if(lsO.size() ==0 || lsO ==null){
 					LmisWorkingCalendarsLocalServiceUtil.workingcalendar(rootId, year, next3month);
 				}
