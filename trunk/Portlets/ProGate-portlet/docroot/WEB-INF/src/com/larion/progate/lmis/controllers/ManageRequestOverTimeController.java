@@ -106,9 +106,14 @@ public class ManageRequestOverTimeController extends
 					bean.put("approve", "approve");
 					System.out.println("Dzo approve, pending");
 					Calendar cal = Calendar.getInstance();
-					bean.put("totalHour",LmisOvertimeMonthlyLocalServiceUtil.countTotalOverTime(rootId, ls.getOrgId(), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR)));
-					System.out.println("total hour: "+LmisOvertimeMonthlyLocalServiceUtil.countTotalOverTime(rootId, ls.getOrgId(), Calendar.MONTH, Calendar.YEAR));
-					System.out.println("Calendar: "+ cal.get(Calendar.MONTH) +" " +cal.get(Calendar.YEAR));
+					
+					//Get totalHourOT in Month
+					//DynamicQuery Q = DynamicQueryFactoryUtil.forClass(LmisOvertimeMonthly.class, PortletClassLoaderUtil.getClassLoader());
+				/*	Q.add(PropertyFactoryUtil.forName("rootId").eq(rootId));
+					Q.add(PropertyFactoryUtil.forName("orgId").eq(ls.getOrgId()));
+					Q.add(PropertyFactoryUtil.forName("monthValue").eq(mont);*/
+					bean.put("totalHour",LmisOvertimeMonthlyLocalServiceUtil.countTotalOverTime(rootId, ls.getOrgId(), cal.get(Calendar.MONTH) +1, cal.get(Calendar.YEAR)));
+					
 				}
 				
 				bean.put("lsDetail", lsDetail);
