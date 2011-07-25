@@ -479,6 +479,9 @@ public class LmisUtils {
 			Date blockDownAft =LmisGeneralSettingsLocalServiceUtil.getBlock(rootId, userId, dayStr, 2, 1);
 			Date blockUpAft = LmisGeneralSettingsLocalServiceUtil.getBlock(rootId, userId, dayStr, 2, 2);
 			//Test data
+			if(goHomeEarlyMor==null || goHomeEarlyAfter==null){
+				return 3;
+			}
 			System.out.println("Test data setAbsence:goHomeEarlyAfter "+goHomeEarlyAfter);
 			System.out.println("Test data setAbsence:goHomeMor "+ goHomeEarlyMor);
 			System.out.println("Test blockDownMor "+blockDownMor);
