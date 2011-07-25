@@ -439,7 +439,7 @@ public class LmisGeneralSettingsLocalServiceImpl
 			System.out
 					.println("Error in LmisGeneralSetting.getRangeGoHomeEarly"
 							+ e.toString());
-			e.printStackTrace();
+			
 			return new Date();
 		}
 		return null;
