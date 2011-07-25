@@ -421,6 +421,7 @@ public class LmisGeneralSettingsLocalServiceImpl
 		try {
 			List<LmisWorkingTimes> ls = LmisWorkingTimesLocalServiceUtil
 					.findByWorkingTimeOf(rootId);
+			
 			if (ls.size() > 0) {
 				for (LmisWorkingTimes i : ls) {
 					if (i.getSessionName().equals(sessionName)) {
