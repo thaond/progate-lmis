@@ -14,7 +14,7 @@
 				dateFormat:'dd/mm/yy',
 				minDate:'0'
 			});
-			jQuery(".btnAgree,.btnNotAgree").hide();
+			jQuery(".btnAgree,.btnNotAgree,#reviewNext_").hide();
 			jQuery("#review").attr("disabled","disabled");
 			jQuery("#review").html("Phản hồi của người phê duyệt sẽ hiển thị ở đây");
 			jQuery(".styleMar1").hide();
@@ -39,7 +39,7 @@
 					dateFormat:'dd/mm/yy',
 					minDate:'1'
 				});
-				jQuery(".btnAgree,.btnNotAgree").hide();
+				jQuery(".btnAgree,.btnNotAgree,#reviewNext_").hide();
 				jQuery("#review").attr("disabled","disabled");
 				jQuery("#review").html("Phản hồi của người phê duyệt sẽ hiển thị ở đây");
 				jQuery(".cls-centerDetail").html("Chi Tiết Đơn Xin Thay Đổi Thời Gian Làm Việc Của Bạn");
@@ -59,13 +59,12 @@
 	<c:otherwise>
 		<script type="text/javascript">
 			jQuery(document).ready(function() {
-				jQuery(".btnSend, .btnCancel, .btnAgree, .btnNotAgree").hide();
+				jQuery(".btnSend, .btnCancel, .btnAgree, .btnNotAgree, #reviewNext_").hide();
 				jQuery("#datepickerBegin, #datepickerEnd").attr("disabled","disabled");
 				jQuery('#tableDaily :input').attr("disabled","disabled");
 				jQuery("textarea").attr("disabled","disabled");
 				if(${bean.timeChangeDetail.requestedStatus != 1}){
 					jQuery("#btnReview").hide();
-					
 				}
 			});
 		</script>
@@ -174,7 +173,7 @@
 		
 		jQuery("#btnReview").click(function(e){
 			jQuery("#review").removeAttr("disabled","disabled");
-			jQuery(".btnAgree, .btnNotAgree").css('display','inline');
+			jQuery(".btnAgree, .btnNotAgree,#revewNext_").css('display','inline');
 			jQuery("#btnReview").hide();
 		});
 		jQuery("#undoPer").one('click',function(e){
@@ -195,20 +194,42 @@
 		});
 		
 		jQuery(".btnAgree").click(function(e){
-			var url='<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">
+			var url;
+			if(jQuery("#reviewNext").is(':checked')){
+				url='<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">
+					<portlet:param name="action" value="managerChangeWorkingTime" />
+					<portlet:param name="<%=Request.ORG_ID%>" value="${bean.orgId}" />
+					<portlet:param name="<%=Constants.CMD%>" value="<%=Request.AGREE%>" />
+					<portlet:param name="next" value="1" />
+				</portlet:renderURL>';
+			}
+			else{
+				url='<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">
 						<portlet:param name="action" value="managerChangeWorkingTime" />
 						<portlet:param name="<%=Request.ORG_ID%>" value="${bean.orgId}" />
 						<portlet:param name="<%=Constants.CMD%>" value="<%=Request.AGREE%>" />
 					</portlet:renderURL>';
+			}
 			submit(url);
 		});
 
 		jQuery(".btnNotAgree").click(function(e){
-			var url='<portlet:renderURL windowState="<%=WindowState.NORMAL.toString() %>">
+			var url;
+			if(jQuery("#reviewNext").is(':checked')){
+				url='<portlet:renderURL windowState="<%=WindowState.NORMAL.toString() %>">
+					<portlet:param name="action" value="managerChangeWorkingTime" />
+					<portlet:param name="<%=Request.ORG_ID%>" value="${bean.orgId}" />
+					<portlet:param name="<%=Constants.CMD%>" value="<%=Request.NOT_AGREE%>" />
+					<portlet:param name="next" value="1" />
+				</portlet:renderURL>';
+			}
+			else{
+				url='<portlet:renderURL windowState="<%=WindowState.NORMAL.toString() %>">
 						<portlet:param name="action" value="managerChangeWorkingTime" />
 						<portlet:param name="<%=Request.ORG_ID%>" value="${bean.orgId}" />
 						<portlet:param name="<%=Constants.CMD%>" value="<%=Request.NOT_AGREE%>" />
-					</portlet:renderURL>'
+					</portlet:renderURL>';
+			}
 			submit(url);
 		});
 
@@ -526,6 +547,10 @@
 			</div>
 		</div><!--End content detail-->
 	</div><!--End content-->
+	<div id="reviewNext_" style="float:right;margin:-15px 10px 20px 0">
+		<input type="checkbox" name="reviewNext" id="reviewNext">Bạn muốn tiếp tục duyệt đơn khác sau khi phê duyệt đơn này
+	</div>
+	<div class="clear"></div>
 	<div class="button">
 		<input type="submit" value='<fmt:message key="button.reset" />' class="btnCancel" />
 		<input type="submit" value='<fmt:message key="button.sendform" />' class="btnSend" />

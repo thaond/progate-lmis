@@ -12,6 +12,8 @@ function isValidation(){
 	var minEnd = jQuery("#minEnd").val();
 	var valid=true;
 	if(isEmpty(hourBegin) || isEmpty(minBegin)){
+		jQuery("#errorTime").removeClass('requiredFieldMessage');
+		jQuery("#errorTime").text('');
 		jQuery("#errorTimeBegin").removeClass('hiddenMessage');
 		jQuery("#errorTimeBegin").addClass('requiredFieldMessage');
 		jQuery("#errorTimeBegin").html('Bạn chưa nhập giờ bắt đầu');
@@ -19,6 +21,26 @@ function isValidation(){
 	}else{
 		jQuery("#errorTimeBegin").removeClass('requiredFieldMessage');
 		jQuery("#errorTimeBegin").text('');
+		if(hourBegin > 24 || minBegin > 59 ){
+			jQuery("#errorTime").removeClass('hiddenMessage');
+			jQuery("#errorTime").addClass('requiredFieldMessage');
+			jQuery("#errorTime").html('Bạn nhập giờ chưa chính xác');
+			valid=false
+		}else{
+			jQuery("#errorTime").removeClass('requiredFieldMessage');
+			jQuery("#errorTime").text('');
+		}
+	}
+	if(!isEmpty(hourEnd) && !isEmpty(minEnd)){
+		if(hourEnd > 24 || minEnd > 59 ){
+			jQuery("#errorTime").removeClass('hiddenMessage');
+			jQuery("#errorTime").addClass('requiredFieldMessage');
+			jQuery("#errorTime").html('Bạn nhập giờ chưa chính xác');
+			valid=false
+		}else{
+			jQuery("#errorTime").removeClass('requiredFieldMessage');
+			jQuery("#errorTime").text('');
+		}
 	}
 	return valid;
 }

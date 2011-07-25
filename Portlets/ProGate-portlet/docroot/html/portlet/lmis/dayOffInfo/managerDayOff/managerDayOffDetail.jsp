@@ -37,7 +37,7 @@
 	<c:when test="${bean.cmd == bean.VIEW || bean.cmd == bean.REVIEW }">
 		<script type="text/javascript">
 			jQuery(document).ready(function() {
-					jQuery(".btnSend, .btnCancel, .btnAgree, .btnNotAgree").hide();
+					jQuery(".btnSend, .btnCancel, .btnAgree, .btnNotAgree,#reviewNext_").hide();
 					jQuery("#dayOffBegin, #dayOffEnd").attr("disabled","disabled");
 					jQuery("textarea").attr("disabled","disabled");
 					jQuery('.contentDetail :input').attr("disabled","disabled");
@@ -52,7 +52,7 @@
 				<script type="text/javascript">
 					jQuery(document).ready(function() {
 						jQuery("#review").removeAttr("disabled","disabled");
-						jQuery(".btnAgree, .btnNotAgree").css('display','inline');
+						jQuery(".btnAgree, .btnNotAgree,#reviewNext_").css('display','inline');
 						jQuery("#btnReview").hide();
 				});
 				</script>
@@ -72,7 +72,7 @@
 				});
 				jQuery("#review").attr("disabled","disabled");
 				jQuery("#review").html("Phản hồi của người phê duyệt sẽ hiển thị ở đây ");
-				jQuery("#imgDisable,#imgDisable1,#edit,.btnAgree,.btnNotAgree").hide();
+				jQuery("#imgDisable,#imgDisable1,#edit,.btnAgree,.btnNotAgree,#reviewNext_").hide();
 			});
 		</script>
 		<c:choose>
@@ -182,7 +182,7 @@
 				
 				jQuery("#btnReview").click(function(e){
 					jQuery("#review").removeAttr("disabled","disabled");
-					jQuery(".btnAgree, .btnNotAgree").css('display','inline');
+					jQuery(".btnAgree, .btnNotAgree,#reviewNext_").css('display','inline');
 					jQuery("#btnReview").hide();
 				});
 				
@@ -283,8 +283,11 @@
 							'selectedId':selectedId,
 						},
 						success:function(){
-							undoRe();
-							
+							if(jQuery("#reviewNext").is(':checked')){
+								undoRe();
+							}else{
+								undoMa()
+							}
 						},
 						error:function(){
 							alert("Có lỗi xảy ra, cần liên hệ đến Quản trị viên của ProGate");
@@ -309,7 +312,12 @@
 							'selectedId':selectedId,
 						},
 						success:function(){
-							undoRe();
+							if(jQuery("#reviewNext").is(':checked')){
+								undoRe();
+							}
+							else{
+								undoMa();
+							}
 						},
 						error:function(){
 							alert("Có lỗi xảy ra, cần liên hệ đến Quản trị viên của ProGate");
@@ -507,6 +515,10 @@
 			</div>
 		</div>
 	</div><!-- End Content -->
+	<div id="reviewNext_" style="float:right;margin:-15px 10px 20px 0">
+		<input type="checkbox" name="reviewNext" id="reviewNext">Bạn muốn tiếp tục duyệt đơn khác sau khi phê duyệt đơn này
+	</div>
+	<div class="clear"></div>
 	<div class="button">
 		<input type="submit" value='<fmt:message key="button.reset"/>' class="btnCancel"/> 
 		<input type="button" value='<fmt:message key="button.sendform"/>' class="btnSend"/>

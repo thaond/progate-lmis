@@ -65,6 +65,10 @@ public class ManagerChangeWorkingTimeController extends ParameterizableViewContr
 		System.out.println("----Manager: "+cmd);
 		bean.put("cmd",cmd);
 		
+		int reviewNext = ParamUtil.getInteger(request, "next",0);
+		bean.put("reviewNext", reviewNext);
+		System.out.println("-------------review next: "+ reviewNext);
+		
 		int selectedStatus = ParamUtil.getInteger(request, "selectedStatus",-1);
 		bean.put("selectedStatus", selectedStatus);
 		System.out.println("trang thai duoc chon: "+ selectedStatus);
