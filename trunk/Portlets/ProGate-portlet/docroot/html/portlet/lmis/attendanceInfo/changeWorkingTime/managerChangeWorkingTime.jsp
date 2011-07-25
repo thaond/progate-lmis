@@ -15,7 +15,7 @@
 			jQuery("#status option[value='3']").attr('selected','selected');
 		}
 		
-	 	if(${bean.cmd == 'agree' || bean.cmd == "notAgree"}){
+	 	if(${bean.reviewNext == 1}){
 	 		if(${bean.countPending !=0}){
 	 			var id = jQuery('.selectChangeTimeID').val();
 	 			var url = '<portlet:renderURL  windowState="<%=WindowState.NORMAL.toString() %>">
