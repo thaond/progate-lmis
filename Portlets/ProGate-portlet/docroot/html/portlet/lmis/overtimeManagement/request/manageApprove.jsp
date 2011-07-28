@@ -195,14 +195,14 @@
 		<div class="content-right" style="height: 120px !important;">
 			<div>
 				<div class="total-ot"> <fmt:message key="lmis.ot.reg.totalhour" /> <span style="font-weight: bold; color: red;">${bean.totalHour }</span></div>
-				<fieldset style="-moz-border-radius:5px">
+				<fieldset style="-moz-border-radius:5px; margin-top: 8px;">
 					<legend><fmt:message key="lmis.ot.reg.reason" /></legend>
 					<textarea id="txt-reason" name="txt-reason" style="height:54px; width: 412px" disabled="disabled">${bean.ls.requestedReason}</textarea>
 				</fieldset>
 			</div>
 		</div>
 		<div class="clear"></div>
-		<div class="tbl-title">
+		<div class="tbl-title" style="margin-top: 10px;">
 			<div class="mbr-join"><fmt:message key="lmis.ot.reg.mbr" /></div>
 			<div class="err-special"> <fmt:message key="lmis.ot.err.filed" /> </div>
 		</div>
