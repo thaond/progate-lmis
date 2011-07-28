@@ -23,6 +23,10 @@
 	    	}
 		});
 		jQuery(".edit").click(function(e){
+			jQuery("#errorTime").removeClass('requiredFieldMessage');
+			jQuery("#errorTime").text('');
+			jQuery("#errorTimeBegin").removeClass('requiredFieldMessage');
+			jQuery("#errorTimeBegin").text('');
 			e.preventDefault();
 			var id = e.currentTarget.parentNode.getElementsByTagName("input")[1].value;
 			var staffCode = jQuery(this).parent().parent().find("td:eq(1)").text();
@@ -158,7 +162,7 @@
 				<span><input id="minBegin" name="minBegin" maxlength="2" type="text" style="width: 5em;height:1.5em;"/></span>				
 			</div>			
 			<div style="margin-top:-22px;margin-bottom:-10px;padding-left:20px" ><label id="errorTimeBegin" class="hiddenMessage" ></label></div>
-			<div style="margin-top:-25px;margin-bottom:-10px;padding-left:20px" ><label id="errorTime" class="hiddenMessage" ></label></div>
+			<div style="margin-top:-20px;margin-bottom:-10px;padding-left:20px" ><label id="errorTime" class="hiddenMessage" ></label></div>
 			</td>
 		</tr>
 		<tr>
